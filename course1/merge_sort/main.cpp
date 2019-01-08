@@ -23,7 +23,7 @@ class Solution
     Vector merge( const Vector& lhs, const Vector& rhs, Vector res={} )
     {
         auto i{ lhs.cbegin() }, j{ rhs.cbegin() };
-        while( i < lhs.cend() && j < rhs.cend() ) res.push_back( ( *i < *j )? *i++ : *j++ );
+        while( i != lhs.cend() && j != rhs.cend() ) res.push_back( ( *i < *j )? *i++ : *j++ );
         if( i != lhs.cend() ) res.insert( res.end(), i, lhs.cend() );
         if( j != rhs.cend() ) res.insert( res.end(), j, rhs.cend() );
         return res;
