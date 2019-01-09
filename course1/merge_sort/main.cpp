@@ -29,7 +29,7 @@ private:
 
     Collection merge( const Collection& lhs, const Collection& rhs, Collection res={} )
     {
-        auto L{ lhs.cbegin() }, R{ rhs.cbegin() };
+        auto L = lhs.cbegin(), R = rhs.cbegin();
         while( L != lhs.cend() && R != rhs.cend() ) res.push_back( ( *L < *R )? *L++ : *R++ );
         if( L != lhs.cend() ) res.insert( res.end(), L, lhs.cend() );
         if( R != rhs.cend() ) res.insert( res.end(), R, rhs.cend() );
