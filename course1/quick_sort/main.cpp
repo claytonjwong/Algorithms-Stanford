@@ -35,20 +35,20 @@ private:
 
     using RandomDevice = random_device;
     using Generator = mt19937;
+    using Distribution = uniform_int_distribution< int >;
 
     Iter random( Iter L, Iter R, RandomDevice randomDevice=RandomDevice() )
     {
         Generator randomGenerator{ randomDevice() };
         int size = static_cast< int >( distance( L, R ) );
-        uniform_int_distribution< int > distribute{ 0, size - 1 }; // size - 1 since R is non-inclusive
-        return L + distribute( randomGenerator );
+        Distribution distribution{ 0, size - 1 }; // size - 1 since R is non-inclusive
+        return L + distribution( randomGenerator );
     }
 
     void go( Collection& A, Iter L, Iter R ) // go() sorts from [ L : R ), that is, from L (inclusive) to R (non-inclusive)
     {
         if( L >= R ) return;
-        auto threshold = random( L, R );
-        iter_swap( A.begin(), threshold );
+        iter_swap( A.begin(), random( L, R ) ); // move random threshold value for pivot to the beginning of A for partitioning
         auto pivot = partition( A, L, R );
         go( A, L, pivot );
         go( A, next( pivot ), R );
