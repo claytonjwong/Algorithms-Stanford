@@ -21,11 +21,11 @@ public:
 
     Iter partition( Collection& A, Iter L, Iter R )
     {
-        auto threshold = L, less = next( threshold );
+        auto threshold{ L }, less{ L + 1 };
         for( auto more{ less }; more != R; ++more )
             if( *more < *threshold )
                 iter_swap( less++, more );
-        auto pivot = prev( less );
+        auto pivot{ less - 1 };
         iter_swap( L, pivot );
         return pivot;
     }
@@ -50,7 +50,7 @@ private:
         iter_swap( L, random( L, R ) ); // move random threshold value for pivot to the beginning of [ L : R ) for partitioning
         auto pivot = partition( A, L, R );
         go( A, L, pivot );
-        go( A, next( pivot ), R );
+        go( A, pivot + 1, R );
     }
 
 };
