@@ -21,14 +21,13 @@ public:
 
     Iter partition( Collection& A, Iter L, Iter R )
     {
-        auto threshold = A.begin(), less = next( threshold );
+        auto threshold = L, less = next( threshold );
         for( auto more{ less }; more != R; ++more )
             if( *more < *threshold )
                 iter_swap( less++, more );
         auto pivot = prev( less );
-        auto index = distance( A.begin(), pivot );
-        iter_swap( A.begin(), pivot );
-        return A.begin() + index;
+        iter_swap( L, pivot );
+        return pivot;
     }
 
 private:
@@ -48,7 +47,7 @@ private:
     void go( Collection& A, Iter L, Iter R ) // go() sorts from [ L : R ), that is, from L (inclusive) to R (non-inclusive)
     {
         if( L >= R ) return;
-        iter_swap( A.begin(), random( L, R ) ); // move random threshold value for pivot to the beginning of A for partitioning
+        iter_swap( L, random( L, R ) ); // move random threshold value for pivot to the beginning of [ L : R ) for partitioning
         auto pivot = partition( A, L, R );
         go( A, L, pivot );
         go( A, next( pivot ), R );
