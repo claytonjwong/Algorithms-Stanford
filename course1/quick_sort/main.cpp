@@ -50,14 +50,12 @@ private:
         //
         // question #3: use median from [ L : R ) as pivot ( note: the right-most value is at R-1 since R is non-inclusive )
         //
-        auto M = ceil( distance( L, R ) / 2.0 ) - 1;
-        Collection candidates{ *L, *(L+M), *(R-1) };
-        sort( candidates.begin(), candidates.end() );
-        auto median = ( *L == candidates[ 1 ] )? L
-                    : ( *(L+M) == candidates[ 1 ] )? L+M
-                    : R-1;
-        iter_swap( L, median );
-        
+        auto M = L + ceil( distance( L, R ) / 2.0 ) - 1;                 // (M)iddle
+        Collection C{ *L, *M, *(R-1) };                                  // Three pivot (C)andidates: (L)eft-most, (M)iddle, (R)ight-most element in [ L : R )
+        sort( C.begin(), C.end() );                                      // median is the middle element C[ 1 ] for the sorted array C of size 3
+        auto median = ( C[ 1 ] == *L )? L  : ( C[ 1 ] == *M )? M  : R-1; // find corresponding iterator
+        iter_swap( L, median );                                          // use median as pivot
+
         auto P = partition( A, L, R ); // (P)ivot
         return distance( L, R-1 ) + go( A, L, P ) + go( A, P+1, R );
     }
