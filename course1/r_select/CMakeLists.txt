@@ -3,4 +3,4 @@ project(r_select)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(r_select main.cpp input.hpp)
+add_executable(r_select main.cpp input.hpp pi.hpp)

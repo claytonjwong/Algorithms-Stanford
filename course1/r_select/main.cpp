@@ -1,8 +1,10 @@
 #include "input.hpp"
+#include "pi.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
 #include <sstream>
+#include <iomanip>
 #include <random>
 
 
@@ -83,6 +85,87 @@ int main()
         B.emplace_back( num );
     }
     assert( solution.r_select( B, 50 ) == 4715 );
+
+    int chunkSize{ 10 };
+    Solution< Type >::Collection C;
+    stringstream pi_10{ PI_10 };
+    for( string digits; pi_10 >> setw( chunkSize ) >> digits; )
+    {
+        stringstream parser{ digits };
+        Type num{ 0 };
+        parser >> num;
+        C.emplace_back( num );
+    }
+    cout << "Median for first 10 digits of PI:      " << solution.r_select( C, ceil( C.size() / 2.0 ) )
+         << endl,
+    C.clear();
+
+    stringstream pi_100{ PI_100 };
+    for( string digits; pi_100 >> setw( chunkSize ) >> digits; )
+    {
+        stringstream parser{ digits };
+        Type num{ 0 };
+        parser >> num;
+        C.emplace_back( num );
+    }
+    cout << "Median for first 100 digits of PI:     " << solution.r_select( C, C.size() / 2 )
+         << endl,
+    C.clear();
+
+    stringstream pi_1000{ PI_1000 };
+    for( string digits; pi_1000 >> setw( chunkSize ) >> digits; )
+    {
+        stringstream parser{ digits };
+        Type num{ 0 };
+        parser >> num;
+        C.emplace_back( num );
+    }
+    cout << "Median for first 1000 digits of PI:    " << solution.r_select( C, C.size() / 2 )
+         << endl,
+    C.clear();
+
+    stringstream pi_10000{ PI_10000 };
+    for( string digits; pi_10000 >> setw( chunkSize ) >> digits; )
+    {
+        stringstream parser{ digits };
+        Type num{ 0 };
+        parser >> num;
+        C.emplace_back( num );
+    }
+    cout << "Median for first 10000 digits of PI:   " << solution.r_select( C, C.size() / 2 )
+         << endl,
+    C.clear();
+
+    stringstream pi_100000{ PI_100000 };
+    for( string digits; pi_100000 >> setw( chunkSize ) >> digits; )
+    {
+        stringstream parser{ digits };
+        Type num{ 0 };
+        parser >> num;
+        C.emplace_back( num );
+    }
+    cout << "Median for first 100000 digits of PI:  " << solution.r_select( C, C.size() / 2 )
+         << endl,
+    C.clear();
+
+    stringstream pi_1000000{ PI_1000000 };
+    for( string digits; pi_1000000 >> setw( chunkSize ) >> digits; )
+    {
+        stringstream parser{ digits };
+        Type num{ 0 };
+        parser >> num;
+        C.emplace_back( num );
+    }
+    cout << "Median for first 1000000 digits of PI: " << solution.r_select( C, C.size() / 2 )
+         << endl,
+    C.clear();
+
+//    Median for first 10 digits of PI:      3141592653
+//    Median for first 100 digits of PI:     4592307816
+//    Median for first 1000 digits of PI:    4330572703
+//    Median for first 10000 digits of PI:   5157098583
+//    Median for first 100000 digits of PI:  4933967376
+//    Median for first 1000000 digits of PI: 5013895529
 
     return 0;
 }
