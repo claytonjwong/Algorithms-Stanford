@@ -38,16 +38,16 @@ private:
         else if( i < j )
             return go( A, L, P, i );           // first half
         else
-            return go( A, P + 1, R, i - j );   // second half
+            return go( A, P+1, R, i-j );       // second half
     }
 
     Iter partition( Collection& A, Iter L, Iter R )
     {
-        auto threshold{ L }, less{ L + 1 };
+        auto threshold{ L }, less{ L+1 };
         for( auto more{ less }; more != R; ++more )
             if( *more < *threshold )
                 iter_swap( less++, more );
-        auto pivot{ less - 1 };
+        auto pivot{ less-1 };
         iter_swap( L, pivot );
         return pivot;
     }
@@ -59,9 +59,9 @@ private:
     Iter random( Iter L, Iter R, RandomDevice randomDevice=RandomDevice() )
     {
         Generator randomGenerator{ randomDevice() };
-        int size = distance( L, R-1 );        // R-1 since R is non-inclusive
-        Distribution distribution{ 0, size }; // size of size+1 for distribution from [ 0 : size ], that is 0 ( inclusive ) to size ( inclusive )
-        return L + distribution( randomGenerator );
+        int size = distance( L, R-1 );              // R-1 since R is non-inclusive
+        Distribution distribution{ 0, size };       // distribution span [ 0 : size ], that is 0 ( inclusive ) to size ( inclusive )
+        return L + distribution( randomGenerator ); // [ L : R-1 ], that is from L ( inclusive ) to R-1 ( inclusive )
     }
 };
 
@@ -70,8 +70,7 @@ int main()
 {
     using Type = size_t;
     Solution< Type > solution;
-    Solution< Type >::Collection A{
-        2148, 9058, 7742, 3153, 6324, 609, 7628, 5469, 7017, 504 };
+    Solution< Type >::Collection A{ 2148, 9058, 7742, 3153, 6324, 609, 7628, 5469, 7017, 504 };
     assert( solution.r_select( A, 5 ) == 5469 );
 
     Solution< Type >::Collection B;
