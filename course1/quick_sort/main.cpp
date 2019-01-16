@@ -36,11 +36,11 @@ private:
 
     Iter partition( Collection& A, Iter L, Iter R )
     {
-        auto threshold{ L }, less{ L + 1 };
+        auto threshold{ L }, less{ L+1 };
         for( auto more{ less }; more != R; ++more )
             if( *more < *threshold )
                 iter_swap( less++, more );
-        auto pivot{ less - 1 };
+        auto pivot{ less-1 };
         iter_swap( L, pivot );
         return pivot;
     }
@@ -67,7 +67,7 @@ private:
             // question #3: use median from [ L : R ) as pivot ( note: the right-most value is at R-1 since R is non-inclusive )
             //
             auto M = L + ceil( distance( L, R ) / 2.0 ) - 1;                 // (M)iddle
-            Collection C{ *L, *M, *(R-1) };                                  // Three pivot (C)andidates: (L)eft-most, (M)iddle, (R)ight-most element in [ L : R )
+            Collection C{ *L, *M, *( R-1 ) };                                  // Three pivot (C)andidates: (L)eft-most, (M)iddle, (R)ight-most element in [ L : R )
             sort( C.begin(), C.end() );                                      // median is the middle element C[ 1 ] for the sorted array C of size 3
             auto median = ( C[ 1 ] == *L )? L  : ( C[ 1 ] == *M )? M  : R-1; // find corresponding iterator
             iter_swap( L, median );                                          // use median as pivot
@@ -111,27 +111,27 @@ int main()
     }
 
     Solution< Type >::Collection Q1{ A };
-    cout << "Question #1: " << s.quickSort( Q1, PivotChoice::Left ) << endl;
+    cout << "Question #1 ( Pivot is Left ):   " << s.quickSort( Q1, PivotChoice::Left ) << endl;
     assert( is_sorted( Q1.cbegin(), Q1.cend() ) );
 
     Solution< Type >::Collection Q2{ A };
-    cout << "Question #2: " << s.quickSort( Q2, PivotChoice::Right ) << endl;
+    cout << "Question #2 ( Pivot is Right ):  " << s.quickSort( Q2, PivotChoice::Right ) << endl;
     assert( is_sorted( Q2.cbegin(), Q2.cend() ) );
 
     Solution< Type >::Collection Q3{ A };
-    cout << "Question #3: " << s.quickSort( Q3, PivotChoice::Median ) << endl;
+    cout << "Question #3 ( Pivot is Median ): " << s.quickSort( Q3, PivotChoice::Median ) << endl;
     assert( is_sorted( Q3.cbegin(), Q3.cend() ) );
 
     Solution< Type >::Collection Q4{ A };
-    cout << "Question #4: " << s.quickSort( Q4, PivotChoice::Random ) << endl;
+    cout << "Question #4 ( Pivot is Random ): " << s.quickSort( Q4, PivotChoice::Random ) << endl;
     assert( is_sorted( Q4.cbegin(), Q4.cend() ) );
 
 //    copy( A.cbegin(), A.cend(), ostream_iterator< Type >( cout, " " ) );
 
-//    Question #1: 162085
-//    Question #2: 164123
-//    Question #3: 138382
-//    Question #4: 156873
+//    Question #1 ( Pivot is Left ):   162085
+//    Question #2 ( Pivot is Right ):  164123
+//    Question #3 ( Pivot is Median ): 138382
+//    Question #4 ( Pivot is Random ): 146451
 
     return 0;
 }
