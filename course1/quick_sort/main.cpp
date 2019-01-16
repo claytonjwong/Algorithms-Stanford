@@ -67,7 +67,7 @@ private:
             // question #3: use median from [ L : R ) as pivot ( note: the right-most value is at R-1 since R is non-inclusive )
             //
             auto M = L + ceil( distance( L, R ) / 2.0 ) - 1;                 // (M)iddle
-            Collection C{ *L, *M, *( R-1 ) };                                  // Three pivot (C)andidates: (L)eft-most, (M)iddle, (R)ight-most element in [ L : R )
+            Collection C{ *L, *M, *( R-1 ) };                                // Three pivot (C)andidates: (L)eft-most, (M)iddle, (R)ight-most element in [ L : R )
             sort( C.begin(), C.end() );                                      // median is the middle element C[ 1 ] for the sorted array C of size 3
             auto median = ( C[ 1 ] == *L )? L  : ( C[ 1 ] == *M )? M  : R-1; // find corresponding iterator
             iter_swap( L, median );                                          // use median as pivot
@@ -88,8 +88,8 @@ private:
     Iter random( Iter L, Iter R, RandomDevice randomDevice=RandomDevice() )
     {
         Generator randomGenerator{ randomDevice() };
-        int size = distance( L, R-1 ); // R is non-inclusive
-        Distribution distribution{ 0, size };
+        int size = distance( L, R-1 );        // R-1 since R is non-inclusive
+        Distribution distribution{ 0, size }; // size of size+1 for distribution from [ 0 : size ], that is 0 ( inclusive ) to size ( inclusive )
         return L + distribution( randomGenerator );
     }
 
