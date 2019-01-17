@@ -40,9 +40,9 @@ public:
 
 Number operator*( const Number& lhs, const Number& rhs )
 {
-    stringstream stream{ lhs.value() + " " + rhs.value() };
+    stringstream parser{ lhs.value() + " " + rhs.value() };
     size_t x{ 0 }, y{ 0 };
-    stream >> x >> y;
+    parser >> x >> y;
     return Number{ to_string( x * y ) };
 }
 
