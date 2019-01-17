@@ -6,6 +6,7 @@
   * [Merge Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/main.cpp )
   * [Array Inversions]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/main.cpp )
   * [Quick Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/main.cpp )
+  * [Randomized Linear-Selection]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/main.cpp )
 * Course 2: Graph Search, Shortest Paths, and Data Structures
 * Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming
 * Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
