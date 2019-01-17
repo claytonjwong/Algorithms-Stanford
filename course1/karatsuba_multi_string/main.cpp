@@ -16,6 +16,7 @@ class Number
 public:
 
     Number() = default;
+    ~Number() = default;
     explicit Number( const string& value ) : value_{ value } {}
     Number( const Number& ) = default;
     Number( Number&& ) = default;
