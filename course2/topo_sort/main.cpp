@@ -51,8 +51,8 @@ int main()
         { 't', {} },
     };
     Solution s;
-    auto result = s.topo_sort( G );
-    copy( result.cbegin(), result.cend(), ostream_iterator< Solution::Vertex >( cout, " " ) );
+    auto list = s.topo_sort( G );
+    copy( list.cbegin(), list.cend(), ostream_iterator< Solution::Vertex >( cout, " " ) );
 
     return 0;
 }
