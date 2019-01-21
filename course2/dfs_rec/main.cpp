@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_set>
+#include <unordered_map>
 #include <queue>
 
 
@@ -11,20 +12,20 @@ class Solution
 {
 public:
 
-    using Vertex = size_t;
-    using Graph = vector< vector< Vertex > >;
+    using Vertex = unsigned char;
+    using Graph = unordered_map< Vertex, vector< Vertex > >;
     using Seen = unordered_set< Vertex >;
 
-    Seen dfs( const Graph& G, Vertex start=0 )
+    Seen dfs( Graph& G, Vertex start='s' )
     {
         Seen seen{ start };
         go( G, start, seen );
         return seen;
     }
 
-    void go( const Graph& G, Vertex cur, Seen& seen )
+    void go( Graph& G, Vertex cur, Seen& seen )
     {
-        for( const auto adj: G[ cur ] )
+        for( auto adj: G[ cur ] )
             if( seen.insert( adj ).second )
                 go( G, adj, seen );
     }
@@ -37,12 +38,19 @@ int main()
     // Figure 8.5 from page 26 of Algorithms Illuminated ( Part 2 )
     //
     Solution::Graph G = {
-        { 1, 2 },           // 0
-        { 0, 3 },           // 1
-        { 0, 3 },           // 2
-        { 1, 2, 4, 5 },     // 3
-        { 3 },              // 4
-        { 3, 4 }            // 5
+
+        { 's', { 'a', 'b' } },
+
+        { 'a', { 's', 'c' } },
+
+        { 'b', { 's', 'c' } },
+
+        { 'c', { 'a', 'b', 'd', 'e' } },
+
+        { 'd', { 'b', 'c', 'e' } },
+
+        { 'e', { 'c', 'd', } }
+
     };
     Solution s;
     auto result = s.dfs( G );
