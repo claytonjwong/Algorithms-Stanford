@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_set>
+#include <unordered_map>
 #include <queue>
 
 
@@ -11,20 +12,20 @@ class Solution
 {
 public:
 
-    using Vertex = size_t;
-    using Graph = vector< vector< Vertex > >;
+    using Vertex = unsigned char;
+    using Graph = unordered_map< Vertex, vector< Vertex > >;
     using Seen = unordered_set< Vertex >;
     using Stack = vector< Vertex >;
 
-    Seen dfs( const Graph& G, Vertex start=0 )
+    Seen dfs( Graph& G, Vertex start='s' )
     {
         Stack stack{ start }; Seen seen{ start };
         while( ! stack.empty() )
         {
             auto cur{ stack.back() }; stack.pop_back(); // (cur)rent top of the stack
-            for( const auto adj: G[ cur ] )             // (adj)acent neighbor vertices
-                if( seen.insert( adj ).second )
-                    stack.push_back( adj );
+            for( auto adj: G[ cur ] )                   // (adj)acent neighbor vertices
+                if( seen.insert( adj ).second )         // if this is the first time the (adj)acent neighbor vertex has been seen
+                    stack.push_back( adj );             // push (adj)acent neighbor vertex onto (q)ueue for future processing
         }
         return seen;
     }
@@ -37,12 +38,19 @@ int main()
     // Figure 8.5 from page 26 of Algorithms Illuminated ( Part 2 )
     //
     Solution::Graph G = {
-        { 1, 2 },           // 0
-        { 0, 3 },           // 1
-        { 0, 3 },           // 2
-        { 1, 2, 4, 5 },     // 3
-        { 3 },              // 4
-        { 3, 4 }            // 5
+
+        { 's', { 'a', 'b' } },
+
+        { 'a', { 's', 'c' } },
+
+        { 'b', { 's', 'c' } },
+
+        { 'c', { 'a', 'b', 'd', 'e' } },
+
+        { 'd', { 'b', 'c', 'e' } },
+
+        { 'e', { 'c', 'd', } }
+
     };
     Solution s;
     auto result = s.dfs( G );
