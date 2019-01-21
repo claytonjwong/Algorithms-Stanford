@@ -16,22 +16,22 @@ public:
     using Graph = vector< vector< Vertex > >;
     using Seen = unordered_set< Vertex >;
     using Queue = queue< Vertex >;
-    using MinPathSize = vector< Vertex >;
-    const Vertex maximum = numeric_limits< int >::max();
+    using Distance = vector< Vertex >;
+    const Vertex max = numeric_limits< int >::max();
 
-    MinPathSize bfs( const Graph& G, Vertex start=0 )
+    Distance bfs( const Graph& G, Vertex start=0 )
     {
-        auto N{ G.size() }; MinPathSize P( N, maximum ); P[ start ] = 0;   // augmented-bfs
+        auto N{ G.size() }; Distance D( N, max ); D[ start ] = 0; // augmented-bfs
         Queue q{{ start }}; Seen seen{ start };
         while( ! q.empty() )
         {
             auto cur{ q.front() }; q.pop(); // (cur)rent front of the queue
             for( const auto adj: G[ cur ] ) // (adj)acent neighbor vertices
                 if( seen.insert( adj ).second )
-                    P[ adj ] = P[ cur ] + 1,                               // augmented-bfs
+                    D[ adj ] = D[ cur ] + 1,                      // augmented-bfs
                     q.push( adj );
         }
-        return P;
+        return D;
     }
 
 };
@@ -51,8 +51,9 @@ int main()
     };
     Solution s;
     auto result = s.bfs( G );
-    cout << "shortest path size from start ( 0 ) to each vertex 0,1,2,3,4,5..." << endl;
-    copy( result.cbegin(), result.cend(), ostream_iterator< Solution::Vertex >( cout, ",") );
+    cout << "distance from start ( 0 ) to each vertex 0, 1, 2, 3, 4, 5..." << endl
+         << "                                         ";
+    copy( result.cbegin(), result.cend(), ostream_iterator< Solution::Vertex >( cout, ", ") );
 
     return 0;
 }
