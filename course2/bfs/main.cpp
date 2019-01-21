@@ -24,8 +24,8 @@ public:
         {
             auto cur{ q.front() }; q.pop();     // (cur)rent front of the (q)ueue
             for( auto adj: G[ cur ] )           // (adj)acent neighbor vertices of the (G)raph's (cur)rent vertex
-                if( seen.insert( adj ).second ) // if this is the first time the (adj)acent neighbor has been seen
-                    q.push( adj );              // push (adj)acent neighbor vertices onto (q)ueue for future processing
+                if( seen.insert( adj ).second ) // if this is the first time the (adj)acent neighbor vertex has been seen
+                    q.push( adj );              // push (adj)acent neighbor vertex onto (q)ueue for future processing
         }
         return seen;
     }
