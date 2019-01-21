@@ -23,7 +23,7 @@ public:
         while( ! stack.empty() )
         {
             auto cur{ stack.back() }; stack.pop_back(); // (cur)rent top of the stack
-            for( auto adj: G[ cur ] )                   // (adj)acent neighbor vertices
+            for( auto adj: G[ cur ] )                   // (adj)acent neighbor vertices of the (G)raph's (cur)rent vertex
                 if( seen.insert( adj ).second )         // if this is the first time the (adj)acent neighbor vertex has been seen
                     stack.push_back( adj );             // push (adj)acent neighbor vertex onto (q)ueue for future processing
         }
