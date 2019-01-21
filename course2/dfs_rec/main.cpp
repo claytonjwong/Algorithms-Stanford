@@ -23,11 +23,11 @@ public:
         return seen;
     }
 
-    void go( Graph& G, Vertex cur, Seen& seen )
+    void go( Graph& G, Vertex cur, Seen& seen ) // (cur)rent vertex at the top of the callstack
     {
-        for( auto adj: G[ cur ] )
-            if( seen.insert( adj ).second )
-                go( G, adj, seen );
+        for( auto adj: G[ cur ] )               // (adj)acent neighbor vertices of the (G)raph's (cur)rent vertex
+            if( seen.insert( adj ).second )     // if this is the first time the (adj)acent neighbor vertex has been seen
+                go( G, adj, seen );             // go further process (adj)acent neighbor vertex
     }
 
 };
