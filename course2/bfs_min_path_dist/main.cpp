@@ -21,14 +21,14 @@ public:
 
     Distance bfs( Graph& G, Vertex start='s' )
     {
-        Distance D{{ start, 0 }};               // augmented-bfs
+        Distance D{{ start, 0 }};               // augmented-BFS
         Queue q{{ start }}; Seen seen{ start };
         while( ! q.empty() )
         {
             auto cur{ q.front() }; q.pop();
             for( auto adj: G[ cur ] )
                 if( seen.insert( adj ).second )
-                    D[ adj ] = D[ cur ] + 1,    // augmented-bfs
+                    D[ adj ] = D[ cur ] + 1,    // augmented-BFS
                     q.push( adj );
         }
         return D;
