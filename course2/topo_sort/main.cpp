@@ -23,7 +23,7 @@ public:
     {
         auto N{ G.size() };
         OrderedList L( N + 1 );
-        for( auto cur: AdjacencyList{ 'v','t','s','w' } ) // force order to exactly follow example section 8.5.5 on page 50-51
+        for( auto cur: AdjacencyList{ 'v','t','s','w' } ) // force order to exactly follow example section 8.5.5 on page 50-51 of Algorithms Illuminated: Part 2
             if( seen.insert( cur ).second )
                 go( L, G, cur, N, seen );
         return { L.cbegin() + 1, L.cend() }; // return buckets as 0-based index of [ 1 : N+1 )
@@ -42,7 +42,7 @@ public:
 int main()
 {
     //
-    // graph from Quiz 8.3 on page 45
+    // graph from Quiz 8.3 on page 45 of Algorithms Illuminated: Part 2
     //
     Solution::Graph G{
         { 's', { 'v', 'w' } },
