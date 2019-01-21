@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_set>
+#include <map>
 #include <queue>
 #include <limits>
 
@@ -12,23 +13,22 @@ class Solution
 {
 public:
 
-    using Vertex = size_t;
-    using Graph = vector< vector< Vertex > >;
+    using Vertex = unsigned char;
+    using Graph = map< Vertex, vector< Vertex > >;
     using Seen = unordered_set< Vertex >;
     using Queue = queue< Vertex >;
-    using Distance = vector< Vertex >;
-    const Vertex max = numeric_limits< int >::max();
+    using Distance = map< Vertex, size_t >;
 
-    Distance bfs( const Graph& G, Vertex start=0 )
+    Distance bfs( Graph& G, Vertex start='s' )
     {
-        auto N{ G.size() }; Distance D( N, max ); D[ start ] = 0; // augmented-bfs
+        Distance D{{ start, 0 }};               // augmented-bfs
         Queue q{{ start }}; Seen seen{ start };
         while( ! q.empty() )
         {
-            auto cur{ q.front() }; q.pop(); // (cur)rent front of the queue
-            for( const auto adj: G[ cur ] ) // (adj)acent neighbor vertices
+            auto cur{ q.front() }; q.pop();
+            for( auto adj: G[ cur ] )
                 if( seen.insert( adj ).second )
-                    D[ adj ] = D[ cur ] + 1,                      // augmented-bfs
+                    D[ adj ] = D[ cur ] + 1,    // augmented-bfs
                     q.push( adj );
         }
         return D;
@@ -36,24 +36,48 @@ public:
 
 };
 
+ostream& operator<<( ostream& stream, const Solution::Distance& distance )
+{
+    for( auto pair: distance )
+    {
+        stream << "distance to " << pair.first << " = " << pair.second << endl;
+    }
+    return stream;
+}
+
 int main()
 {
     //
     // Figure 8.5 from page 26 of Algorithms Illuminated ( Part 2 )
     //
     Solution::Graph G = {
-        { 1, 2 },           // 0
-        { 0, 3 },           // 1
-        { 0, 3 },           // 2
-        { 1, 2, 4, 5 },     // 3
-        { 3 },              // 4
-        { 3, 4 }            // 5
+
+        { 's', { 'a', 'b' } },
+
+        { 'a', { 's', 'c' } },
+
+        { 'b', { 's', 'c' } },
+
+        { 'c', { 'a', 'b', 'd', 'e' } },
+
+        { 'd', { 'b', 'c', 'e' } },
+
+        { 'e', { 'c', 'd', } }
+
     };
-    Solution s;
-    auto result = s.bfs( G );
-    cout << "distance from start ( 0 ) to each vertex 0, 1, 2, 3, 4, 5..." << endl
-         << "                                         ";
-    copy( result.cbegin(), result.cend(), ostream_iterator< Solution::Vertex >( cout, ", ") );
+    Solution solution;
+    auto s = solution.bfs( G, 's' );
+    auto a = solution.bfs( G, 'a' );
+    auto b = solution.bfs( G, 'b' );
+    auto c = solution.bfs( G, 'c' );
+    auto d = solution.bfs( G, 'd' );
+    auto e = solution.bfs( G, 'e' );
+    cout << "starting from 's': " << endl << s << endl << endl;
+    cout << "starting from 'a': " << endl << a << endl << endl;
+    cout << "starting from 'b': " << endl << b << endl << endl;
+    cout << "starting from 'c': " << endl << c << endl << endl;
+    cout << "starting from 'd': " << endl << d << endl << endl;
+    cout << "starting from 'e': " << endl << e << endl << endl;
 
     return 0;
 }
