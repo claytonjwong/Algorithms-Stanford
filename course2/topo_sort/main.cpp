@@ -16,7 +16,6 @@ public:
     using AdjacencyList = vector< Vertex >;
     using Graph = unordered_map< Vertex, AdjacencyList >;
     using Seen = unordered_set< Vertex >;
-    using Set = set< Vertex >;
     using OrderedList = vector< Vertex >;
 
     OrderedList topo_sort( Graph& G, Seen seen={} )
@@ -37,6 +36,7 @@ public:
                 go( L, G, adj, N, seen );      // go further process (adj)acent neighbor vertex
         L[ N-- ] = cur;                        // update ordered-(L)ist entries in reverse order as the callstack returns from [ N : 1 ]
     }
+    
 };
 
 int main()
