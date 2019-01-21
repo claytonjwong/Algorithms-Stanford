@@ -16,19 +16,19 @@ public:
     using Graph = vector< vector< Vertex > >;
     using Seen = unordered_set< Vertex >;
     using Queue = queue< Vertex >;
-    using ShortestPathSize = vector< Vertex >;
+    using MinPathSize = vector< Vertex >;
     const Vertex maximum = numeric_limits< int >::max();
 
-    ShortestPathSize bfs( const Graph& G, Vertex start=0 )
+    MinPathSize bfs( const Graph& G, Vertex start=0 )
     {
-        auto N{ G.size() }; ShortestPathSize P( N, maximum ); P[ start ] = 0;   // augmented-bfs
+        auto N{ G.size() }; MinPathSize P( N, maximum ); P[ start ] = 0;   // augmented-bfs
         Queue q{{ start }}; Seen seen{ start };
         while( ! q.empty() )
         {
             auto cur{ q.front() }; q.pop(); // (cur)rent front of the queue
             for( const auto adj: G[ cur ] ) // (adj)acent neighbor vertices
                 if( seen.insert( adj ).second )
-                    P[ adj ] = P[ cur ] + 1,                                    // augmented-bfs
+                    P[ adj ] = P[ cur ] + 1,                               // augmented-bfs
                     q.push( adj );
         }
         return P;
