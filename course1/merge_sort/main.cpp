@@ -22,7 +22,7 @@ private:
 
     Collection go( Collection&& A )
     {
-        if( A.size() < 2 )
+        if( A.size() < 2 ) // base case
             return A;
 
         auto pivot = A.cbegin() + A.size() / 2;

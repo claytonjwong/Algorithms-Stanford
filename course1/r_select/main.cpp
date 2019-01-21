@@ -31,7 +31,9 @@ private:
 
     Type go( Collection& A, Iter L, Iter R, size_t i )
     {
-        if( distance( L, R ) == 1 ) return *L; // base case: sub-array size 1
+        if( distance( L, R ) == 1 )            // base case: sub-array size 1
+            return *L;
+
         iter_swap( L, random( L, R ) );        // random (P)ivot
         auto P = partition( A, L, R );
         auto j = distance( L, P ) + 1;         // +1 for 1-based indexing

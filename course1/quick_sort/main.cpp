@@ -26,12 +26,16 @@ public:
 
 private:
 
-    size_t go( Collection& A, Iter L, Iter R, const PivotChoice PC ) // go() sorts from [ L : R ), that is, from L (inclusive) to R (non-inclusive)
-    {
-        if( L >= R ) return 0;
+    size_t go( Collection& A, Iter L, Iter R, const PivotChoice PC ) // go() sorts from [ L : R ),
+    {                                                                // that is, from L (inclusive) to R (non-inclusive)
+        if( L >= R )
+            return 0; // base case, 0 comparisons performed
+
         choosePivot( L, R, PC );
         auto P = partition( A, L, R ); // (P)ivot
-        return distance( L, R-1 ) + go( A, L, P, PC ) + go( A, P+1, R, PC );
+        return distance( L, R-1 )      // m comparisons ( the distance from L to R ), add ( m-1 ) to the running total
+             + go( A, L, P, PC )
+             + go( A, P+1, R, PC );
     }
 
     Iter partition( Collection& A, Iter L, Iter R )
