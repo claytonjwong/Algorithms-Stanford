@@ -22,19 +22,19 @@ private:
 
     Collection go( Collection&& A )
     {
-        if( A.size() < 2 ) return A;
+        if( A.size() < 2 )
+            return A;
+
         auto pivot = A.cbegin() + A.size() / 2;
         return merge( go({ A.cbegin(), pivot }), go({ pivot, A.cend() }) );
     }
 
     Collection merge( Collection&& lhs, Collection&& rhs, Collection res={} ) // merge (res)ult
     {
-        auto L = lhs.cbegin(),
-             R = rhs.cbegin();
+        auto L = lhs.cbegin(), R = rhs.cbegin();
         while( L != lhs.cend() && R != rhs.cend() )
             res.push_back( ( *L < *R )? *L++ : *R++ );
-        res.insert( res.end(), L, lhs.cend() );
-        res.insert( res.end(), R, rhs.cend() );
+        res.insert( res.end(), L, lhs.cend() ), res.insert( res.end(), R, rhs.cend() ); // append left-overs ( if applicable )
         return res;
     }
 
