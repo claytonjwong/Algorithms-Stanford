@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_set>
+#include <unordered_map>
 #include <queue>
 
 
@@ -11,20 +12,20 @@ class Solution
 {
 public:
 
-    using Vertex = size_t;
-    using Graph = vector< vector< Vertex > >;
+    using Vertex = unsigned char;
+    using Graph = unordered_map< Vertex, vector< Vertex > >;
     using Seen = unordered_set< Vertex >;
     using Queue = queue< Vertex >;
 
-    Seen bfs( const Graph& G, Vertex start=0 )
+    Seen bfs( Graph& G, Vertex start='s' )
     {
         Queue q{{ start }}; Seen seen{ start };
         while( ! q.empty() )
         {
-            auto cur{ q.front() }; q.pop(); // (cur)rent front of the queue
-            for( const auto adj: G[ cur ] ) // (adj)acent neighbor vertices
-                if( seen.insert( adj ).second )
-                    q.push( adj );
+            auto cur{ q.front() }; q.pop();     // (cur)rent front of the (q)ueue
+            for( auto adj: G[ cur ] )           // (adj)acent neighbor vertices of the (G)raph's (cur)rent vertex
+                if( seen.insert( adj ).second ) // if this is the first time the (adj)acent neighbor has been seen
+                    q.push( adj );              // push (adj)acent neighbor vertices onto (q)ueue for future processing
         }
         return seen;
     }
@@ -34,15 +35,22 @@ public:
 int main()
 {
     //
-    // Figure 8.5 from page 26 of Algorithms Illuminated ( Part 2 )
+    // Figure 8.5 from page 26 of Algorithms Illuminated: Part 2
     //
     Solution::Graph G = {
-        { 1, 2 },           // 0
-        { 0, 3 },           // 1
-        { 0, 3 },           // 2
-        { 1, 2, 4, 5 },     // 3
-        { 3 },              // 4
-        { 3, 4 }            // 5
+
+        { 's', { 'a', 'b' } },
+
+        { 'a', { 's', 'c' } },
+
+        { 'b', { 's', 'c' } },
+
+        { 'c', { 'a', 'b', 'd', 'e' } },
+
+        { 'd', { 'b', 'c', 'e' } },
+
+        { 'e', { 'c', 'd', } }
+
     };
     Solution s;
     auto result = s.bfs( G );
