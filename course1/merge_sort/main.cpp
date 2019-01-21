@@ -27,13 +27,15 @@ private:
         return merge( go({ A.cbegin(), pivot }), go({ pivot, A.cend() }) );
     }
 
-    Collection merge( Collection&& lhs, Collection&& rhs, Collection result={} )
+    Collection merge( Collection&& lhs, Collection&& rhs, Collection res={} ) // merge (res)ult
     {
-        auto L = lhs.cbegin(), R = rhs.cbegin();
-        while( L != lhs.cend() && R != rhs.cend() ) result.push_back( ( *L < *R )? *L++ : *R++ );
-        if( L != lhs.cend() ) result.insert( result.end(), L, lhs.cend() );
-        if( R != rhs.cend() ) result.insert( result.end(), R, rhs.cend() );
-        return result;
+        auto L = lhs.cbegin(),
+             R = rhs.cbegin();
+        while( L != lhs.cend() && R != rhs.cend() )
+            res.push_back( ( *L < *R )? *L++ : *R++ );
+        res.insert( res.end(), L, lhs.cend() );
+        res.insert( res.end(), R, rhs.cend() );
+        return res;
     }
 
 };
