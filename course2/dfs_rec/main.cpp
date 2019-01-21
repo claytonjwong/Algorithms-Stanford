@@ -13,7 +13,8 @@ class Solution
 public:
 
     using Vertex = unsigned char;
-    using Graph = unordered_map< Vertex, vector< Vertex > >;
+    using AdjacencyList = vector< Vertex >;
+    using Graph = unordered_map< Vertex, AdjacencyList >;
     using Seen = unordered_set< Vertex >;
 
     Seen dfs( Graph& G, Vertex start='s' )

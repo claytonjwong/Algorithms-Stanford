@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 #include <unordered_set>
 #include <map>
 #include <queue>
@@ -14,7 +15,8 @@ class Solution
 public:
 
     using Vertex = unsigned char;
-    using Graph = map< Vertex, vector< Vertex > >;
+    using AdjacencyList = vector< Vertex >;
+    using Graph = unordered_map< Vertex, AdjacencyList >;
     using Seen = unordered_set< Vertex >;
     using Queue = queue< Vertex >;
     using Distance = map< Vertex, size_t >;
