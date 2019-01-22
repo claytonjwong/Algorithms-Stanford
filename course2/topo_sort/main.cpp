@@ -36,7 +36,7 @@ public:
                 go( L, G, adj, N, seen );      // go further process (adj)acent neighbor vertex
         L[ N-- ] = cur;                        // update ordered-(L)ist entries in reverse order as the callstack returns from [ N : 1 ]
     }
-    
+
 };
 
 int main()
