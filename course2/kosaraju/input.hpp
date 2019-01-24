@@ -97,3 +97,16 @@ R"(1 2
 11 12
 12 10
 )";
+
+const std::string TEST_CASE_6 =
+R"(1 2
+2 1
+2 3
+)";
+
+const std::string TEST_CASE_7 =
+R"(1 2
+2 1
+3 2
+)";
+

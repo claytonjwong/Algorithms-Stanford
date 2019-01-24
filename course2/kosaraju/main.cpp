@@ -27,6 +27,7 @@ public:
     {
         auto R = reverse( G );           // (R)eversed (G)raph
         auto L = topo_sort( R );
+        std::reverse( L.begin(), L.end() );
         for( auto cur: L )               // L is the reverse topological order of R
             if( seen.insert( cur ).second )
                 CC.push_back( {} ),
@@ -57,26 +58,26 @@ private:
         return R;
     }
 
-    OrderedList topo_sort( Graph& G, Seen visiting={}, Seen visited={} )
+    OrderedList topo_sort( Graph& G, Seen seen={} )
     {
-        OrderedList L;
+        auto N{ G.size() };
+        OrderedList L( N + 1 );
+        for( auto& pair: G )
+        {
+            auto cur{ pair.first };
+            if( seen.insert( cur ).second )
+                go( L, G, cur, N, seen );
+        }
+        return { L.cbegin() + 1, L.cend() }; // return buckets as 0-based index of [ 1 : N+1 )
+    }
 
-        // TODO: write working TopoSort implementation on directed cyclic graphs,
-        //       5 should be the first in the reverse ordered list, because its a "sink"
-/*
-
-            1 ----> 2 ----> 3
-              <---- | <----
-                    |
-                    V
-                    5
-
-*/
-        // TODO: check pseudocode for TopoSort ( pg 50 ) and Kosaraju ( pg 62 ) and re-write code verbatim?
-
-        // TODO: if above doesn't work, maybe look for functional implementations to see why test case #5 isn't topologically sorted as expected
-
-        return L;
+    void go( OrderedList& L, Graph& G, Vertex cur, // (cur)rent vertex at the top of the callstack
+             size_t& N, Seen& seen )
+    {
+        for( auto adj: G[ cur ] )              // (adj)acent neighbor vertices of the (G)raph's (cur)rent vertex
+            if( seen.insert( adj ).second )    // if this is the first time the (adj)acent neighbor vertex has been seen
+                go( L, G, adj, N, seen );      // go further process (adj)acent neighbor vertex
+        L[ N-- ] = cur;                        // update ordered-(L)ist entries in reverse order as the callstack returns from [ N : 1 ]
     }
 
 };
@@ -102,7 +103,11 @@ int main()
     Solution s;
     auto scc = s.getSCC( G );
 
-    for( auto& test: { TEST_CASE_4 } ) //TEST_CASE_1, TEST_CASE_2, TEST_CASE_3, TEST_CASE_4, TEST_CASE_5
+    //
+    // TODO: the result for TC #4 is incorrect, vertex 5 should be its own SCC,
+    //       this seems to be failing because DFS-Topo is unable to find 5 as a sink
+    //
+    for( auto& test: { TEST_CASE_1, TEST_CASE_2, TEST_CASE_3, TEST_CASE_4, TEST_CASE_5, TEST_CASE_6, TEST_CASE_7 } )
     {
         G.clear();
         auto u{ 0 }, v{ 0 };
