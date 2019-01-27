@@ -9,9 +9,6 @@
 #include <fstream>
 
 
-#define UNIT_TESTS 69 // comment this line to execute the large homework assignment instead of small unit tests
-
-
 using namespace std;
 
 
@@ -85,7 +82,6 @@ private:
 
 };
 
-#ifdef UNIT_TESTS
 int main()
 {
     Solution s;
@@ -93,13 +89,13 @@ int main()
     for( auto& test: { TEST_CASE_0, TEST_CASE_1, TEST_CASE_2, TEST_CASE_3, TEST_CASE_4, TEST_CASE_5, TEST_CASE_6, TEST_CASE_7 } )
     {
         G.clear();
-        auto u{ 0 }, v{ 0 };
+        auto tail{ 0 }, head{ 0 };
         stringstream input{ test };
-        for( string line; getline( input, line ); G[ u ].insert( v ) )
+        for( string line; getline( input, line ); G[ tail ].insert( head ) )
         {
-            stringstream parser{ line }; parser >> u >> v;
-            if( G.find( u ) == G.end() )
-                G[ u ] = {};
+            stringstream parser{ line }; parser >> tail >> head;
+            if( G.find( tail ) == G.end() )
+                G[ tail ] = {};
         }
         auto result = s.getSCC( G );
         auto index{ 0 };
@@ -115,28 +111,3 @@ int main()
 
     return 0;
 }
-#else
-int main()
-{
-    Solution::Graph G;
-    fstream stream{ "input.txt" };
-    string line;
-    while( getline( stream, line ) )
-    {
-        stringstream parser{ line };
-        auto tail{ 0 }, head{ 0 };
-        parser >> tail >> head;
-        if( G.find( tail ) == G.end() )
-            G[ tail ] = {};
-        G[ tail ].insert( head );
-    }
-    Solution s;
-    cout << "G.size() == " << G.size() << endl;
-    auto CC = s.getSCC( G );
-    cout << "CC.size() == " << CC.size() << endl;
-    for( auto& component: CC )
-        cout << "component.size() == " << component.size() << endl;
-
-    return 0;
-}
-#endif
