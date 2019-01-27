@@ -6,6 +6,10 @@
 #include <vector>
 #include <queue>
 #include <sstream>
+#include <fstream>
+
+
+#define UNIT_TESTS 69 // comment this line to execute the large homework assignment instead of small unit tests
 
 
 using namespace std;
@@ -16,7 +20,7 @@ class Solution
 public:
 
     using Vertex = unsigned int;
-    using AdjacencyList = vector< Vertex >;
+    using AdjacencyList = unordered_set< Vertex >;
     using Graph = unordered_map< Vertex, AdjacencyList >;
     using Seen = unordered_set< Vertex >;
     using ConnectedComponents = vector< vector< Vertex > >;
@@ -27,11 +31,10 @@ public:
     {
         auto R = reverse( G );           // (R)eversed (G)raph
         auto L = topo_sort( R );
-        std::reverse( L.begin(), L.end() );
-        for( auto cur: L )               // L is the reverse topological order of R
+        for( auto cur: L )               // L is the topological order of (R)eversed (G)raph
             if( seen.insert( cur ).second )
                 CC.push_back( {} ),
-                dfs( CC, R, cur, seen ); // coalesce (cur)rent vertex into a new (C)onnected (C)omponent
+                dfs( CC, G, cur, seen ); // coalesce (cur)rent vertex as new (C)onnected (C)omponent of original (G)raph
         return CC;
     }
 
@@ -53,7 +56,7 @@ private:
         {
             auto cur{ pair.first };
             for( auto adj: G[ cur ] )
-                R[ adj ].push_back( cur );
+                R[ adj ].insert( cur );
         }
         return R;
     }
@@ -82,6 +85,7 @@ private:
 
 };
 
+#ifdef UNIT_TESTS
 int main()
 {
     //
@@ -102,17 +106,12 @@ int main()
     };
     Solution s;
     auto scc = s.getSCC( G );
-
-    //
-    // TODO: the result for TC #4 is incorrect, vertex 5 should be its own SCC,
-    //       this seems to be failing because DFS-Topo is unable to find 5 as a sink
-    //
     for( auto& test: { TEST_CASE_1, TEST_CASE_2, TEST_CASE_3, TEST_CASE_4, TEST_CASE_5, TEST_CASE_6, TEST_CASE_7 } )
     {
         G.clear();
         auto u{ 0 }, v{ 0 };
         stringstream input{ test };
-        for( string line; getline( input, line ); G[ u ].push_back( v ) )
+        for( string line; getline( input, line ); G[ u ].insert( v ) )
         {
             stringstream parser{ line }; parser >> u >> v;
             if( G.find( u ) == G.end() )
@@ -132,3 +131,28 @@ int main()
 
     return 0;
 }
+#else
+int main()
+{
+    Solution::Graph G;
+    fstream stream{ "input.txt" };
+    string line;
+    while( getline( stream, line ) )
+    {
+        stringstream parser{ line };
+        auto tail{ 0 }, head{ 0 };
+        parser >> tail >> head;
+        if( G.find( tail ) == G.end() )
+            G[ tail ] = {};
+        G[ tail ].insert( head );
+    }
+    Solution s;
+    cout << "G.size() == " << G.size() << endl;
+    auto CC = s.getSCC( G );
+    cout << "CC.size() == " << CC.size() << endl;
+    for( auto& component: CC )
+        cout << "component.size() == " << component.size() << endl;
+
+    return 0;
+}
+#endif
