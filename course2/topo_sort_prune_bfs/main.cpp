@@ -21,10 +21,9 @@ public:
     using OrderedList = vector< Vertex >;
     using Queue = queue< Vertex >;
 
-    OrderedList topo_sort( const Graph& G, OrderedList L={}, Queue q={}, Seen seen={} )
+    OrderedList topo_sort( Graph G, OrderedList L={}, Queue q={}, Seen seen={} )
     {
-        Graph P( G ); // (G)raph to be (P)runed via BFS
-        for( auto& pair: P ) // initialize (q)ueue to contains all vertices without parents
+        for( auto& pair: G ) // initialize (q)ueue to contains all vertices without parents
         {
             auto vertex{ pair.first };
             auto parent{ pair.second.parent };
@@ -34,14 +33,14 @@ public:
         for( Vertex cur; ! q.empty(); q.pop() ) // pruning (q)ueue contains seen vertices without parents
         {
             cur = q.front(), L.push_back( cur );
-            for( auto child: P[ cur ].children )
+            for( auto child: G[ cur ].children )
             {
-                P[ child ].parent.erase( cur );
-                if( P[ child ].parent.empty() && seen.insert( child ).second )
+                G[ child ].parent.erase( cur );
+                if( G[ child ].parent.empty() && seen.insert( child ).second )
                     q.push( child );
             }
         }
-        for( auto& pair: P ) // append remaining vertices onto the end of the list in arbitrary order since these vertices form a cycle
+        for( auto& pair: G ) // append remaining vertices onto the end of the list in arbitrary order since these vertices form a cycle
         {
             auto vertex{ pair.first };
             if( seen.insert( vertex ).second )
