@@ -3,6 +3,31 @@
 
 #include <string>
 
+
+//
+// graph from figure 8.16, page 55 of Algorithms Illuminated: Part 2
+//
+const std::string TEST_CASE_0 =
+    R"(1 3
+2 4
+2 10
+3 5
+3 11
+4 7
+5 1
+5 7
+5 9
+6 10
+7 9
+8 6
+9 2
+9 4
+9 8
+10 8
+11 6
+11 8
+)";
+
 //
 // http://www.algorithmsilluminated.org/datasets/problem8.10test1.txt
 //

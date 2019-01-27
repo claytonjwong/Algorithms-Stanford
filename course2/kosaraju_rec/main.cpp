@@ -88,25 +88,9 @@ private:
 #ifdef UNIT_TESTS
 int main()
 {
-    //
-    // graph from figure 8.8, page 35 of Algorithms Illuminated: Part 2
-    //
-    Solution::Graph G{
-        { 1, { 3 } },
-        { 2, { 4, 10 } },
-        { 3, { 5, 11 } },
-        { 4, { 7 } },
-        { 5, { 1, 7, 9 } },
-        { 6, { 10 } },
-        { 7, { 9 } },
-        { 8, { 6 } },
-        { 9, { 2, 4, 8 } },
-        { 10, { 8 } },
-        { 11, { 6, 8 } },
-    };
     Solution s;
-    auto scc = s.getSCC( G );
-    for( auto& test: { TEST_CASE_1, TEST_CASE_2, TEST_CASE_3, TEST_CASE_4, TEST_CASE_5, TEST_CASE_6, TEST_CASE_7 } )
+    Solution::Graph G;
+    for( auto& test: { TEST_CASE_0, TEST_CASE_1, TEST_CASE_2, TEST_CASE_3, TEST_CASE_4, TEST_CASE_5, TEST_CASE_6, TEST_CASE_7 } )
     {
         G.clear();
         auto u{ 0 }, v{ 0 };
