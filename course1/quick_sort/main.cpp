@@ -33,7 +33,7 @@ private:
 
         choosePivot( L, R, PC );
         auto P = partition( A, L, R ); // (P)ivot
-        return distance( L, R-1 )      // m comparisons ( the distance from L to R ), add ( m-1 ) to the running total
+        return distance( L, R-1 )      // m is the distance from L to R, add m-1 to the running total to NOT include the pivot as a comparison
              + go( A, L, P, PC )
              + go( A, P+1, R, PC );
     }
@@ -93,7 +93,7 @@ private:
     {
         Generator randomGenerator{ randomDevice() };
         int size = distance( L, R-1 );        // R-1 since R is non-inclusive
-        Distribution distribution{ 0, size }; // size of size+1 for distribution from [ 0 : size ], that is 0 ( inclusive ) to size ( inclusive )
+        Distribution distribution{ 0, size }; // distribution from [ 0 : size ], that is 0 ( inclusive ) to size ( inclusive )
         return L + distribution( randomGenerator );
     }
 
