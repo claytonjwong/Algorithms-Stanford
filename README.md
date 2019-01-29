@@ -17,5 +17,6 @@
   * [Undirected Connected Components ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/ucc/main.cpp )
   * [Kosaraju ( DFS + DFS - Recursive )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_rec/main.cpp )
   * [Kosaraju ( DFS + DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/main.cpp )
+  * [Dikstra ( priority queue )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/main.cpp )
 * Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming
 * Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
