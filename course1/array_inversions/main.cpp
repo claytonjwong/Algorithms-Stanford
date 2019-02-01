@@ -47,17 +47,16 @@ private:
 
     Result merge( Result&& lhs, Result&& rhs )
     {
-        Result result{ {}, lhs.count + rhs.count }; // left + right inversions
+        Result res{ {}, lhs.count + rhs.count }; // left + right inversions
         auto L = lhs.A.cbegin(), R = rhs.A.cbegin();
         while( L != lhs.A.cend() && R != rhs.A.cend() )
             if( *L < *R )
-                result.A.push_back( *L++ );
+                res.A.push_back( *L++ );
             else
-                result.A.push_back( *R++ ),
-                result.count += distance( L, lhs.A.cend() ); // split inversions
-        if( L != lhs.A.cend() ) result.A.insert( result.A.end(), L, lhs.A.cend() );
-        if( R != rhs.A.cend() ) result.A.insert( result.A.end(), R, rhs.A.cend() );
-        return result;
+                res.A.push_back( *R++ ),
+                res.count += distance( L, lhs.A.cend() ); // split inversions
+        res.A.insert( res.A.end(), L, lhs.A.cend() ), res.A.insert( res.A.end(), R, rhs.A.cend() ); // append leftovers ( if applicable )
+        return res;
     }
 
 };
