@@ -14,9 +14,12 @@
   * [Depth First Search ( DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/dfs/main.cpp )
   * [Depth First Search ( DFS - Recursive )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/dfs_rec/main.cpp )
   * [Topological Sort ( DFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/topo_sort/main.cpp )
+  * [Topological Sort ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/topo_sort_prune_bfs/main.cpp )
   * [Undirected Connected Components ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/ucc/main.cpp )
   * [Kosaraju ( DFS + DFS - Recursive )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_rec/main.cpp )
   * [Kosaraju ( DFS + DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/main.cpp )
   * [Dikstra ( priority queue )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/main.cpp )
+  * [Heap ( sort + median )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/main.cpp )
+  * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
 * Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming
 * Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
