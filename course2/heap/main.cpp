@@ -1,6 +1,9 @@
+#include "input.hpp"
 #include <iostream>
+#include <sstream>
 #include <vector>
 #include <functional>
+#include <numeric>
 
 
 using namespace std;
@@ -29,13 +32,14 @@ public:
     Heap& operator=( const Heap& ) = default;
     Heap& operator=( Heap&& ) = default;
 
+    size_t size() const { return A.size() - 1; } // sentinel exists at A[ 0 ], so subtracting by one is OK
     bool empty() const { return A.size() == 1; } // heap is empty when it only contains the sentinel
 
     void insert( Type value )
     {
         A.push_back( value );
-        for( auto i{ A.size()-1 }; 0 < i && 0 < parent( i ) && Compare()( A[ i ], A[ parent( i ) ] ); i = parent( i ) )
-            swap( A[ i ], A[ parent( i ) ] );
+        for( auto i{ A.size()-1 }; 0 < i && 0 < parent( i ) && Compare()( A[ i ], A[parent( i )] ); i = parent( i ) )
+            swap( A[ i ], A[parent( i )] );
     }
 
     Type top() const
@@ -56,11 +60,11 @@ public:
         {
             isViolation = false;
             Type L = { Compare()(0,1)? max : min }, R{ Compare()(0,1)? max : min };
-            if( left( i ) < A.size() && Compare()( A[left(i)], A[i] ) )
-                L = A[ left( i ) ],
+            if( left( i ) < A.size() && Compare()( A[left( i )], A[ i ] ) )
+                L = A[left( i )],
                 isViolation = true;
-            if( right( i ) < A.size() && Compare()( A[right(i)], A[i] ) )
-                R = A[ right( i ) ],
+            if( right( i ) < A.size() && Compare()( A[right( i )], A[ i ] ) )
+                R = A[right( i )],
                 isViolation = true;
             if( isViolation )
                 next = ( Compare()( L, R ) )? left( i ) : right( i );
@@ -70,7 +74,7 @@ public:
 
 private:
 
-    vector< Type > A{ max }; // sentinel for 1-based indexing ( easy to find parent and left/right children )
+    vector< Type > A{ Compare()(0,1)? max : min }; // sentinel for 1-based indexing ( easy to find parent and left/right children )
 
     size_t parent( size_t i ){ return i >> 1; }
     size_t left( size_t i ){ return i << 1; }
@@ -99,26 +103,17 @@ public:
 
     void insert( const Type& value )
     {
-        if( lo.empty() || value < lo.top() )
-            lo.insert( value );
-        else
-            hi.insert( value );
-
-        if( lo.size() + 1 < hi.size() ) lo.insert( hi.extract() );
-        if( hi.size() + 1 < lo.size() ) hi.insert( lo.extract() );
+        ( lo.empty() || value < lo.top() )? lo.insert( value ) : hi.insert( value ); // use lo.top() as insertion pivot
+        if( lo.size()     < hi.size() ) lo.insert( hi.extract() ); // balance lo/hi heaps, such that
+        if( hi.size() + 1 < lo.size() ) hi.insert( lo.extract() ); // median is always lo.top()
     }
 
-    Type getMedian() const // TODO: calculate median
+    Type getMedian() const // always extract median from lo ( insert() ensures lo.top() is always the median )
     {
         if( lo.empty() && hi.empty() )
             throw out_of_range{ "empty collection" };
-        else
-        if( hi.empty() )
-            return lo.top();
 
-        Type result;
-
-        return result;
+        return lo.top();
     }
 
 private:
@@ -131,11 +126,33 @@ private:
 
 int main()
 {
+    //
+    // heap sort
+    //
     using Type = int;
     using Collection = vector< Type >;
     using Compare = Lesser< Type >;
     auto C = heap_sort< Type, Compare >({ 5,9,6,7,3,8,2,1,0,4 });
     assert( is_sorted( C.cbegin(), C.cend(), Compare() ) );
     copy( C.cbegin(), C.cend(), ostream_iterator< Type >( cout, " " ) );
+    cout << endl << endl;
+
+    //
+    // median maintenance
+    //
+    MedianMaintainer< Type > M;
+    Collection medians;
+    stringstream stream{ INPUT };
+    for( string line; getline( stream, line ); )
+    {
+        Type value;
+        stringstream parser{ line };
+        parser >> value;
+        M.insert( value );
+        medians.push_back( M.getMedian() );
+    }
+    auto answer = accumulate( medians.cbegin(), medians.cend(), 0 ) % 10000; // 1213
+    cout << "answer: " << answer << endl;
+
     return 0;
 }
