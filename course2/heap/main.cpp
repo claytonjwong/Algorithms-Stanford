@@ -25,13 +25,6 @@ public:
     static const Type min{ numeric_limits< Type >::min() };
     static const Type max{ numeric_limits< Type >::max() };
 
-    Heap() = default;
-    ~Heap() = default;
-    Heap( const Heap& ) = default;
-    Heap( Heap&& ) = default;
-    Heap& operator=( const Heap& ) = default;
-    Heap& operator=( Heap&& ) = default;
-
     size_t size() const { return A.size() - 1; } // sentinel exists at A[ 0 ], so subtracting by one is OK
     bool empty() const { return A.size() == 1; } // heap is empty when it only contains the sentinel
 
@@ -140,7 +133,7 @@ int main()
     //
     // median maintenance
     //
-    MedianMaintainer< Type > M;
+    MedianMaintainer< Type > MM;
     Collection medians;
     stringstream stream{ INPUT };
     for( string line; getline( stream, line ); )
@@ -148,8 +141,8 @@ int main()
         Type value;
         stringstream parser{ line };
         parser >> value;
-        M.insert( value );
-        medians.push_back( M.getMedian() );
+        MM.insert( value );
+        medians.push_back( MM.getMedian() );
     }
     auto answer = accumulate( medians.cbegin(), medians.cend(), 0 ) % 10000; // 1213
     cout << "answer: " << answer << endl;
