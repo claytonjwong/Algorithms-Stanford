@@ -25,5 +25,6 @@
   * [Heap ( sort + median )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/main.cpp )
   * Search Trees
   * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
-* Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming
-* Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
+* **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
+  * [Job Scheduler ( minimum weighted sum of completion times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/main.cpp )
+* **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
