@@ -103,7 +103,7 @@ public:
 
     Type getMedian() const // always extract median from lo ( insert() ensures lo.top() is always the median )
     {
-        if( lo.empty() && hi.empty() )
+        if( lo.empty() )
             throw out_of_range{ "empty collection" };
 
         return lo.top();
