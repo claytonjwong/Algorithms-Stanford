@@ -10,10 +10,9 @@ using namespace std;
 
 class Number
 {
-    using Iter = string::const_reverse_iterator;
-    string value_;
-
 public:
+
+    using Iter = string::const_reverse_iterator;
 
     Number() = default;
     ~Number() = default;
@@ -36,6 +35,11 @@ public:
     Number substr( size_t begin ){ return Number({ value_.substr( begin ) }); }
     void append( size_t N, const char c ){ value_.append( N, c ); }
     void pad( const size_t N ){ stringstream ss; ss << setw( N ) << setfill( '0' ) << value_; value_ = ss.str(); }
+
+private:
+
+    string value_;
+
 };
 
 Number operator*( const Number& lhs, const Number& rhs )
@@ -106,7 +110,7 @@ class Solution
     {
         if( x.size() < 2 || y.size() < 2 )
             return x * y;
-        const size_t
+        auto
             M = min( x.size(), y.size() )+( min( x.size(), y.size() ) & 1 ), // add one for odd min size
             N = max( x.size(), y.size() ),
             pivot = N - M/2;
