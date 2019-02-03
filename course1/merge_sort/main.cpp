@@ -15,26 +15,25 @@ public:
 
     Collection mergeSort( const Collection& A )
     {
-        return go({ A.cbegin(), A.cend() });
+        return go({ A.begin(), A.end() });
     }
 
 private:
 
     Collection go( Collection&& A )
     {
-        if( A.size() < 2 ) // base case
+        if( A.size() < 2 )
             return A;
-
-        auto pivot = A.cbegin() + A.size() / 2;
-        return merge( go({ A.cbegin(), pivot }), go({ pivot, A.cend() }) );
+        auto pivot = A.begin() + A.size() / 2;
+        return merge( go({ A.begin(), pivot }), go({ pivot, A.end() }) );
     }
 
     Collection merge( Collection&& lhs, Collection&& rhs, Collection res={} ) // merge (res)ult
     {
-        auto L = lhs.cbegin(), R = rhs.cbegin();
-        while( L != lhs.cend() && R != rhs.cend() )
+        auto L = lhs.begin(), R = rhs.begin();
+        while( L != lhs.end() && R != rhs.end() )
             res.push_back( ( *L < *R )? *L++ : *R++ );
-        res.insert( res.end(), L, lhs.cend() ), res.insert( res.end(), R, rhs.cend() ); // append left-overs ( if applicable )
+        res.insert( res.end(), L, lhs.end() ), res.insert( res.end(), R, rhs.end() ); // append left-overs ( if applicable )
         return res;
     }
 
@@ -43,20 +42,30 @@ private:
 
 int main()
 {
-    const Solution< int >::Collection
-        A{ 9,5,6,3,2,8,0,4,1,7 },
-        B{ 3,9,7,1,2,8,6,5,0,4 },
-        C{ 3,2,9,7,1,3,7,2,8,1,6,5,0,8,0,4 };
+    using Type = int;
 
-    Solution< int > s;
+    const Solution< Type >::Collection
+        A_unsorted{ 9,5,6,3,2,8,0,4,1,7 },
+        B_unsorted{ 3,9,7,1,2,8,6,5,0,4 },
+        C_unsorted{ 3,2,9,7,1,3,7,2,8,1,6,5,0,8,0,4 };
+
+    Solution< Type > s;
     auto
-        resultA{ s.mergeSort( A ) },
-        resultB{ s.mergeSort( B ) },
-        resultC{ s.mergeSort( C ) };
+        A{ s.mergeSort( A_unsorted ) },
+        B{ s.mergeSort( B_unsorted ) },
+        C{ s.mergeSort( C_unsorted ) };
 
-    cout << "is_sorted()? " << is_sorted( resultA.cbegin(), resultA.cend() ) << endl;
-    cout << "is_sorted()? " << is_sorted( resultB.cbegin(), resultB.cend() ) << endl;
-    cout << "is_sorted()? " << is_sorted( resultC.cbegin(), resultC.cend() ) << endl;
+    assert( is_sorted( A.begin(), A.end() ) );
+    assert( is_sorted( B.begin(), B.end() ) );
+    assert( is_sorted( C.begin(), C.end() ) );
+
+    cout << "A: "; copy( A.begin(), A.end(), ostream_iterator< Type >( cout, " " ) ); cout << endl;
+    cout << "B: "; copy( B.begin(), B.end(), ostream_iterator< Type >( cout, " " ) ); cout << endl;
+    cout << "C: "; copy( C.begin(), C.end(), ostream_iterator< Type >( cout, " " ) ); cout << endl;
+
+//    A: 0 1 2 3 4 5 6 7 8 9
+//    B: 0 1 2 3 4 5 6 7 8 9
+//    C: 0 0 1 1 2 2 3 3 4 5 6 7 7 8 8 9
 
     return 0;
 }
