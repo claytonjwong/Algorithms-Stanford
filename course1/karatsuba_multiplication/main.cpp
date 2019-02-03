@@ -9,24 +9,24 @@ class Solution
 {
 public:
 
-    Type multiply( const Type x, const Type y )
+    Type multiply( Type x, Type y )
     {
         return go( x,y );
     }
 
 private:
 
-    Type POW_10( Type N ){ return( N == 0 )? 1 : 10 * POW_10( N - 1 ); }
-    Type LOG_10( Type N ){ return( N == 0 )? 0 : 1 + LOG_10( N / 10 ); }
+    Type pow( Type N ){ return( N == 0 )? 1 : 10 * pow( N - 1); }
+    Type log( Type N ){ return( N == 0 )? 0 : 1 + log( N / 10); }
 
-    Type go( const Type x, const Type y )
+    Type go( Type x, Type y )
     {
         if( x < 10 || y < 10 ) return x * y;
-        auto i{ LOG_10(x) }, j{ LOG_10(y) }, N{ min(i,j) }, p{ POW_10(N/2) }, // (p)ivot
+        auto i{ log(x) }, j{ log(y) }, N{ min(i,j) }, p{ pow(N/2) }, // (p)ivot
             a{ x / p }, b{ x % p },
             c{ y / p }, d{ y % p },
             u{ go(a,c) }, v{ go(a+b,c+d) }, w{ go(b,d) };
-        return( u * POW_10(N)  +  (v-u-w) * POW_10(N/2)  +  w );
+        return( u * pow( N )  +  ( v -u -w ) * pow( N/2 )  +  w );
     }
 
 };
@@ -46,6 +46,6 @@ int main()
 //    7006652
 //    -121
 //    2139
-    
+
     return 0;
 }
