@@ -28,4 +28,13 @@
 * **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
   * [Job Scheduler ( minimum weighted sum of completion times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/main.cpp )
   * [Prim Minimum Spanning Tree]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/prim_mst )
+  * Kruskal Minimum Spanning Tree
+  * Clustering
+  * Union-Find
+  * Huffman Codes
+  * Dynamic Programming
+  * Knapsack
+  * Sequence Alignment
+  * Optimal Binary Search Trees
+  
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
