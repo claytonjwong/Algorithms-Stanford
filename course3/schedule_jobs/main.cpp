@@ -48,7 +48,7 @@ class Solution
 {
 public:
 
-    void print(){ copy( jobs.cbegin(), jobs.cend(), ostream_iterator< Job >( cout, "\n" ) ); }
+    void print(){ copy( jobs.begin(), jobs.end(), ostream_iterator< Job >( cout, "\n" ) ); }
 
     void insert( Job&& job ){ jobs.insert( job ); }
 
@@ -99,7 +99,7 @@ struct R_Job : public Job // a R_Job is optimal greedily scheduled via the (R)at
 
 int main()
 {
-    for( auto& input: { LECTURE, ASSIGNMENT } )
+    for( auto& input: { Lecture::Input, Assignment::Input } )
     {
         Solution< D_Job > d_jobs;
         istringstream d_stream{ input };
@@ -110,7 +110,7 @@ int main()
             parser >> cost >> time;
             d_jobs.insert({ cost, time });
         }
-        cout << "answer 1: " << d_jobs.minCostTime() << endl;
+        cout << "answer 1: " << d_jobs.minCostTime() << " ( sub-optimal ) " << endl;
 
         Solution< R_Job > r_jobs;
         istringstream r_stream{ input };
@@ -121,14 +121,14 @@ int main()
             parser >> cost >> time;
             r_jobs.insert({ cost, time });
         }
-        cout << "answer 2: " << r_jobs.minCostTime() << endl << endl;
+        cout << "answer 2: " << r_jobs.minCostTime() << " ( optimal ) " << endl << endl;
     }
 
-//    answer 1: 23
-//    answer 2: 22
-
-//    answer 1: 69119377652
-//    answer 2: 67311454237
+//    answer 1: 23 ( sub-optimal )
+//    answer 2: 22 ( optimal )
+//
+//    answer 1: 69119377652 ( sub-optimal )
+//    answer 2: 67311454237 ( optimal )
 
     return 0;
 }

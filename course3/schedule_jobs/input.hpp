@@ -4,13 +4,22 @@
 #include <string>
 
 
-const std::string LECTURE =
+namespace Lecture
+{
+    const std::string Input
+    {
 R"(5 3
 2 1
-)";
+)"
+    }; // const std::string Input
+
+} // namespace Lecture
 
 
-const std::string ASSIGNMENT =
+namespace Assignment
+{
+    const std::string Input
+    {
 R"(8 50
 74 59
 31 73
@@ -10011,5 +10020,8 @@ R"(8 50
 56 63
 4 38
 68 15
-)";
+)"
+    }; // const std::string Input
+
+} // namespace Assignment
 
