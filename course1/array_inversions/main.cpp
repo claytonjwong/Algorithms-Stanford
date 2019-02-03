@@ -17,16 +17,16 @@ covered in the video lectures.
 using namespace std;
 
 
-template< typename T >
+template< typename Type >
 class Solution
 {
 public:
 
-    using Collection = vector< T >;
+    using Collection = vector< Type >;
 
     size_t inversions( const Collection& A )
     {
-        return go({ A.cbegin(), A.cend() }).count;
+        return go({ A.begin(), A.end() }).count;
     }
 
 private:
@@ -41,21 +41,21 @@ private:
     {
         if( A.size() < 2 )
             return { A, 0 };
-        auto pivot = A.cbegin() + A.size() / 2;
-        return merge( go({ A.cbegin(), pivot }), go({ pivot, A.cend() }) );
+        auto pivot = A.begin() + A.size() / 2;
+        return merge( go({ A.begin(), pivot }), go({ pivot, A.end() }) );
     }
 
     Result merge( Result&& lhs, Result&& rhs )
     {
         Result res{ {}, lhs.count + rhs.count }; // left + right inversions
-        auto L = lhs.A.cbegin(), R = rhs.A.cbegin();
-        while( L != lhs.A.cend() && R != rhs.A.cend() )
+        auto L = lhs.A.begin(), R = rhs.A.begin();
+        while( L != lhs.A.end() && R != rhs.A.end() )
             if( *L < *R )
                 res.A.push_back( *L++ );
             else
                 res.A.push_back( *R++ ),
-                res.count += distance( L, lhs.A.cend() ); // split inversions
-        res.A.insert( res.A.end(), L, lhs.A.cend() ), res.A.insert( res.A.end(), R, rhs.A.cend() ); // append leftovers ( if applicable )
+                res.count += distance( L, lhs.A.end() ); // split inversions
+        res.A.insert( res.A.end(), L, lhs.A.end() ), res.A.insert( res.A.end(), R, rhs.A.end() ); // append leftovers ( if applicable )
         return res;
     }
 

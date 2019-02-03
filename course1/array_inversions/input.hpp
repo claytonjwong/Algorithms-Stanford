@@ -4,8 +4,11 @@
 #include <string>
 
 
-const std::string INPUT =
-R"(54044
+namespace Assignment
+{
+    const std::string Input
+    {
+        R"(54044
 14108
 79294
 29649
@@ -100005,4 +100008,7 @@ R"(54044
 74018
 71187
 91901
-)";
+)"
+    }; // const std::string Input
+
+} // namespace Assignment
