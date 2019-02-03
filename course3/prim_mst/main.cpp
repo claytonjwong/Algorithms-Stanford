@@ -64,19 +64,19 @@ public:
     {
         auto Compare = []( const EdgeCost& lhs, const EdgeCost& rhs ){ return lhs.second < rhs.second; };
         set< EdgeCost, decltype( Compare )> edges( {}, Compare );
-        for( Tree tree{ start }; tree.size() < G.size(); )
+        for( Tree tree{ start }; tree.size() < G.size(); edges.clear() )
         {
-            for( auto vertex{ tree.begin() }; vertex != tree.end(); ++vertex )
-                for( auto& adj: G[ *vertex ] )
-                    for( auto edgeCost = E.find({ *vertex, adj });
-                         edgeCost != E.end() && tree.find( adj ) == tree.end();
-                         edges.insert({ edgeCost->first, edgeCost->second }), // executed at-most once ( if the edgeCost is found )
-                         edgeCost = E.end() );
+            for( auto vertex{ tree.begin() }; vertex != tree.end(); ++vertex ) for( auto& adj: G[ *vertex ] ) // each vertex (adj)acent to each tree vertex
+            {
+                auto edgeCost = E.find({ *vertex, adj });
+                if( edgeCost != E.end() && tree.find( adj ) == tree.end() ) // edge exists, and (adj)acent vertex is not part of the tree
+                    edges.insert({ edgeCost->first, edgeCost->second });
+            }
             auto min = edges.begin();
             auto minEdge = min->first;
             auto minCost = min->second;
-            auto cur{ minEdge.tail }, // the first edge has minimal cost from (cur)rrent vertex ( included in the MST )
-                 adj{ minEdge.head }; // to the (adj)acent vertex ( to be included in the MST )
+            auto cur{ minEdge.tail }, // (cur)rrent tail vertex already included in the MST
+                 adj{ minEdge.head }; // (adj)acent head vertex to be included in the MST
             tree.insert( adj );
             cost += minCost;
         }
@@ -111,5 +111,10 @@ int main()
         auto answer = s.costMST( G, E, start );
         cout << "answer: " << answer << endl;
     }
+
+//    answer: 7
+
+//    answer: -3612829
+
     return 0;
 }
