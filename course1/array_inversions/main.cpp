@@ -65,7 +65,7 @@ private:
 int main()
 {
     string line;
-    stringstream stream{ INPUT };
+    stringstream stream{ Assignment::Input };
     Solution< size_t >::Collection A;
     for( size_t num{ 0 }; getline( stream, line ); A.push_back( num ) )
     {
@@ -73,6 +73,9 @@ int main()
         parser >> num;
     }
     Solution< size_t > s;
-    cout << s.inversions( A ) << endl; // 2407905288
+    cout << "answer: " << s.inversions( A ) << endl;
+
+    // answer: 2407905288
+
     return 0;
 }
