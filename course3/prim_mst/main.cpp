@@ -66,7 +66,7 @@ public:
         set< EdgeCost, decltype( Compare )> edges( {}, Compare );
         for( Tree tree{ start }; tree.size() < G.size(); edges.clear() )
         {
-            for( auto vertex{ tree.begin() }; vertex != tree.end(); ++vertex ) for( auto& adj: G[ *vertex ] ) // each vertex (adj)acent to each tree vertex
+            for( auto vertex{ tree.begin() }; vertex != tree.end(); ++vertex ) for( auto& adj: G[ *vertex ] ) // each vertex (adj)acent to each tree vertex -- O( |V|^2 )
             {
                 auto edgeCost = E.find({ *vertex, adj });
                 if( edgeCost != E.end() && tree.find( adj ) == tree.end() ) // edge exists, and (adj)acent vertex is not part of the tree
