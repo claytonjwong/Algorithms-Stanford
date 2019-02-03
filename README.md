@@ -27,4 +27,5 @@
   * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
 * **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
   * [Job Scheduler ( minimum weighted sum of completion times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/main.cpp )
+  * [Prim Minimum Spanning Tree]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/prim_mst )
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
