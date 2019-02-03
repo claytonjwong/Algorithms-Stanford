@@ -109,7 +109,7 @@ int main()
         }
         auto start{ G.begin()->first }; // arbitrary start vertex is irrelevant
         auto answer = s.costMST( G, E, start );
-        cout << "answer: " << answer << endl;
+        cout << "answer: " << answer << endl << endl;
     }
 
 //    answer: 7
