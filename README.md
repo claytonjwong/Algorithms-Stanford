@@ -29,9 +29,8 @@
   * [Job Scheduler ( minimum weighted sum of completion times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/main.cpp )
   * [Prim Minimum Spanning Tree ( trivial search in O( |V|^2 ) time )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/prim_mst )
   * Prim Minimum Spanning Tree ( non-trivial with heap in O( (|E|+|V|)log(|V|) ) time )
-  * Kruskal Minimum Spanning Tree
+  * [Kruskal Minimum Spanning Tree ( Union-Find )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/main.cpp )
   * Clustering
-  * Union-Find
   * Huffman Codes
   * Dynamic Programming
   * Knapsack
