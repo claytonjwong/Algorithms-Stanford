@@ -27,9 +27,11 @@
   * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
 * **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
   * [Job Scheduler ( minimum weighted sum of completion times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/main.cpp )
-  * [Prim Minimum Spanning Tree ( trivial search in O( |V|^2 ) time )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/prim_mst )
-  * Prim Minimum Spanning Tree ( non-trivial with heap in O( (|E|+|V|)log(|V|) ) time )
-  * [Kruskal Minimum Spanning Tree ( Union-Find )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/main.cpp )
+  * [Prim - Minimum Spanning Tree ( MST ) ( trivial search in O( |V|^2 ) time )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/prim_mst )
+  * Prim - Minimum Spanning Tree ( MST ) ( non-trivial with heap in O( (|E|+|V|)log(|V|) ) time )
+  * [Kruskal - Minimum Spanning Tree ( MST ) ( Union-Find with Path Compression )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/main.cpp )
+  * Boruvka - Minimum Spanning Tree ( MST ) ( Union-Find with Path Compression )
+  * Karger, Klein, Tarjan - Randomized Minimum Spanning Forest ( relies on adaptation of Boruvka's algorithm ) 
   * Clustering
   * Huffman Codes
   * Dynamic Programming
