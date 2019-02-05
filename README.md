@@ -32,7 +32,7 @@
   * [Kruskal - Minimum Spanning Tree ( MST ) ( Union-Find with Path Compression )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/main.cpp )
   * Boruvka - Minimum Spanning Tree ( MST ) ( Union-Find with Path Compression )
   * Karger, Klein, Tarjan - Randomized Minimum Spanning Forest ( relies on adaptation of Boruvka's algorithm ) 
-  * K-Clustering
+  * [K-Clustering]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/main.cpp )
   * Huffman Codes
   * Dynamic Programming
   * Knapsack
