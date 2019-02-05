@@ -31,7 +31,7 @@ public:
     using Leader = unordered_map< Vertex, Vertex >;
 
 
-    Type costMST( Graph& G, Edges& E, Vertex start )
+    Type costMST( Graph& G, Edges& E )
     {
         Tree tree;
         for( auto& pair: G )
@@ -98,8 +98,7 @@ int main()
             E.insert({ {u,v}, cost });
             E.insert({ {v,u}, cost });
         }
-        auto start{ G.begin()->first }; // arbitrary start vertex is irrelevant
-        auto answer = s.costMST( G, E, start );
+        auto answer = s.costMST( G, E );
         cout << "answer: " << answer << endl << endl;
     }
 
