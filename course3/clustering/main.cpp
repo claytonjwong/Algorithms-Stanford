@@ -30,6 +30,36 @@ And then post them to the discussion forum!
 
 Part 2:
 
+In this question your task is again to run the clustering algorithm from lecture,
+but on a MUCH bigger graph. So big, in fact, that the distances (i.e., edge costs) are only defined implicitly,
+rather than being provided as an explicit list.
+
+The format is:
+
+[# of nodes] [# of bits for each node's label]
+
+[first bit of node 1] ... [last bit of node 1]
+
+[first bit of node 2] ... [last bit of node 2]
+
+...
+
+For example, the third line of the file "0 1 1 0 0 1 1 0 0 1 0 1 1 1 1 1 1 0 1 0 1 1 0 1"
+denotes the 24 bits associated with node #2.
+
+The distance between two nodes uu and vv in this problem is defined as
+the Hamming distance--- the number of differing bits --- between the two nodes' labels.
+For example, the Hamming distance between the 24-bit label of node #2 above
+and the label "0 1 0 0 0 1 0 0 0 1 0 1 1 1 1 1 1 0 1 0 0 1 0 1" is 3 (since they differ in the 3rd, 7th, and 21st bits).
+
+The question is: what is the largest value of k such that there is a k-clustering with spacing at least 3?
+That is, how many clusters are needed to ensure that no pair of nodes with all but 2 bits
+ in common get split into different clusters?
+
+NOTE: The graph implicitly defined by the data file is so big that you probably can't write it out explicitly,
+let alone sort the edges by cost. So you will have to be a little creative to complete this part of the question.
+For example, is there some way you can identify the smallest distances without explicitly looking at every pair of nodes?
+
 */
 
 #include "input.hpp"
@@ -64,12 +94,27 @@ public:
     using Graph = unordered_map< Vertex, AdjacencyList >;
     using EdgeCost = pair< Edge, Cost >;
     using Leader = unordered_map< Vertex, Vertex >;
-    using Bucket = unordered_map< size_t, unordered_set< size_t > >;
+    using Bucket = unordered_map< size_t, size_t >;
+    using Hammed = bitset< 24 >;
+    using Ham = unordered_set< Hammed >;
 
-    Cost maxSpacingKClusters( Graph& G, Edges& E, size_t K )
+    Cost maxSpacingKClusters( size_t K )
     {
-        Cost cost{ 0 };
-        auto N{ G.size() };
+        Graph G;
+        Edges E;
+        istringstream stream{ Assignment1::Input };
+        for( string line; getline( stream, line ); )
+        {
+            stringstream parser{ line };
+            Type u{ 0 }, v{ 0 }, cost{ 0 };
+            parser >> u >> v >> cost;
+            if( G.find( u ) == G.end() ) G[ u ] = {};
+            if( G.find( v ) == G.end() ) G[ v ] = {};
+            G[ u ].insert( v );
+            G[ v ].insert( u );
+            E.insert({ {u,v}, cost });
+            E.insert({ {v,u}, cost });
+        }
         Clusters clusters;
         for( auto& pair: G )
         {
@@ -78,6 +123,8 @@ public:
         }
         auto Compare = []( const EdgeCost& lhs, const EdgeCost& rhs ){ return lhs.second < rhs.second; };
         multiset< EdgeCost, decltype( Compare )> edges{ E.begin(), E.end(), Compare };
+        auto N{ G.size() };
+        Cost cost{ 0 };
         for( auto& edge: edges )
         {
             auto u{ edge.first.tail },
@@ -96,11 +143,46 @@ public:
         return cost;
     }
 
-    // TODO: write pseudo code for this first!!!
-    size_t maxClusters( Bucket& bucket, size_t threshold ) // TODO: create a bucket of (ham)ming weights < threshold
+    size_t maxClusters( size_t threshold )
     {
-        auto N{ 0 };
+        Bucket bucket;
+        string line;
+        for( fstream stream{ "hamming.txt" }; getline( stream, line ); )
+        {
+            line.erase( remove( line.begin(), line.end(), ' ' ), line.end() );
+            Hammed hammed{ line };
+            ++bucket[ hammed.to_ulong() ];
+        }
+        Ham ham;
         Clusters clusters;
+        for( auto& pair: bucket )
+        {
+            auto num{ pair.first };
+            auto count{ pair.second };
+            if( count > 1 )
+                clusters.lead[ num ] = num,
+                ham.insert( num );
+        }
+        cout << "initial ham size: " << ham.size() << endl;
+        while( threshold-- )
+        {
+            auto next{ ham };
+            for( auto& pair: bucket )
+            {
+                auto num{ pair.first };
+                Hammed hammed{ num };
+                for( size_t i{ 0 }; i < 24; ++i )
+                {
+                    auto alt{ hammed };
+                    alt.flip( i );
+                    if( bucket.find( alt.to_ulong() ) != bucket.end() && next.find( alt ) == next.end() )
+                        //cout << "before: " << next.size(), next.insert( alt ), cout << " after: " << next.size() << endl;
+                        next.insert( alt );
+                }
+            }
+            swap( next, ham );
+            cout << "next ham size: " << ham.size() << endl;
+        }
 
         // TODO: find all same values and union together as initial 0 distance hamming weight disjoint sets --> initial ham0 set
 
@@ -111,7 +193,7 @@ public:
 
         // once next ham set is created (above for-loop), coalesce into the original ham set, keep repeating until threshold is met ( non-inclusive ) -- use hamCount < threshold?
 
-        return N;
+        return 1 + bucket.size() ;
     }
 
 private:
@@ -128,7 +210,13 @@ private:
                 lead[ lu ] = lv; // arbitrary lead choice
         }
 
-        Vertex Find( Vertex v ){ return( lead[ v ] == v )? v : lead[ v ] = Find( lead[ v ] ); }
+        Vertex Find( Vertex v )
+        {
+            if( lead[ v ] == v )
+                return v;
+            else
+                return lead[ v ] = Find( lead[ v ] );
+        }
     };
 
 };
@@ -139,51 +227,23 @@ int main()
     //
     // part 1
     //
-    using Type = int;
+    using Type = size_t;
 
     auto K{ 4 };
     Solution< Type > s;
-    Solution< Type >::Graph G;
-    Solution< Type >::Edges E;
-    istringstream stream{ Assignment1::Input };
-    for( string line; getline( stream, line ); )
-    {
-        stringstream parser{ line };
-        Type u{ 0 }, v{ 0 }, cost{ 0 };
-        parser >> u >> v >> cost;
-        if( G.find( u ) == G.end() ) G[ u ] = {};
-        if( G.find( v ) == G.end() ) G[ v ] = {};
-        G[ u ].insert( v );
-        G[ v ].insert( u );
-        E.insert({ {u,v}, cost });
-        E.insert({ {v,u}, cost });
-    }
-    auto answer_part1 = s.maxSpacingKClusters( G, E, K );
+    auto answer_part1 = s.maxSpacingKClusters( K );
     cout << "answer ( part 1 ): " << answer_part1 << endl << endl;
 
     //
     // part 2
     //
     auto hammingThreshold{ 3 }; // non-inclusive, find all K-clusters with hamming distance strictly LESS THAN this threshold
-    Solution< Type >::Bucket bucket;
-    string line;
-    for( fstream stream{ "hamming.txt" }; getline( stream, line ); )
-    {
-        line.erase( remove( line.begin(), line.end(), ' ' ), line.end() );
-        size_t num{ 0 };
-        for( auto i{ 0 }; i < 24; ++i )
-        {
-            if( line[ i ] == '1' )
-                num |= ( 1 << i );
-        }
-        if( bucket.find( num ) == bucket.end() )
-            bucket[ num ] = {};
-        bucket[ num ].insert( num );
-    }
-    auto answer_part2 = s.maxClusters( bucket, hammingThreshold );
-
+    auto answer_part2 = s.maxClusters( hammingThreshold );
+    cout << "answer ( part 2 ): " << answer_part2 << endl << endl;
 
     // answer ( part 1 ): 106
+
+    // answer ( part 2 ): 197579, 1210, 1209 ( wrong answer )
 
     return 0;
 }
