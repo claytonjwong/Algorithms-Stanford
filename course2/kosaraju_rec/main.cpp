@@ -26,8 +26,7 @@ public:
 
     ConnectedComponents getSCC( Graph& G, ConnectedComponents CC={}, Seen seen={} )
     {
-        auto R = reverse( G );           // (R)eversed (G)raph
-        auto L = topo_sort( R );
+        auto L = topo_sort( reverse( G ) );
         for( auto cur: L )               // L is the topological order of (R)eversed (G)raph
             if( seen.insert( cur ).second )
                 CC.push_back( {} ),
@@ -58,7 +57,7 @@ private:
         return R;
     }
 
-    OrderedList topo_sort( Graph& G, Seen seen={} )
+    OrderedList topo_sort( Graph&& G, Seen seen={} )
     {
         auto N{ G.size() };
         OrderedList L( N + 1 );
