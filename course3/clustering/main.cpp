@@ -64,6 +64,7 @@ For example, is there some way you can identify the smallest distances without e
 
 #include "input.hpp"
 #include <iostream>
+#include <iomanip>
 #include <sstream>
 #include <fstream>
 #include <unordered_set>
@@ -93,16 +94,15 @@ public:
     using AdjacencyList = unordered_set< Vertex >;
     using Graph = unordered_map< Vertex, AdjacencyList >;
     using EdgeCost = pair< Edge, Cost >;
-    using Leader = unordered_map< Vertex, Vertex >;
-    using Bucket = unordered_map< size_t, size_t >;
+    using Buckets = unordered_map< size_t, size_t >;
+    using Leads = unordered_set< Type >;
     using Hammed = bitset< 24 >;
-    using Ham = unordered_set< Hammed >;
 
-    Cost maxSpacingKClusters( size_t K )
+    Cost maxSpacingKClusters( const string& input, size_t K )
     {
         Graph G;
         Edges E;
-        istringstream stream{ Assignment1::Input };
+        istringstream stream{ input };
         for( string line; getline( stream, line ); )
         {
             stringstream parser{ line };
@@ -115,15 +115,15 @@ public:
             E.insert({ {u,v}, cost });
             E.insert({ {v,u}, cost });
         }
-        Clusters clusters;
-        for( auto& pair: G )
-        {
-            auto vertex{ pair.first };
-            clusters.lead[ vertex ] = vertex;
-        }
         auto Compare = []( const EdgeCost& lhs, const EdgeCost& rhs ){ return lhs.second < rhs.second; };
         multiset< EdgeCost, decltype( Compare )> edges{ E.begin(), E.end(), Compare };
-        auto N{ G.size() };
+        Leads leads;
+        transform( G.begin(), G.end(), inserter( leads, leads.end() ), []( auto& pair )
+        {
+            auto vertex{ pair.first };
+            return vertex;
+        });
+        Clusters clusters{ leads };
         Cost cost{ 0 };
         for( auto& edge: edges )
         {
@@ -133,90 +133,93 @@ public:
                  lv{ clusters.Find( v ) };
             if( lu == lv )
                 continue;
-            if( N <= K )
+            if( clusters.size() <= K )
             {
                 cost = edge.second;
                 break;
             }
-            clusters.Union( lu, lv ), --N; // decrement N for each union
+            clusters.Union( lu, lv );
         }
         return cost;
     }
 
     size_t maxClusters( size_t threshold )
     {
-        Bucket bucket;
+        Buckets buckets;
+        Leads leads;
         string line;
         for( fstream stream{ "hamming.txt" }; getline( stream, line ); )
         {
             line.erase( remove( line.begin(), line.end(), ' ' ), line.end() );
             Hammed hammed{ line };
-            ++bucket[ hammed.to_ulong() ];
+            auto num{ hammed.to_ulong() };
+            ++buckets[ num ];
+            leads.insert( num );
         }
-        Ham ham;
-        Clusters clusters;
-        for( auto& pair: bucket )
+        Clusters clusters{ leads };
+        for( auto& pair: buckets )
         {
             auto num{ pair.first };
-            auto count{ pair.second };
-            if( count > 1 )
-                clusters.lead[ num ] = num,
-                ham.insert( num );
-        }
-        cout << "initial ham size: " << ham.size() << endl;
-        while( threshold-- )
-        {
-            auto next{ ham };
-            for( auto& pair: bucket )
+            for( auto i{ 0 }; i < 24; ++i )
             {
-                auto num{ pair.first };
-                Hammed hammed{ num };
-                for( size_t i{ 0 }; i < 24; ++i )
+                Hammed alt{ num }; // (alt)ernative number to be manipulated as "hamming distance" away from (num)ber
+                alt.flip( i );
+                auto match = alt.to_ulong();
+                if( buckets.find( match ) != buckets.end() )
+                    clusters.Union( num, match );
+                for( auto j{ i+1 }; j < 24; ++j )
                 {
-                    auto alt{ hammed };
-                    alt.flip( i );
-                    if( bucket.find( alt.to_ulong() ) != bucket.end() && next.find( alt ) == next.end() )
-                        //cout << "before: " << next.size(), next.insert( alt ), cout << " after: " << next.size() << endl;
-                        next.insert( alt );
+                    alt.flip( j );
+                    match = alt.to_ulong();
+                    if( buckets.find( match ) != buckets.end() )
+                        clusters.Union( num, match );
+                    alt.flip( j );
                 }
             }
-            swap( next, ham );
-            cout << "next ham size: " << ham.size() << endl;
         }
-
-        // TODO: find all same values and union together as initial 0 distance hamming weight disjoint sets --> initial ham0 set
-
-        // TODO: for distance = 1 to threshold ( non-inclusive )
-
-            // iter all bits of each num in the ham to find another num in the bucket which is not in the ham already ( or find lead to check if leads differ )
-            // if off by 1-bit and not already part of the ham, include in next ham set
-
-        // once next ham set is created (above for-loop), coalesce into the original ham set, keep repeating until threshold is met ( non-inclusive ) -- use hamCount < threshold?
-
-        return 1 + bucket.size() ;
+        return clusters.size();
     }
 
 private:
 
-    struct Clusters
+    class Clusters
     {
-        Leader lead;
+    public:
 
-        void Union( Vertex u, Vertex v )
+        Clusters( Leads& leads ) : N_{ leads.size() }
+        {
+            for( auto x: leads )
+                lead_[ x ] = x;
+        }
+
+        void Union( Type u, Type v )
         {
             auto lu{ Find( u ) },
                  lv{ Find( v ) };
-            if( lu != lv )
-                lead[ lu ] = lv; // arbitrary lead choice
+            if( lu == lv )
+                return;
+            lead_[ lu ] = lv, --N_; // arbitrary lead choice and decrement N
         }
 
-        Vertex Find( Vertex v )
+        Type Find( Type x )
         {
-            if( lead[ v ] == v )
-                return v;
+            if( lead_[ x ] == x )
+                return x;
             else
-                return lead[ v ] = Find( lead[ v ] );
+                return lead_[ x ] = Find( lead_[ x ] );
         }
+
+        size_t size()
+        {
+            return N_;
+        }
+
+    private:
+
+        size_t N_;
+        using Leader = unordered_map< Type, Type >;
+        Leader lead_;
+
     };
 
 };
@@ -231,7 +234,7 @@ int main()
 
     auto K{ 4 };
     Solution< Type > s;
-    auto answer_part1 = s.maxSpacingKClusters( K );
+    auto answer_part1 = s.maxSpacingKClusters( Assignment1::Input, K );
     cout << "answer ( part 1 ): " << answer_part1 << endl << endl;
 
     //
@@ -241,9 +244,9 @@ int main()
     auto answer_part2 = s.maxClusters( hammingThreshold );
     cout << "answer ( part 2 ): " << answer_part2 << endl << endl;
 
-    // answer ( part 1 ): 106
+//    answer ( part 1 ): 106
 
-    // answer ( part 2 ): 197579, 1210, 1209 ( wrong answer )
+//    answer ( part 2 ): 6118
 
     return 0;
 }
