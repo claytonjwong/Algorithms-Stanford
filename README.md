@@ -33,7 +33,7 @@
   * Boruvka - Minimum Spanning Tree ( MST ) ( Union-Find with Path Compression )
   * Karger, Klein, Tarjan - Randomized Minimum Spanning Forest ( relies on adaptation of Boruvka's algorithm ) 
   * [K-Clustering]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/main.cpp )
-  * Huffman Codes
+  * [Huffman Codes]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/main.cpp )
   * Dynamic Programming
   * Knapsack
   * Sequence Alignment

@@ -77,8 +77,8 @@ private:
         Cost cost; HNode left, right;
         Node( Cost cost, HNode left={}, HNode right={} ) : cost{ cost }, left{ left }, right{ right } {}
     };
-    struct Cmp{ bool operator()( HNode& lhs, HNode& rhs ){ return lhs->cost > rhs->cost; } };
-    using Costs = priority_queue< HNode, vector< HNode >, Cmp >;
+    struct Compare{ bool operator()( HNode& lhs, HNode& rhs ){ return lhs->cost > rhs->cost; } };
+    using Costs = priority_queue< HNode, vector< HNode >, Compare >;
 
     void go( HNode root, Depths& D, int depth=0 )
     {
