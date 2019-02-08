@@ -52,6 +52,8 @@ public:
             Cost cost; istringstream parser{ line }; parser >> cost;
             costs.push( make_shared< Node >( cost ) );
         }
+        if( costs.empty() )
+            return{ 0,0 };
         while( costs.size() > 1 )
         {
             auto first{ costs.top() }; costs.pop();
@@ -59,8 +61,6 @@ public:
             auto next = make_shared< Node >( first->cost + second->cost, first, second );
             costs.push( next );
         }
-        if( costs.empty() )
-            return{ 0,0 };
         auto root{ costs.top() };
         Depths D;
         go( root, D );
