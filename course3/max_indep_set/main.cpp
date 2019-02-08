@@ -2,7 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-
+#include <unordered_map>
 
 
 using namespace std;
@@ -13,36 +13,38 @@ class Solution
 {
 public:
 
-    static constexpr size_t N{ 1000 };
     using Cost = Type;
     using Vertex = size_t;
     using Graph = vector< Cost >;
     using Iter = typename vector< Cost >::iterator;
+    using Memo = unordered_map< size_t, Cost >;
 
     Cost max_independent_set( Graph G )
     {
-        if( G.empty() )
-            return 0;
-        else
-        if( G.size() == 1 )
-            return *G.begin();
-        else
-            return go( G, G.end() );
+        return go( G, G.end() );
     }
 
 private:
 
-    Cost go( Graph& G, Iter end )
+    Cost go( Graph& G, Iter end, Memo&& memo={} )
     {
         auto n = distance( G.begin(), end );
+        auto memoIt = memo.find( n );
+        if( memoIt != memo.end() )
+        {
+            auto cost{ memoIt->second };
+            return cost;
+        }
         if( n == 0 )
-            return 0;
+            return memo[ n ] = 0;
         auto Vn{ end-1 };
         if( n == 1 )
-            return *Vn;
-        auto S1 = go( G, Vn ),
-             S2 = go( G, Vn-1 ) + *Vn;
-        return max( S1, S2 );
+            return memo[ n ] = *Vn;
+        auto S1 = memo[ n ] = go( G, Vn, move( memo ) ),
+             S2 = memo[ n ] = go( G, Vn-1, move( memo ) ) + *Vn;
+        if( S1 > S2 )
+            return S1;
+        return S2;
     }
 
 };
@@ -63,8 +65,7 @@ int main()
         parser >> cost;
         G.push_back( cost );
     }
-    auto cost = s.max_independent_set( G );
-    cout << cost << endl;
+    cout << "cost: " << s.max_independent_set( G ) << endl;
 
     return 0;
 }
