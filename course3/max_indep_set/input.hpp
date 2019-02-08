@@ -4,6 +4,20 @@
 #include <string>
 
 
+namespace Lecture
+{
+    const std::string Input
+    {
+R"(1
+4
+5
+4
+)"
+    }; // const std::string Input
+
+} // namespace Lecture
+
+
 namespace Assignment3
 {
     const std::string Input

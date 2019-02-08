@@ -19,38 +19,43 @@ public:
     using Graph = vector< Cost >;
     using Iter = typename vector< Cost >::iterator;
 
-    Graph max_indep_set( Graph G )
+    Cost max_independent_set( Graph G )
     {
-        if( G.size() < 2 )
-            return G;
-        Graph maxIS;
-        go( G, G.end(), maxIS );
-        return maxIS;
+        if( G.empty() )
+            return 0;
+        else
+        if( G.size() == 1 )
+            return *G.begin();
+        else
+            return go( G, G.end() );
     }
 
 private:
 
-    Cost go( Cost& C, Iter it )
+    Cost go( Graph& G, Iter end )
     {
-        auto n = distance( C.begin(), it );
-        auto Vn{ it - 1 };
+        auto n = distance( G.begin(), end );
+        if( n == 0 )
+            return 0;
+        auto Vn{ end-1 };
         if( n == 1 )
             return *Vn;
-        if( n == 2 )
-            return max( *Vn, *( Vn-1 ) );
-        auto S1 = go( C, Vn ),
-             S2 = go( C, Vn-1 ) + *Vn;
+        auto S1 = go( G, Vn ),
+             S2 = go( G, Vn-1 ) + *Vn;
         return max( S1, S2 );
     }
+
 };
+
 
 int main()
 {
     using Type = size_t;
 
+    Solution< Type > s;
     Solution< Type >::Graph G;
 
-    stringstream stream{ Assignment3::Input };
+    stringstream stream{ Lecture::Input };
     for( string line; getline( stream, line ); )
     {
         stringstream parser{ line };
@@ -58,7 +63,8 @@ int main()
         parser >> cost;
         G.push_back( cost );
     }
-
+    auto cost = s.max_independent_set( G );
+    cout << cost << endl;
 
     return 0;
 }
