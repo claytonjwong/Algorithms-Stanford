@@ -147,6 +147,7 @@ int main()
 {
     cout << "Assignment #1 Top-Down Answer: " << maxSack< TopDown::Solution >( Assignment1::Input ) << endl
          << "Assignment #1 Bottom-Up Answer: " << maxSack< BottomUp::Solution >( Assignment1::Input ) << endl << endl
+
          << "Assignment #2 Top-Down Answer: " << maxSack< TopDown::Solution >( Assignment2::Input ) << endl
          << "Assignment #2 Bottom-Up Answer: " << maxSack< BottomUp::Solution >( Assignment2::Input ) << endl << endl;
 
