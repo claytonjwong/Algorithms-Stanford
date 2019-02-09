@@ -74,7 +74,7 @@ namespace TopDown
         }
 
     private:
-        
+
         Cost go( Graph& G, Iter end, Memo& memo )
         {
             auto n = distance( G.begin(), end );
