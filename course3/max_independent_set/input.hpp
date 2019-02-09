@@ -18,7 +18,7 @@ R"(1
 } // namespace Lecture
 
 
-namespace Assignment3
+namespace Assignment
 {
     const std::string Input
     {
@@ -1025,4 +1025,4 @@ R"(4962786
 )"
     }; // const std::string
 
-} // namespace Assignment3
+} // namespace Assignment
