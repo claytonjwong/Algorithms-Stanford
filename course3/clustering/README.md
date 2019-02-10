@@ -18,13 +18,21 @@
 
 <h2 id="slides">Lecture Slides</h2>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_01.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_02.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_03.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_04.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_05.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_06.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_07.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_08.png" />
+<hr/>
 
 <h2 id="solution">Solution</h2>
 <pre>
@@ -230,7 +238,7 @@
 <h2 id="dependencies">Dependencies</h2>
 <ul>
   <li>
-    <a href="https://cmake.org/" target="_blank">cmake.org</a>
+    <a href="https://cmake.org/">cmake.org</a>
   </li>
 </ul>
 

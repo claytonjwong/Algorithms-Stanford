@@ -18,23 +18,41 @@
 
 <h2 id="slides">Lecture Slides</h2>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_01.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_02.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_03.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_04.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_05.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_06.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_07.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_08.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_09.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_10.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_11.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_12.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_13.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_14.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_15.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_16.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_17.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_18.png" />
+<hr/>
 
 <h2 id="solution">Solution</h2>
 <pre>

@@ -17,7 +17,6 @@
 </ul>
 
 <h2 id="slides">Lecture Slides</h2>
-<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_00.png" />
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_01.png" />

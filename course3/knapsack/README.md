@@ -18,15 +18,25 @@
 
 <h2 id="slides">Lecture Slides</h2>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack01.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack02.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack03.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack04.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack05.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack06.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack07.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack08.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack09.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack10.png" />
+<hr/>
 
 <h2 id="solution">Solution</h2>
 <pre>
