@@ -130,55 +130,36 @@
     } // namespace BottomUp
     
     
+    template< typename Solution >
+    string max_independent_set()
+    {
+        Solution solution;
+        Graph G;
+        istringstream inStream{ Assignment::Input };
+        for( string line; getline( inStream, line ); )
+        {
+            istringstream parser{ line };
+            Cost cost{ 0 };
+            parser >> cost;
+            G.push_back( cost );
+        }
+        auto memo = solution.max_independent_set( G );
+        auto max = reconstruct( G, memo );
+        ostringstream outStream;
+        for( auto vertex: { 1, 2, 3, 4, 17, 117, 517, 997 } )
+            outStream << ( max.find( vertex ) != max.end() );
+        return outStream.str();
+    }
+    
+    
     int main()
     {
-        //
-        // Top Down
-        //
-        {
-            TopDown::Solution solution;
-            Graph G;
-            istringstream stream{ Assignment::Input };
-            for( string line; getline( stream, line ); )
-            {
-                istringstream parser{ line };
-                Cost cost{ 0 };
-                parser >> cost;
-                G.push_back( cost );
-            }
-            auto memo = solution.max_independent_set( G );
-            auto max = reconstruct( G, memo );
-            cout << "TopDown answer:  ";
-            for( auto vertex: { 1, 2, 3, 4, 17, 117, 517, 997 } )
-                cout << ( max.find( vertex ) != max.end() );
-            cout << endl << endl;
-        }
+        cout << "Top-Down answer: " << max_independent_set< TopDown::Solution >() << endl << endl
+             << "Bottom-Up answer: " << max_independent_set< TopDown::Solution >() << endl << endl;
     
-        //
-        // Bottom Up
-        //
-        {
-            BottomUp::Solution solution;
-            Graph G;
-            istringstream stream{ Assignment::Input };
-            for( string line; getline( stream, line ); )
-            {
-                istringstream parser{ line };
-                Cost cost{ 0 };
-                parser >> cost;
-                G.push_back( cost );
-            }
-            auto memo = solution.max_independent_set( G );
-            auto max = reconstruct( G, memo );
-            cout << "BottomUp answer: ";
-            for( auto vertex: { 1, 2, 3, 4, 17, 117, 517, 997 } )
-                cout << ( max.find( vertex ) != max.end() );
-            cout << endl << endl;
-        }
+    //    Top-Down answer:  10100110
     
-    //    TopDown answer:  10100110
-    
-    //    BottomUp answer: 10100110
+    //    Bottom-Up answer: 10100110
     
         return 0;
     }
