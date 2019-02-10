@@ -74,9 +74,16 @@ int main()
 {
     using Type = size_t;
     Solution< Type > solution;
-    Solution< Type >::Collection A{ 2148, 9058, 7742, 3153, 6324, 609, 7628, 5469, 7017, 504 };
-    assert( solution.r_select( A, 5 ) == 5469 );
 
+    //
+    // test case #1: http://www.algorithmsilluminated.org/datasets/problem6.5test1.txt
+    //
+    Solution< Type >::Collection A{ 2148, 9058, 7742, 3153, 6324, 609, 7628, 5469, 7017, 504 };
+    assert( solution.r_select( A, 5 ) == 5469 ); // 5-th order statistic
+
+    //
+    // test case #2: http://www.algorithmsilluminated.org/datasets/problem6.5test2.txt
+    //
     Solution< Type >::Collection B;
     stringstream stream{ INPUT };
     for( string line; getline( stream, line ); )
@@ -86,8 +93,13 @@ int main()
         parser >> num;
         B.emplace_back( num );
     }
-    assert( solution.r_select( B, 50 ) == 4715 );
+    assert( solution.r_select( B, 50 ) == 4715 ); // 50-th order statistic
 
+    //
+    // challenge data set: form an array in which the first element is the first 10 digits of pi,
+    // the second element is the next 10 digits of pi, and so on.  Make the array as big as you can
+    // (perhaps 100,000 elements or 1 million elements, or ...).  What is the median of the array?
+    //
     int chunkSize{ 10 };
     Solution< Type >::Collection C;
     stringstream pi_10{ PI_10 };

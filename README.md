@@ -14,7 +14,7 @@
   * Strassen's Matrix Multiplication
   * Closest Pair ( minimal Euclidean distance between two points in a 2-D plane )
   * [Randomized Quick Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort )
-  * [Randomized Linear Selection]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/main.cpp )
+  * [Randomized Linear Selection]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select )
   * Deterministic Linear Selection
   * [Karger Minimum Cut ( Randomized Edge Contractions ) [ Monte Carlo ]]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course1/karger_min_cut/main.cpp )
   
