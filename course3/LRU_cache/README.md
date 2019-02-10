@@ -25,18 +25,6 @@
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_04.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_05.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_06.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_07.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_08.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_09.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_10.png" />
-<hr/>
 
 <h2 id="solution">Solution</h2>
 <pre>
