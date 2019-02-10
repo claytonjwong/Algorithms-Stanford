@@ -56,8 +56,8 @@
     cache.get(4);       // returns 4
     
     */
-
-
+    
+    
     #include <iostream>
     #include <unordered_map>
     
@@ -74,85 +74,85 @@
                 shared_ptr<Node> prev, next;
                 Node(int key) : key{key}, prev{nullptr}, next{nullptr} {}
             };
-            shared_ptr<Node> _head, _tail;
-            int _size, _cap;
+            shared_ptr<Node> head_, tail_;
+            int size_, cap_;
     
         public:
             LinkedList() {
-                _head=make_shared<Node>(-1);
-                _tail=make_shared<Node>(-1);
-                _head->next=_tail;
-                _tail->prev=_head;
-                _size=0;
-                _cap=0;
+                head_=make_shared<Node>(-1);
+                tail_=make_shared<Node>(-1);
+                head_->next=tail_;
+                tail_->prev=head_;
+                size_=0;
+                cap_=0;
             }
     
-            int Size() { return _size; }
+            int Size() { return size_; }
     
-            void Cap(int capacity) { _cap=capacity; }
+            void Cap(int capacity) { cap_=capacity; }
     
             bool Full(){
-                return _size>=_cap;
+                return size_>=cap_;
             }
     
             void Add(int key){
                 auto node=make_shared<Node>(key);
-                node->prev=_head;
-                node->next=_head->next;
-                _head->next->prev=node;
-                _head->next=node;
-                ++_size;
+                node->prev=head_;
+                node->next=head_->next;
+                head_->next->prev=node;
+                head_->next=node;
+                ++size_;
             }
     
             void Del(int key){
-                shared_ptr<Node> itr=_head->next;
-                while (itr!=_tail && itr->key!=key){
+                shared_ptr<Node> itr=head_->next;
+                while (itr!=tail_ && itr->key!=key){
                     itr=itr->next;
                 }
-                if (itr!=_tail){
+                if (itr!=tail_){
                     itr->prev->next=itr->next;
                     itr->next->prev=itr->prev;
-                    --_size;
+                    --size_;
                 }
             }
     
             shared_ptr<Node> Pop(){
                 if (Size()==0) return nullptr;
-                auto res=_tail->prev;
-                _tail->prev->prev->next=_tail;
-                _tail->prev=_tail->prev->prev;
+                auto res=tail_->prev;
+                tail_->prev->prev->next=tail_;
+                tail_->prev=tail_->prev->prev;
                 return res;
             }
         };
     
-        unordered_map<int,int> _hash{};
-        LinkedList _list{};
+        unordered_map<int,int> hash_{};
+        LinkedList list_{};
     
     public:
         LRUCache(int capacity){
-            _list.Cap(capacity);
+            list_.Cap(capacity);
         }
     
         int get(int key) {
-            auto entry=_hash.find(key);
-            if (entry==_hash.end()) return -1;
+            auto entry=hash_.find(key);
+            if (entry==hash_.end()) return -1;
             int val=entry->second;
-            _list.Del(key);
-            _list.Add(key);
+            list_.Del(key);
+            list_.Add(key);
             return val;
         }
     
         void put(int key, int val) {
-            auto entry=_hash.find(key);
-            if (entry==_hash.end()){
-                if (_list.Full()){
-                    auto del=_list.Pop();
-                    _hash.erase(del->key);
+            auto entry=hash_.find(key);
+            if (entry==hash_.end()){
+                if (list_.Full()){
+                    auto del=list_.Pop();
+                    hash_.erase(del->key);
                 }
             }
-            _list.Del(key);
-            _list.Add(key);
-            _hash[key]=val;
+            list_.Del(key);
+            list_.Add(key);
+            hash_[key]=val;
         }
     };
     
