@@ -31,7 +31,7 @@
   * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
   
 * **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
-  * [Introduction and Movivating Applications]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/greedy_mst_dp )
+  * [Introduction and Motivating Applications]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/greedy_mst_dp )
   * [LRU Cache]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/LRU_cache )
   * [Job Scheduler ( Minimum Weighted Sum of Completion Times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs )
   * [Prim ( trivial search in O( |V|^2 ) time )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/prim_mst )
