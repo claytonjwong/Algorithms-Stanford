@@ -49,42 +49,54 @@
 <h2 id="solution">Solution</h2>
 <pre>
 
+    #include "input.hpp"
     #include <iostream>
     #include <vector>
-    #include <algorithm>
+    #include <sstream>
     
     
     using namespace std;
     
     
-    template< typename T >
+    template< typename Type >
     class Solution
     {
     public:
     
-        using Collection = vector< T >;
+        using Collection = vector< Type >;
     
-        Collection mergeSort( const Collection& A )
+        size_t inversions( const Collection& A )
         {
-            return go({ A.begin(), A.end() });
+            return go({ A.begin(), A.end() }).count;
         }
     
     private:
     
-        Collection go( Collection&& A )
+        struct Result
+        {
+            Collection A;
+            size_t count{ 0 };
+        };
+    
+        Result go( Collection&& A )
         {
             if( A.size() < 2 )
-                return A;
+                return { A, 0 };
             auto pivot = A.begin() + A.size() / 2;
             return merge( go({ A.begin(), pivot }), go({ pivot, A.end() }) );
         }
     
-        Collection merge( Collection&& lhs, Collection&& rhs, Collection res={} ) // merge (res)ult
+        Result merge( Result&& lhs, Result&& rhs )
         {
-            auto L = lhs.begin(), R = rhs.begin();
-            while( L != lhs.end() && R != rhs.end() )
-                res.push_back( ( *L < *R )? *L++ : *R++ );
-            res.insert( res.end(), L, lhs.end() ), res.insert( res.end(), R, rhs.end() ); // append left-overs ( if applicable )
+            Result res{ {}, lhs.count + rhs.count }; // left + right inversions
+            auto L = lhs.A.begin(), R = rhs.A.begin();
+            while( L != lhs.A.end() && R != rhs.A.end() )
+                if( *L < *R )
+                    res.A.push_back( *L++ );
+                else
+                    res.A.push_back( *R++ ),
+                    res.count += distance( L, lhs.A.end() ); // split inversions
+            res.A.insert( res.A.end(), L, lhs.A.end() ), res.A.insert( res.A.end(), R, rhs.A.end() ); // append leftovers ( if applicable )
             return res;
         }
     
@@ -93,30 +105,18 @@
     
     int main()
     {
-        using Type = int;
+        string line;
+        stringstream stream{ Assignment::Input };
+        Solution< size_t >::Collection A;
+        for( size_t num{ 0 }; getline( stream, line ); A.push_back( num ) )
+        {
+            stringstream parser{ line };
+            parser >> num;
+        }
+        Solution< size_t > s;
+        cout << "answer: " << s.inversions( A ) << endl;
     
-        const Solution< Type >::Collection
-            A_unsorted{ 9,5,6,3,2,8,0,4,1,7 },
-            B_unsorted{ 3,9,7,1,2,8,6,5,0,4 },
-            C_unsorted{ 3,2,9,7,1,3,7,2,8,1,6,5,0,8,0,4 };
-    
-        Solution< Type > s;
-        auto
-            A{ s.mergeSort( A_unsorted ) },
-            B{ s.mergeSort( B_unsorted ) },
-            C{ s.mergeSort( C_unsorted ) };
-    
-        assert( is_sorted( A.begin(), A.end() ) );
-        assert( is_sorted( B.begin(), B.end() ) );
-        assert( is_sorted( C.begin(), C.end() ) );
-    
-        cout << "A: "; copy( A.begin(), A.end(), ostream_iterator< Type >( cout, " " ) ); cout << endl;
-        cout << "B: "; copy( B.begin(), B.end(), ostream_iterator< Type >( cout, " " ) ); cout << endl;
-        cout << "C: "; copy( C.begin(), C.end(), ostream_iterator< Type >( cout, " " ) ); cout << endl;
-    
-    //    A: 0 1 2 3 4 5 6 7 8 9
-    //    B: 0 1 2 3 4 5 6 7 8 9
-    //    C: 0 0 1 1 2 2 3 3 4 5 6 7 7 8 8 9
+        // answer: 2407905288
     
         return 0;
     }
