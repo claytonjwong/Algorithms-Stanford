@@ -20,7 +20,8 @@ public:
 
     Seen bfs( Graph& G, Vertex start='s' )
     {
-        Queue q{{ start }}; Seen seen{ start };
+        Queue q{{ start }};
+        Seen seen{ start };
         while( ! q.empty() )
         {
             auto cur{ q.front() }; q.pop();     // (cur)rent front of the (q)ueue
