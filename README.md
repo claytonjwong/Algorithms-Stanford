@@ -1,5 +1,26 @@
 # Algorithms-Stanford
 ## Algorithms specialization from Stanford University via Coursera
+
+<h3>Contents</h3>
+<ul>
+  <li>
+      <a href="#Course1">Course 1</a>
+  </li>
+  <li>
+    <a href="#Course2">Course 2</a>
+  </li>
+  <li>
+    <a href="#Course3">Course 3</a>
+  </li>
+  <li>
+    <a href="#Course4">Course 4</a>
+  </li>
+  <li>
+    <a href="#IntroSlides">Introductory Slides</a>
+  </li>
+</ul>
+
+<p id="Course1"></p>
 * **Course 1: Divide and Conquer, Sorting and Searching, and Randomized Algorithms**
   * [Karatsuba Multiplication ( trivial templates )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/main.cpp )
   * [Karatsuba Multiplication ( non-trivial strings )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multi_string/main.cpp )
@@ -11,6 +32,8 @@
   * [Randomized Linear Selection]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/main.cpp )
   * Deterministic Linear Selection
   * [Karger Minimum Cut ( Randomized Edge Contractions ) [ Monte Carlo ]]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course1/karger_min_cut/main.cpp )
+
+<p id="Course1"></p>
 * **Course 2: Graph Search, Shortest Paths, and Data Structures**
   * [Breadth First Search ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs/main.cpp )
   * [Minimum Path Distances ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs_min_path_dist/main.cpp )
@@ -25,6 +48,8 @@
   * [Heap ( sort + median )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/main.cpp )
   * Search Trees
   * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
+  
+<p id="Course1"></p>
 * **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
   * [LRU Cache]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/LRU_cache )
   * [Job Scheduler ( Minimum Weighted Sum of Completion Times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs )
@@ -42,8 +67,12 @@
   
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
 
-## Introductory Slides
 
+<p id="IntroSlides"></p>
+# Introduction Slides
+
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/intro_00.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/intro_01.png" />
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/intro_02.png" />
