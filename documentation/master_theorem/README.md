@@ -1,7 +1,5 @@
 # Master Theorem
 
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/mm_00.png" />
-<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/mm_01.png" />
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/mm_02.png" />
