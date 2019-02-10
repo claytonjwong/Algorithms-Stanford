@@ -27,8 +27,6 @@
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_05.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_06.png" />
-<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_07.png" />
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_08.png" />
