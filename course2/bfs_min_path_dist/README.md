@@ -129,7 +129,7 @@
 <p>Use <code>cmake</code> to build this project:</p>
 
 <pre>
-    cmake --build cmake-build-debug --target bfs_shortest_paths -- -j 4
+    cmake --build cmake-build-debug --target bfs_min_path_dist -- -j 4
 </pre>
 
 <h2 id="dependencies">Dependencies</h2>
