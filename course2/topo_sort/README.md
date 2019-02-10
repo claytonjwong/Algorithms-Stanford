@@ -1,4 +1,4 @@
-<h1 id="topo_sort">Topological Sort ( DFS - Iterative )</h1>
+<h1 id="topo_sort">Topological Sort ( DFS - Recursive )</h1>
 <a href="https://en.wikipedia.org/wiki/Topological_sorting">https://en.wikipedia.org/wiki/Topological_sorting</a>
 <h2>Contents</h2>
 <ul>
