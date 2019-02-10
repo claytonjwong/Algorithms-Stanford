@@ -1,10 +1,3 @@
-<script>
-a.right {
-   display: inline-block;
-   text-align: right;
-   width: 100%;
-}
-</script>
 <h1 id="knapsack">Knapsack</h1>
 <a href="https://en.wikipedia.org/wiki/Knapsack_problem" target="_blank">https://en.wikipedia.org/wiki/Knapsack_problem</a>
 <h2>Contents</h2>
