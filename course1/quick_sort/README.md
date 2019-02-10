@@ -105,12 +105,18 @@
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_44.png" />
 <hr/>
-<a href="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/probability.pdf">
-  Probability ( part 1 )
-</a>
-<a href="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/probability2.pdf">
-  Probability ( part 2 )
-</a>
+<ul>
+  <li>
+    <a href="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/probability.pdf">
+      Probability ( part 1 )
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/probability2.pdf">
+      Probability ( part 2 )
+    </a>
+  </li>
+</ul>
 <hr/>
 <hr/>
 
