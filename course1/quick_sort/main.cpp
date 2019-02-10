@@ -33,7 +33,8 @@ private:
 
         choosePivot( L, R, PC );
         auto P = partition( A, L, R ); // (P)ivot
-        return distance( L, R-1 )      // m is the distance from L to R, add m-1 to the running total to NOT include the pivot as a comparison
+        auto M = distance( L, R );     // Note: M is the distance from L to R, add ( M - 1 ) to the running total
+        return ( M - 1 )               //       ( subtract one to NOT include the pivot as a comparison )
              + go( A, L, P, PC )
              + go( A, P+1, R, PC );
     }
