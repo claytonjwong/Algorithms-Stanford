@@ -17,6 +17,7 @@
 </ul>
 
 <h2 id="slides">Lecture Slides</h2>
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_00.png" />
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_01.png" />
@@ -24,22 +25,39 @@
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_02.png" />
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_03.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_04.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_05.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_06.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_07.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_08.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_09.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_10.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_11.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_12.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_13.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_14.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_15.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_16.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_17.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_18.png" />
+<hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_19.png" />
+<hr/>
 
 <h2 id="solution">Solution</h2>
 <pre>
