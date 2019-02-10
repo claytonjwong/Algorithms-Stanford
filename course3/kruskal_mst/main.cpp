@@ -1,6 +1,6 @@
 /*
 
-In this programming problem you'll code up Prim's minimum spanning tree algorithm.
+In this programming problem you'll code up Kruskal's minimum spanning tree algorithm.
 
 Download the text file below.
 
