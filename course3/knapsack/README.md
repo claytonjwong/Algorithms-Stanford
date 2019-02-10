@@ -1,5 +1,5 @@
 <h1 id="knapsack">Knapsack</h1>
-<a href="https://en.wikipedia.org/wiki/Knapsack_problem" target="_blank">https://en.wikipedia.org/wiki/Knapsack_problem</a>
+<a href="https://en.wikipedia.org/wiki/Knapsack_problem">https://en.wikipedia.org/wiki/Knapsack_problem</a>
 <h2>Contents</h2>
 <ul>
   <li>
@@ -176,7 +176,7 @@
 <h2 id="dependencies">Dependencies</h2>
 <ul>
   <li>
-    <a href="https://cmake.org/" target="_blank">cmake.org</a>
+    <a href="https://cmake.org/">cmake.org</a>
   </li>
 </ul>
 
