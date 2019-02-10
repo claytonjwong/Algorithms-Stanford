@@ -1,4 +1,4 @@
-<h1 id="array_inversions">Array Inversions</h1>
+<h1 id="quick_sort">Quick Sort</h1>
 <a href="https://en.wikipedia.org/wiki/Quicksort">https://en.wikipedia.org/wiki/Quicksort</a>
 <h2>Contents</h2>
 <ul>
