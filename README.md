@@ -15,6 +15,7 @@
   * [Karger Minimum Cut ( Randomized Edge Contractions ) [ Monte Carlo ]]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course1/karger_min_cut/main.cpp )
   
 * **Course 2: Graph Search, Shortest Paths, and Data Structures**
+  * [Graph Introduction, Representations, Primitives, and the Web]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/graphs )
   * [Breadth First Search ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs/main.cpp )
   * [Minimum Path Distances ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs_min_path_dist/main.cpp )
   * [Depth First Search ( DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/dfs/main.cpp )
