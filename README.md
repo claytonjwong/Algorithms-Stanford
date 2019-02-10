@@ -35,7 +35,7 @@
   * [K-Clustering]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/main.cpp )
   * [Huffman Codes]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/main.cpp )
   * [Maximum Independent Set]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/main.cpp )
-  * Knapsack
+  * [Knapsack]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/knapsack )
   * Sequence Alignment
   * Optimal Binary Search Trees
   
