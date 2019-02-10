@@ -155,7 +155,7 @@
     int main()
     {
         cout << "Top-Down answer: " << max_independent_set< TopDown::Solution >() << endl << endl
-             << "Bottom-Up answer: " << max_independent_set< TopDown::Solution >() << endl << endl;
+             << "Bottom-Up answer: " << max_independent_set< BottomUp::Solution >() << endl << endl;
     
     //    Top-Down answer:  10100110
     
