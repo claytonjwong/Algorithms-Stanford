@@ -127,7 +127,7 @@
 <p>Use <code>cmake</code> to build this project:</p>
 
 <pre>
-    cmake --build cmake-build-debug --target merge_sort -- -j 4
+    cmake --build cmake-build-debug --target array_inversions -- -j 4
 </pre>
 
 <h2 id="dependencies">Dependencies</h2>
