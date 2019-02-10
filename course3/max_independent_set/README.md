@@ -1,4 +1,4 @@
-<h1 id="knapsack">Knapsack</h1>
+<h1 id="max_independent_set">Max Independent Set</h1>
 <a href="https://en.wikipedia.org/wiki/Maximal_independent_set">https://en.wikipedia.org/wiki/Maximal_independent_set</a>
 <h2>Contents</h2>
 <ul>
