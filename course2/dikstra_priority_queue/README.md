@@ -63,11 +63,15 @@
 <h2 id="solution">Solution</h2>
 <pre>
 
+    #include "input.hpp"
     #include <iostream>
-    #include <vector>
-    #include <unordered_set>
     #include <unordered_map>
+    #include <unordered_set>
+    #include <set>
+    #include <vector>
     #include <queue>
+    #include <sstream>
+    #include <fstream>
     
     
     using namespace std;
@@ -77,49 +81,91 @@
     {
     public:
     
-        using Vertex = unsigned char;
-        using AdjacencyList = vector< Vertex >;
-        using Graph = unordered_map< Vertex, AdjacencyList >;
-        using Seen = unordered_set< Vertex >;
-    
-        Seen dfs( Graph& G, Vertex start='s' )
+        using Vertex = unsigned int;
+        using Cost = size_t;
+        static const size_t N{ 200 };
+        static const size_t Infinity = numeric_limits< Cost >::max();
+        using VertexCost = pair< Vertex, Cost >;
+        struct Edge
         {
-            Seen seen{ start };
-            go( G, start, seen );
-            return seen;
+            Vertex tail{ 0 }, head{ 0 };
+            bool operator==( const Edge& rhs ) const { return tail == rhs.tail && head == rhs.head; }
+        };
+        struct Hash{ Cost operator()( const Edge& e ) const { return ( N+1 ) * e.tail + e.head; } };
+        using Edges = unordered_map< Edge, Cost, Hash >;
+        using Vertices = unordered_set< Vertex >;
+        using MinCost = unordered_map< Vertex, Cost >;
+        using AdjacencyList = unordered_set< Vertex >;
+        using Graph = unordered_map< Vertex, AdjacencyList >;
+        struct Compare{ bool operator()( const VertexCost& lhs, const VertexCost& rhs ) const { return lhs.second > rhs.second; } };
+        using Queue = priority_queue< VertexCost, vector< VertexCost >, Compare >;
+        using Parent = unordered_map< Vertex, Vertex >;
+    
+        Graph generateGraph( const Vertices& V, const Edges& E, Graph G={} )
+        {
+            for( auto& vertex: V )
+                G[ vertex ] = {};
+            for( auto& pair: E )
+            {
+                auto edge{ pair.first };
+                G[ edge.tail ].insert( edge.head );
+            }
+            return G;
         }
     
-        void go( Graph& G, Vertex cur, Seen& seen ) // (cur)rent vertex at the top of the callstack
+        pair< MinCost, Parent > getShortestPaths( Graph& G, Edges& E, Vertex start, Queue q={}, MinCost C={}, Parent P={} )
         {
-            for( auto adj: G[ cur ] )               // (adj)acent neighbor vertices of the (G)raph's (cur)rent vertex
-                if( seen.insert( adj ).second )     // if this is the first time the (adj)acent neighbor vertex has been seen
-                    go( G, adj, seen );             // go further process (adj)acent neighbor vertex
+            for( auto& pair: G )
+            {
+                auto vertex{ pair.first };
+                C[ vertex ] = Infinity;
+            }
+            C[ start ] = 0;
+            for( q.push({ start, C[ start ] }); ! q.empty(); q.pop() )
+            {
+                auto tail{ q.top().first };
+                auto cost{ q.top().second };
+                for( auto& head: G[ tail ] )
+                {
+                    Edge edge{ tail, head };
+                    auto candidate = cost + E[ edge ];
+                    if( C[ head ] > candidate )
+                        C[ head ] = candidate,
+                        P[ head ] = tail,
+                        q.push({ head, C[ head ] });
+                }
+            }
+            return { C, P };
+        }
+    
+        Edges readInput( const string& input, Edges edges={}, Vertex tail=0, Vertex head=0, char comma=',', Cost cost=0 )
+        {
+            istringstream stream{ input };
+            for( string line; getline( stream, line ); )
+            {
+                stringstream parser{ line };
+                parser >> tail;
+                while( parser >> head >> comma >> cost )
+                    edges.insert({ { tail, head }, cost });
+            }
+            return edges;
         }
     
     };
     
+    
     int main()
     {
-        //
-        // Figure 8.5 from page 26 of Algorithms Illuminated ( Part 2 )
-        //
-        Solution::Graph G = {
-    
-            { 's', { 'a', 'b' } },
-    
-            { 'a', { 's', 'c' } },
-    
-            { 'b', { 's', 'c' } },
-    
-            { 'c', { 'a', 'b', 'd', 'e' } },
-    
-            { 'd', { 'b', 'c', 'e' } },
-    
-            { 'e', { 'c', 'd', } }
-    
-        };
         Solution s;
-        auto result = s.dfs( G );
+        Solution::Vertices V;
+        for( size_t vertex{ 1 }; vertex <= 200; ++vertex )
+            V.insert( vertex );
+        auto E = s.readInput( INPUT );
+        auto G = s.generateGraph( V, E );
+        auto[ C, P ] = s.getShortestPaths( G, E, 1 );
+        for( auto vertex: { 7,37,59,82,99,115,133,165,188,197 } ) // 2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
+            cout << C[ vertex ] << ",";
+        cout << endl;
     
         return 0;
     }
