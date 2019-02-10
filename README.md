@@ -17,7 +17,7 @@
 * **Course 2: Graph Search, Shortest Paths, and Data Structures**
   * [Graph Introduction, Representations, Primitives, and the Web]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/graphs )
   * [Breadth First Search ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs )
-  * [Minimum Path Distances ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs_min_path_dist/main.cpp )
+  * [Minimum Path Distances ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs_min_path_dist )
   * [Depth First Search ( DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/dfs/main.cpp )
   * [Depth First Search ( DFS - Recursive )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/dfs_rec/main.cpp )
   * [Topological Sort ( DFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/topo_sort/main.cpp )

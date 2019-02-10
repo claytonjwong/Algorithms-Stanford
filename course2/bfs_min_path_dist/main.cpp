@@ -24,7 +24,8 @@ public:
     Distance bfs( Graph& G, Vertex start='s' )
     {
         Distance D{{ start, 0 }};               // augmented-BFS
-        Queue q{{ start }}; Seen seen{ start };
+        Queue q{{ start }};
+        Seen seen{ start };
         while( ! q.empty() )
         {
             auto cur{ q.front() }; q.pop();
