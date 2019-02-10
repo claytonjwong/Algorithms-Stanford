@@ -17,14 +17,14 @@
 </ul>
 
 <h2 id="slides">Lecture Slides</h2>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/clustering_01.png" />
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/clustering_02.png" />
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/clustering_03.png" />
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/clustering_04.png" />
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/clustering_05.png" />
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/clustering_06.png" />
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/clustering_07.png" />
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/clustering_08.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_01.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_02.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_03.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_04.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_05.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_06.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_07.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_08.png" />
 
 <h2 id="solution">Solution</h2>
 <pre>
