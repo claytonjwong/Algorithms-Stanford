@@ -166,7 +166,7 @@
 <p>Use <code>cmake</code> to build this project:</p>
 
 <pre>
-    cmake --build cmake-build-debug --target knapsack -- -j 4
+    cmake --build cmake-build-debug --target kruskal_mst -- -j 4
 </pre>
 
 <h2 id="dependencies">Dependencies</h2>
