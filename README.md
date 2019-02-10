@@ -8,7 +8,7 @@
   * [Introduction, Guiding Principles, and Aysmptotic Analysis]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/introduction )
   * [Master Theorem]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/master_theorem )
   * [Karatsuba Multiplication ( trivial templates )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication )
-  * [Karatsuba Multiplication ( non-trivial strings )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multi_string/main.cpp )
+  * [Karatsuba Multiplication ( non-trivial strings )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multi_string )
   * [Merge Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/main.cpp )
   * [Array Inversions]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/main.cpp )
   * Strassen's Matrix Multiplication

@@ -1,4 +1,4 @@
-<h1 id="karatsuba_multiplication">Karatsuba Multiplication</h1>
+<h1 id="karatsuba_multiplication">Karatsuba Multiplication ( trivial templates )</h1>
 <a href="https://en.wikipedia.org/wiki/Karatsuba_algorithm">https://en.wikipedia.org/wiki/Karatsuba_algorithm</a>
 <h2>Contents</h2>
 <ul>
