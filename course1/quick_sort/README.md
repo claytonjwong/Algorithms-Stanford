@@ -65,7 +65,54 @@
 <hr/>
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_24.png" />
 <hr/>
-
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_25.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_26.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_27.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_28.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_29.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_30.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_31.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_32.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_33.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_34.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_35.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_36.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_37.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_38.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_39.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_40.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_41.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_42.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_43.png" />
+<hr/>
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_44.png" />
+<hr/>
+<a href="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/probability.pdf">
+  Probability ( part 1 )
+</a>
+<a href="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/probability2.pdf">
+  Probability ( part 2 )
+</a>
+<hr/>
+<hr/>
 
 <h2 id="solution">Solution</h2>
 <pre>
