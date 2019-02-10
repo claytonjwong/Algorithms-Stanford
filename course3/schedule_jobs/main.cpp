@@ -52,7 +52,7 @@ public:
 
     void insert( Job&& job ){ jobs.insert( job ); }
 
-    Type minCostTime() const
+    Type schedule() const
     {
         Type cost{ 0 }, time{ 0 };
         for( auto& job: jobs )
@@ -97,38 +97,35 @@ struct R_Job : public Job // a R_Job is optimal greedily scheduled via the (R)at
     }
 };
 
+
+template< typename Job >
+Type schedule( const string& input )
+{
+    Solution< Job > jobs;
+    istringstream stream{ input };
+    for( string line; getline( stream, line ); )
+    {
+        stringstream parser{ line };
+        Type cost{ 0 }, time{ 0 };
+        parser >> cost >> time;
+        jobs.insert({ cost, time });
+    }
+    return jobs.schedule();
+}
+
+
 int main()
 {
-    for( auto& input: { Lecture::Input, Assignment::Input } )
-    {
-        Solution< D_Job > d_jobs;
-        istringstream d_stream{ input };
-        for( string line; getline( d_stream, line ); )
-        {
-            stringstream parser{ line };
-            Type cost{ 0 }, time{ 0 };
-            parser >> cost >> time;
-            d_jobs.insert({ cost, time });
-        }
-        cout << "answer 1: " << d_jobs.minCostTime() << " ( sub-optimal ) " << endl;
+    cout << "lecture answer 1: "    << schedule< D_Job >( Lecture::Input )    << " ( sub-optimal )" << endl
+         << "lecture answer 2: "    << schedule< R_Job >( Lecture::Input )    << " ( optimal )" << endl << endl
+         << "assignment answer 1: " << schedule< D_Job >( Assignment::Input ) << " ( sub-optimal )" << endl
+         << "assignment answer 2: " << schedule< R_Job >( Assignment::Input ) << " ( optimal )" << endl;
 
-        Solution< R_Job > r_jobs;
-        istringstream r_stream{ input };
-        for( string line; getline( r_stream, line ); )
-        {
-            stringstream parser{ line };
-            Type cost{ 0 }, time{ 0 };
-            parser >> cost >> time;
-            r_jobs.insert({ cost, time });
-        }
-        cout << "answer 2: " << r_jobs.minCostTime() << " ( optimal ) " << endl << endl;
-    }
+//    lecture answer 1: 23 ( sub-optimal )
+//    lecture answer 2: 22 ( optimal )
 
-//    answer 1: 23 ( sub-optimal )
-//    answer 2: 22 ( optimal )
-//
-//    answer 1: 69119377652 ( sub-optimal )
-//    answer 2: 67311454237 ( optimal )
+//    assignment answer 1: 69119377652 ( sub-optimal )
+//    assignment answer 2: 67311454237 ( optimal )
 
     return 0;
 }
