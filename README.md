@@ -26,7 +26,7 @@
   * Search Trees
   * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
 * **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
-  * [Job Scheduler ( Minimum Weighted Sum of Completion Times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/main.cpp )
+  * [Job Scheduler ( Minimum Weighted Sum of Completion Times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs )
   * [Prim ( trivial search in O( |V|^2 ) time )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/prim_mst )
   * Prim - Minimum Spanning Tree ( MST ) ( non-trivial with heap in O( (|E|+|V|)log(|V|) ) time )
   * [Kruskal]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst )
