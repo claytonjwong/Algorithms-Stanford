@@ -20,7 +20,7 @@
   * [Minimum Path Distances ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs_min_path_dist )
   * [Depth First Search ( DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/dfs )
   * [Depth First Search ( DFS - Recursive )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/dfs_rec )
-  * [Topological Sort ( DFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/topo_sort/main.cpp )
+  * [Topological Sort ( DFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/topo_sort )
   * [Topological Sort ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/topo_sort_prune_bfs/main.cpp )
   * [Undirected Connected Components ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/ucc/main.cpp )
   * [Kosaraju ( DFS + DFS - Recursive )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_rec/main.cpp )
