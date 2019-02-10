@@ -25,7 +25,7 @@
   * [Undirected Connected Components ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/ucc/main.cpp )
   * [Kosaraju ( DFS + DFS - Recursive )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_rec/main.cpp )
   * [Kosaraju ( DFS + DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/main.cpp )
-  * [Dikstra ( priority queue )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/main.cpp )
+  * [Dikstra ( priority queue )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue )
   * [Heap ( sort + median )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/main.cpp )
   * Search Trees
   * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
