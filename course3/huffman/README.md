@@ -1,9 +1,9 @@
-<h1 id="knapsack">Knapsack</h1>
+<h1 id="huffman">Huffman Coding</h1>
 <a href="https://en.wikipedia.org/wiki/Huffman_coding">https://en.wikipedia.org/wiki/Huffman_coding</a>
 <h2>Contents</h2>
 <ul>
   <li>
-      <a href="#slides">Lecture Slides</a>
+    <a href="#slides">Lecture Slides</a>
   </li>
   <li>
     <a href="#solution">Solution</a>
