@@ -17,21 +17,21 @@
 </ul>
 
 <h2 id="slides">Lecture Slides</h2>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/karatsuba_multiplication/documentation/mult_01.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_01.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/karatsuba_multiplication/documentation/mult_02.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_02.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/karatsuba_multiplication/documentation/mult_03.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_03.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/karatsuba_multiplication/documentation/mult_04.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_04.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/karatsuba_multiplication/documentation/mult_05.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_05.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/karatsuba_multiplication/documentation/mult_06.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_06.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/karatsuba_multiplication/documentation/mult_07.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_07.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/karatsuba_multiplication/documentation/mult_08.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_08.png" />
 <hr/>
 
 <h2 id="solution">Solution</h2>
