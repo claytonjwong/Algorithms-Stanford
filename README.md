@@ -49,7 +49,7 @@
   * algo 3
   * algo 4
 
-# Introduction Slides
+# Introduction, Guiding Principles, and Asymptotic Analysis
 
 <img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/intro_00.png" />
 <hr/>
