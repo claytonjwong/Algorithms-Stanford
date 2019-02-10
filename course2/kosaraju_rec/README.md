@@ -1,4 +1,4 @@
-<h1 id="kosaraju_itr">Kosaraju ( DFS + DFS - Iterative )</h1>
+<h1 id="kosaraju_rec">Kosaraju ( DFS + DFS - Recursive )</h1>
 <a href="https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm">https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm</a>
 <h2>Contents</h2>
 <ul>
