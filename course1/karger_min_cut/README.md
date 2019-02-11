@@ -17,61 +17,61 @@
 </ul>
 
 <h2 id="slides">Lecture Slides</h2>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_01.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_01.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_02.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_02.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_03.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_03.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_04.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_04.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_05.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_05.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_06.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_06.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_07.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_07.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_08.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_08.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_09.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_09.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_10.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_10.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_11.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_11.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_12.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_12.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_13.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_13.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_14.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_14.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_15.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_15.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_16.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_16.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_17.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_17.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_18.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_18.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_19.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_19.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_20.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_20.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_21.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_21.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_22.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_22.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_23.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_23.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_24.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_24.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_25.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_25.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_26.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_26.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_27.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_27.png" />
 <hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger/documentation/karger_28.png" />
+<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_28.png" />
 <hr/>
 
 <h2 id="solution">Solution</h2>
