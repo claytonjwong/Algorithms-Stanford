@@ -16,7 +16,7 @@
   * [Randomized Quick Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort )
   * [Randomized Linear Selection]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select )
   * Deterministic Linear Selection
-  * [Karger Minimum Cut ( Randomized Edge Contractions ) [ Monte Carlo ]]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course1/karger_min_cut/main.cpp )
+  * [Karger Minimum Cut ( Randomized Edge Contractions ) [ Monte Carlo ]]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course1/karger_min_cut )
   
 * **Course 2: Graph Search, Shortest Paths, and Data Structures**
   * [Graph Introduction, Representations, Primitives, and the Web]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/graphs )

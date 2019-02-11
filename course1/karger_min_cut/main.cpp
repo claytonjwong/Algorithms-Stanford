@@ -71,7 +71,7 @@ int main()
 {
     Solution s;
     Solution::Graph G;
-    stringstream stream{ QUIZ_INPUT };
+    stringstream stream{ Assignment::Input };
     for( string line; getline( stream, line ); )
     {
         stringstream parser{ line };
@@ -90,9 +90,11 @@ int main()
         }
     }
 
-    int minCut = numeric_limits< int >::max();
+    auto minCut = numeric_limits< int >::max();
     for( auto N{ 100 }; N--; minCut = min( minCut, s.getMinCut( G ) ) );
     cout << "minCut: " << minCut << endl;
+
+    // minCut: 17
 
     return 0;
 }
