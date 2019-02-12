@@ -15,7 +15,7 @@ struct Cost{ Integer same{ 0 }, diff{ 1 }, gap{ 1 }; } cost;
 
 Type reconstruct( Type& X, Type& Y, VVI& dp )
 {
-    if( X.empty() || X.empty() )
+    if( X.empty() || Y.empty() )
         return {};
     Type result;
     auto M{ dp.size() },
