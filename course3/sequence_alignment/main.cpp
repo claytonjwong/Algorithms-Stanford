@@ -7,7 +7,8 @@ using namespace std;
 using Type = string;
 using SubType = char;
 SubType diff{ '*' }, gap{ '_' };
-using VI = vector< size_t >;
+using Integer = size_t;
+using VI = vector< Integer >;
 using VVI = vector< VI >;
 struct Cost{ size_t same{ 0 }, diff{ 1 }, gap{ 1 }; } cost;
 
@@ -56,7 +57,7 @@ namespace TopDown
     public:
 
         using Iter = typename Type::iterator;
-        const size_t MaximumSentinel = numeric_limits< size_t >::max();
+        const Integer MaximumSentinel = numeric_limits< Integer >::max();
 
         VVI alignment( Type& X, Type& Y )
         {
@@ -71,7 +72,7 @@ namespace TopDown
 
     private:
 
-        size_t go( Type& X, Type& Y, Iter i, Iter j, VVI& memo )
+        Integer go( Type& X, Type& Y, Iter i, Iter j, VVI& memo )
         {
             auto M = distance( X.begin(), i ),
                  N = distance( Y.begin(), j );

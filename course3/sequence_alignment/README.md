@@ -52,7 +52,8 @@
     using Type = string;
     using SubType = char;
     SubType diff{ '*' }, gap{ '_' };
-    using VI = vector< size_t >;
+    using Integer = size_t;
+    using VI = vector< Integer >;
     using VVI = vector< VI >;
     struct Cost{ size_t same{ 0 }, diff{ 1 }, gap{ 1 }; } cost;
     
@@ -101,60 +102,38 @@
         public:
     
             using Iter = typename Type::iterator;
+            const Integer MaximumSentinel = numeric_limits< Integer >::max();
     
             VVI alignment( Type& X, Type& Y )
             {
-                Memo memo;
                 auto i{ X.end() },
                      j{ Y.end() };
+                auto M = distance( X.begin(), i ),
+                     N = distance( Y.begin(), j );
+                VVI memo( M+1, VI( N+1, MaximumSentinel ));
                 go( X, Y, i, j, memo );
-                return memo2dp( X, Y, memo );
+                return memo;
             }
     
         private:
     
-            using Key = pair< size_t, size_t >;
-            struct Hash{ size_t operator()( const Key& key ) const { return key.first * 10001 + key.second; }};
-            using Memo = unordered_map< Key , size_t, Hash >;
-    
-            size_t go( Type& X, Type& Y, Iter i, Iter j, Memo& memo )
+            Integer go( Type& X, Type& Y, Iter i, Iter j, VVI& memo )
             {
                 auto M = distance( X.begin(), i ),
                      N = distance( Y.begin(), j );
-                Key key{ M, N };
-                for( auto pair{ memo.find(key) }; pair != memo.end(); )
-                {
-                    auto value{ pair->second };
-                    return value;
-                }
-                if( M == 0 ) return memo[ key ] = cost.gap * N;
-                if( N == 0 ) return memo[ key ] = cost.gap * M;
+                if( memo[ M ][ N ] < MaximumSentinel )
+                    return memo[ M ][ N ];
+                if( M == 0 ) return memo[ M ][ N ] = cost.gap * N;
+                if( N == 0 ) return memo[ M ][ N ] = cost.gap * M;
                 auto Xi{ *(i-1) },
                      Yj{ *(j-1) };
-                return memo[ key ] =
+                return memo[ M ][ N ] =
                     min({ ( Xi == Yj )? go( X, Y, i-1, j-1, memo ) + cost.same
                                       : go( X, Y, i-1, j-1, memo ) + cost.diff,
                           go( X, Y, i-1, j, memo ) + cost.gap,
                           go( X, Y, i, j-1, memo ) + cost.gap });
             }
     
-            VVI memo2dp( Type& X, Type& Y, Memo& memo )
-            {
-                auto M = X.size(),
-                     N = Y.size();
-                VVI dp( M+1, VI( N+1 ) );
-                for( auto i{ 0 }; i <= M; ++i ) for( auto j{ 0 }; j <= N; ++j )
-                {
-                    Key key{ i, j };
-                    auto pair{ memo.find(key) };
-                    if( pair != memo.end() )
-                    {
-                        auto value{ pair->second };
-                        dp[ i ][ j ] = value;
-                    }
-                }
-                return dp;
-            }
         };
     
     } // namespace TopDown
@@ -174,7 +153,7 @@
                 VVI dp( M+1, VI( N+1 ) );
                 for( auto i{ 0 }; i <= M; ++i ) dp[ i ][ 0 ] = i * cost.gap;
                 for( auto j{ 0 }; j <= N; ++j ) dp[ 0 ][ j ] = j * cost.gap;
-                for( auto i{ 1 }; i <= M; ++i ) for( auto j{ 1 }; j <= N; ++j )
+                for( auto i{ 1 }; i <= M; ++i ) for( auto j{ 1 }; j <= N; ++j ) // for each Xi,Yj where i=[1:M] and j=[1:N]
                 {
                     auto Xi = X[ i-1 ],
                          Yj = Y[ j-1 ];
@@ -202,7 +181,7 @@
             q{ "AGGCA",  "AGTGCTGAAGTTCGCCAGTTGACG", "CGAATTTTTCCCAGAGAGA"  };
         Answer ans{ 2, 4, 2 };
     
-        BottomUp::Solution< Type > solution;
+        Solution solution;
         for( auto i{ 0 }; i < 3; ++i )
         {
             auto X{ p[ i ] },
