@@ -10,7 +10,7 @@ SubType diff{ '*' }, gap{ '_' };
 using Integer = size_t;
 using VI = vector< Integer >;
 using VVI = vector< VI >;
-struct Cost{ size_t same{ 0 }, diff{ 1 }, gap{ 1 }; } cost;
+struct Cost{ Integer same{ 0 }, diff{ 1 }, gap{ 1 }; } cost;
 
 
 Type reconstruct( Type& X, Type& Y, VVI& dp )
@@ -129,7 +129,7 @@ template< typename Solution >
 void test()
 {
     using TestCases = vector< Type >;
-    using Answer = vector< size_t >;
+    using Answer = vector< Integer >;
 
     TestCases
         p{ "AGGGCT", "AGTGCTGAAAGTTGCGCCAGTGAC", "CACAATTTTTCCCAGAGAGA" },
