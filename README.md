@@ -7,7 +7,7 @@
 * **Course 1: Divide and Conquer, Sorting and Searching, and Randomized Algorithms**
   * [Introduction, Guiding Principles, and Asymptotic Analysis]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/introduction )
   * [Master Theorem]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/master_theorem )
-  * [Karatsuba Multiplication ( trivial templates )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/mastercourse1/karatsuba_multiplication )
+  * [Karatsuba Multiplication ( trivial templates )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication )
   * [Karatsuba Multiplication ( non-trivial strings )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multi_string )
   * [Merge Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort )
   * [Array Inversions]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions )
