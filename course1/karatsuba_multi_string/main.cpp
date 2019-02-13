@@ -128,8 +128,8 @@ class Solution
                c = y.substr( 0, pivot ), d = y.substr( pivot ),
                u = go( a, c ), v = go( a+b, c+d ), w = go( b, d );
         v = v - u - w;
-        u.append( M, '0' ); // 10^M
-        v.append( M/2, '0' ); // 10^M/2
+        u.append( M, '0' );   // multiply u by 10^M
+        v.append( M/2, '0' ); // multiply v by 10^M/2
         return( u + v + w );
     }
 
