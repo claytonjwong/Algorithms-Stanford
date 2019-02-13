@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of Depth First Search algorithm on a graph
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include <iostream>
 #include <vector>
 #include <unordered_set>
