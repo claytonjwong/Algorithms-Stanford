@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of Karatsuba algorithm to perform multiplication of two integers
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include <iostream>
 
 
