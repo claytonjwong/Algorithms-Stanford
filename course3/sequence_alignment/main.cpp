@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of Sequence Alignment algorithm to calculate Needleman-Wunsch score and reconstruct best match
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include <iostream>
 #include <vector>
 #include <unordered_map>
