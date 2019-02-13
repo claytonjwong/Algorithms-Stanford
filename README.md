@@ -51,7 +51,7 @@
   * Optimal Binary Search Trees
   
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
-  * algo 1
+  * [Bellman Ford]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford )
   * algo 2
   * algo 3
   * algo 4
