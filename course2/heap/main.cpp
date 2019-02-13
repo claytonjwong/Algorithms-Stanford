@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of a Heap data structure
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include "input.hpp"
 #include <iostream>
 #include <sstream>
@@ -97,8 +106,8 @@ public:
     void insert( const Type& value )
     {
         ( lo.empty() || value < lo.top() )? lo.insert( value ) : hi.insert( value ); // use lo.top() as insertion pivot
-        if( lo.size()     < hi.size() ) lo.insert( hi.extract() ); // balance lo/hi heaps, such that
-        if( hi.size() + 1 < lo.size() ) hi.insert( lo.extract() ); // median is always lo.top()
+        if( lo.size()     < hi.size() ) lo.insert( hi.extract() ); // Note: balance lo/hi heaps, such that
+        if( hi.size() + 1 < lo.size() ) hi.insert( lo.extract() ); //       median is always lo.top()
     }
 
     Type getMedian() const // always extract median from lo ( insert() ensures lo.top() is always the median )
@@ -144,8 +153,10 @@ int main()
         MM.insert( value );
         medians.push_back( MM.getMedian() );
     }
-    auto answer = accumulate( medians.cbegin(), medians.cend(), 0 ) % 10000; // 1213
+    auto answer = accumulate( medians.cbegin(), medians.cend(), 0 ) % 10000;
     cout << "answer: " << answer << endl;
+
+    // answer: 1213
 
     return 0;
 }
