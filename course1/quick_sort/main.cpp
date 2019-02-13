@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of Quick Sort algorithm to sort a collection
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include "input.hpp"
 #include <iostream>
 #include <vector>
