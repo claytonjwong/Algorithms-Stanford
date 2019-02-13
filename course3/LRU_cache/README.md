@@ -1,34 +1,34 @@
-<h1 id="LRU_cache">LRU Cache</h1>
-<a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)">https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)</a>
-<h2>Contents</h2>
-<ul>
-  <li>
-      <a href="#slides">Lecture Slides</a>
-  </li>
-  <li>
-    <a href="#solution">Solution</a>
-  </li>
-  <li>
-    <a href="#build">Build Instructions</a>
-  </li>
-  <li>
-    <a href="#dependencies">Dependencies</a>
-  </li>
-</ul>
+# LRU Cache
+https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)
 
-<h2 id="slides">Lecture Slides</h2>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_01.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_02.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_03.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_04.png" />
-<hr/>
+## Contents
+* [Lecture Slides](#lecture-slides)
+* [Solution](#solution)
+* [Build Instructions](#build-instructions)
+* [Dependencies](#dependencies)
 
-<h2 id="solution">Solution</h2>
-<pre>
+## Lecture Slides
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_01.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_02.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_03.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_04.png)
+---
 
+## Solution
+```cpp
+
+    /**
+     *
+     * Modern C++ implementation of LRU cache algorithm
+     *
+     * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+     *
+     **/
+    
+    
     /*
     
     146. LRU Cache
@@ -175,21 +175,14 @@
         return 0;
     }
 
-</pre>
+```
 
-<h2 id="build">Build Instructions</h2>
-<p>Use <code>cmake</code> to build this project:</p>
+## Build Instructions
+Use ```cmake``` to build this project:
 
-<pre>
+```
     cmake --build cmake-build-debug --target LRU_cache -- -j 4
-</pre>
+```
 
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-  <li>
-    <a href="https://cmake.org/">cmake.org</a>
-  </li>
-</ul>
-
-</body>
-</html>
+## Dependencies
+* [cmake.org](https://cmake.org)

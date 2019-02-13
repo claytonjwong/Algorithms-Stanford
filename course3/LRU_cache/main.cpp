@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of LRU cache algorithm
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 /*
 
 146. LRU Cache
