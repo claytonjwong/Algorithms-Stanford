@@ -5,7 +5,7 @@
 ### Can we do better?...
 
 * **Course 1: Divide and Conquer, Sorting and Searching, and Randomized Algorithms**
-  * [Introduction, Guiding Principles, and Aysmptotic Analysis]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/introduction )
+  * [Introduction, Guiding Principles, and Aysmptotic Analysis](/documentation/introduction)
   * [Master Theorem]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/master_theorem )
   * [Karatsuba Multiplication ( trivial templates )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication )
   * [Karatsuba Multiplication ( non-trivial strings )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multi_string )
@@ -47,7 +47,7 @@
   * [Huffman Coding]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman )
   * [Maximum Independent Set]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set )
   * [Knapsack]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/knapsack )
-  * [Sequence Alignment]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/sequence_alignment )
+  * [Needleman-Wunsch Sequence Alignment]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/sequence_alignment )
   * Optimal Binary Search Trees
   
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
