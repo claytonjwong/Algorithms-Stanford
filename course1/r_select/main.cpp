@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of Randomized Linear Selection algorithm to find the i-th order statistic in linear time
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include "input.hpp"
 #include "pi.hpp"
 #include <iostream>
