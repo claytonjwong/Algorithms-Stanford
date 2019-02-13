@@ -11,6 +11,7 @@
   * [Karatsuba Multiplication ( non-trivial strings )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multi_string )
   * [Merge Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort )
   * [Array Inversions]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions )
+  * [Array Inversions]( array_inversions.md )
   * Strassen's Matrix Multiplication
   * Closest Pair ( minimal Euclidean distance between two points in a 2-D plane )
   * [Randomized Quick Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort )
