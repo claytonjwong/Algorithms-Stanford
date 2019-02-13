@@ -1,46 +1,46 @@
-<h1 id="knapsack">Knapsack</h1>
-<a href="https://en.wikipedia.org/wiki/Knapsack_problem">https://en.wikipedia.org/wiki/Knapsack_problem</a>
-<h2>Contents</h2>
-<ul>
-  <li>
-      <a href="#slides">Lecture Slides</a>
-  </li>
-  <li>
-    <a href="#solution">Solution</a>
-  </li>
-  <li>
-    <a href="#build">Build Instructions</a>
-  </li>
-  <li>
-    <a href="#dependencies">Dependencies</a>
-  </li>
-</ul>
+# Knapsack
+https://en.wikipedia.org/wiki/Knapsack_problem
 
-<h2 id="slides">Lecture Slides</h2>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack01.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack02.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack03.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack04.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack05.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack06.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack07.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack08.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack09.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack10.png" />
-<hr/>
+## Contents
+* [Lecture Slides](#lecture-slides)
+* [Solution](#solution)
+* [Build Instructions](#build-instructions)
+* [Dependencies](#dependencies)
 
-<h2 id="solution">Solution</h2>
-<pre>
+## Lecture Slides
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack01.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack02.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack03.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack04.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack05.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack06.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack07.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack08.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack09.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack10.png)
+---
 
+## Solution
+```cpp
+
+    /**
+     *
+     * Modern C++ implementation of Knapsack algorithm
+     *
+     * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+     *
+     **/
+    
+    
     #include "input.hpp"
     #include <iostream>
     #include <sstream>
@@ -174,21 +174,14 @@
         return 0;
     }
 
-</pre>
+```
 
-<h2 id="build">Build Instructions</h2>
-<p>Use <code>cmake</code> to build this project:</p>
+## Build Instructions
+Use ```cmake``` to build this project:
 
-<pre>
+```
     cmake --build cmake-build-debug --target knapsack -- -j 4
-</pre>
+```
 
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-  <li>
-    <a href="https://cmake.org/">cmake.org</a>
-  </li>
-</ul>
-
-</body>
-</html>
+## Dependencies
+* [cmake.org](https://cmake.org)
