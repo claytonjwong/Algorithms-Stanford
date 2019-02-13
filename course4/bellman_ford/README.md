@@ -1,5 +1,5 @@
 # Bellman Ford
-## https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
+https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
 
 ## Contents
 * [Lecture Slides](#lecture-slides)
