@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of Koraraju's algorithm to find the strongly connected components of a directed graph
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include "input.hpp"
 #include <iostream>
 #include <unordered_map>
