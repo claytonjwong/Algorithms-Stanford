@@ -1,12 +1,18 @@
+/**
+ *
+ * Modern C++ implementation of Dikstra algorithm to find the single-source shortest paths in a graph
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include "input.hpp"
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
-#include <set>
-#include <vector>
 #include <queue>
 #include <sstream>
-#include <fstream>
 
 
 using namespace std;

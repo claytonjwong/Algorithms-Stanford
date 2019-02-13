@@ -1,77 +1,74 @@
-<h1 id="dikstra">Dikstra ( priority queue )</h1>
-<a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm</a>
-<h2>Contents</h2>
-<ul>
-  <li>
-      <a href="#slides">Lecture Slides</a>
-  </li>
-  <li>
-    <a href="#solution">Solution</a>
-  </li>
-  <li>
-    <a href="#build">Build Instructions</a>
-  </li>
-  <li>
-    <a href="#dependencies">Dependencies</a>
-  </li>
-</ul>
+# Dikstra ( priority queue )
+https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 
-<h2 id="slides">Lecture Slides</h2>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_01.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_02.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_03.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_04.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_05.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_06.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_07.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_08.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_09.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_10.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_11.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_12.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_13.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_14.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_15.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_16.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_17.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_18.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_19.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_20.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_21.png" />
-<hr/>
+## Contents
+* [Lecture Slides](#lecture-slides)
+* [Solution](#solution)
+* [Build Instructions](#build-instructions)
+* [Dependencies](#dependencies)
 
-<h2 id="solution">Solution</h2>
-<pre>
+## Lecture Slides
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_01.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_02.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_03.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_04.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_05.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_06.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_07.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_08.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_09.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_10.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_11.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_12.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_13.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_14.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_15.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_16.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_17.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_18.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_19.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_20.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_21.png)
+---
 
+## Solution
+```cpp
+
+    /**
+     *
+     * Modern C++ implementation of Dikstra algorithm to find the single-source shortest paths in a graph
+     *
+     * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+     *
+     **/
+    
+    
     #include "input.hpp"
     #include <iostream>
     #include <unordered_map>
     #include <unordered_set>
-    #include <set>
-    #include <vector>
     #include <queue>
     #include <sstream>
-    #include <fstream>
     
     
     using namespace std;
@@ -170,21 +167,14 @@
         return 0;
     }
 
-</pre>
+```
 
-<h2 id="build">Build Instructions</h2>
-<p>Use <code>cmake</code> to build this project:</p>
+## Build Instructions
+Use ```cmake``` to build this project:
 
-<pre>
+```
     cmake --build cmake-build-debug --target dikstra_priority_queue -- -j 4
-</pre>
+```
 
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-  <li>
-    <a href="https://cmake.org/">cmake.org</a>
-  </li>
-</ul>
-
-</body>
-</html>
+## Dependencies
+* [cmake.org](https://cmake.org)
