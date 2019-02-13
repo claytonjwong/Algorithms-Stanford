@@ -1,78 +1,78 @@
-<h1 id="huffman">Huffman Coding</h1>
-<a href="https://en.wikipedia.org/wiki/Huffman_coding">https://en.wikipedia.org/wiki/Huffman_coding</a>
-<h2>Contents</h2>
-<ul>
-  <li>
-    <a href="#slides">Lecture Slides</a>
-  </li>
-  <li>
-    <a href="#solution">Solution</a>
-  </li>
-  <li>
-    <a href="#build">Build Instructions</a>
-  </li>
-  <li>
-    <a href="#dependencies">Dependencies</a>
-  </li>
-</ul>
+# Huffman Coding
+https://en.wikipedia.org/wiki/Huffman_coding
 
-<h2 id="slides">Lecture Slides</h2>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_01.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_02.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_03.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_04.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_05.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_06.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_07.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_08.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_09.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_10.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_11.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_12.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_13.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_14.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_15.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_16.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_17.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_18.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_19.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_20.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_21.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_22.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_23.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_24.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_25.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_26.png" />
-<hr/>
+## Contents
+* [Lecture Slides](#lecture-slides)
+* [Solution](#solution)
+* [Build Instructions](#build-instructions)
+* [Dependencies](#dependencies)
 
-<h2 id="solution">Solution</h2>
-<pre>
+## Lecture Slides
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_01.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_02.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_03.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_04.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_05.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_06.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_07.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_08.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_09.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_10.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_11.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_12.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_13.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_14.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_15.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_16.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_17.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_18.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_19.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_20.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_21.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_22.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_23.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_24.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_25.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_26.png)
+---
 
+## Solution
+```cpp
+
+    /**
+     *
+     * Modern C++ implementation of Huffman's algorithm to encode weighed symbols
+     *
+     * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+     *
+     **/
+    
+    
     #include "input.hpp"
     #include <iostream>
     #include <sstream>
@@ -158,21 +158,14 @@
         return 0;
     }
 
-</pre>
+```
 
-<h2 id="build">Build Instructions</h2>
-<p>Use <code>cmake</code> to build this project:</p>
+## Build Instructions
+Use ```cmake``` to build this project:
 
-<pre>
+```
     cmake --build cmake-build-debug --target huffman -- -j 4
-</pre>
+```
 
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-  <li>
-    <a href="https://cmake.org/">cmake.org</a>
-  </li>
-</ul>
-
-</body>
-</html>
+## Dependencies
+* [cmake.org](https://cmake.org)
