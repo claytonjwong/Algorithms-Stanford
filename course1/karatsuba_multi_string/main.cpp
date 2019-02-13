@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of Karatsuba algorithm to perform multiplication of two large integers represented as strings
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include <iostream>
 #include <iomanip>
 #include <string>
