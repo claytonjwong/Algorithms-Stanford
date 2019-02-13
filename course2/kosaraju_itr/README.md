@@ -1,55 +1,54 @@
-<h1 id="kosaraju_itr">Kosaraju ( DFS + DFS - Iterative )</h1>
-<a href="https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm">https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm</a>
-<h2>Contents</h2>
-<ul>
-  <li>
-      <a href="#slides">Lecture Slides</a>
-  </li>
-  <li>
-    <a href="#solution">Solution</a>
-  </li>
-  <li>
-    <a href="#build">Build Instructions</a>
-  </li>
-  <li>
-    <a href="#dependencies">Dependencies</a>
-  </li>
-</ul>
+# Kosaraju ( DFS + DFS - Iterative )
+https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
 
-<h2 id="slides">Lecture Slides</h2>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_01.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_02.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_03.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_04.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_05.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_06.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_07.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_08.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_09.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_10.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_11.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_12.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_13.png" />
-<hr/>
-<img src="https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_14.png" />
-<hr/>
+## Contents
+* [Lecture Slides](#lecture-slides)
+* [Solution](#solution)
+* [Build Instructions](#build-instructions)
+* [Dependencies](#dependencies)
 
+## Lecture Slides
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_01.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_02.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_03.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_04.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_05.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_06.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_07.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_08.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_09.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_10.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_11.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_12.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_13.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_14.png)
+---
 
-<h2 id="solution">Solution</h2>
-<pre>
+## Solution
+```cpp
 
+    /**
+     *
+     * Modern C++ implementation of Koraraju's algorithm to find the strongly connected components of a directed graph
+     *
+     * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+     *
+     **/
+    
+    
     #include "input.hpp"
     #include <iostream>
     #include <unordered_map>
@@ -183,7 +182,7 @@
     int main()
     {
         Solution::Graph G;
-        fstream stream{ "input.txt" };
+        fstream stream{ "input.txt" }; // this file was too big to upload to github, so I had to zip it as "input.txt.zip"
         string line;
         while( getline( stream, line ) )
         {
@@ -204,21 +203,14 @@
     }
     #endif
 
-</pre>
+```
 
-<h2 id="build">Build Instructions</h2>
-<p>Use <code>cmake</code> to build this project:</p>
+## Build Instructions
+Use ```cmake``` to build this project:
 
-<pre>
+```
     cmake --build cmake-build-debug --target kosaraju -- -j 4
-</pre>
+```
 
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-  <li>
-    <a href="https://cmake.org/">cmake.org</a>
-  </li>
-</ul>
-
-</body>
-</html>
+## Dependencies
+* [cmake.org](https://cmake.org)

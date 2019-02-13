@@ -1,3 +1,12 @@
+/**
+ *
+ * Modern C++ implementation of Koraraju's algorithm to find the strongly connected components of a directed graph
+ *
+ * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+ *
+ **/
+
+
 #include "input.hpp"
 #include <iostream>
 #include <unordered_map>
@@ -131,7 +140,7 @@ void print_answer( const Solution::ConnectedComponents& CC )
 int main()
 {
     Solution::Graph G;
-    fstream stream{ "input.txt" };
+    fstream stream{ "input.txt" }; // this file was too big to upload to github, so I had to zip it as "input.txt.zip"
     string line;
     while( getline( stream, line ) )
     {
