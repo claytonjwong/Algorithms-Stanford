@@ -11,7 +11,7 @@ between vertex 6 and vertex 141 that has length 8200. The rest of the
 pairs of this row indicate the other vertices adjacent to vertex 6 and
 the lengths of the corresponding edges.
 
-Your task is to run Dijkstra's shortest-path algorithm on this graph,
+Your task is to run Bellman Ford's shortest-path algorithm on this graph,
 using 1 (the first vertex) as the source vertex, and to compute the
 shortest-path distances between 1 and every other vertex of the graph.
 If there is no path between a vertex v and vertex 1, we'll define
@@ -25,20 +25,36 @@ distance away, then your answer should be 1000,1000,1000,1000,1000,2000,1000,
 1000,1000,1000. Remember the order of reporting DOES MATTER, and the string
 should be in the same order in which the above ten vertices are given.
 
-
-IMPLEMENTATION NOTES: This graph is small enough that the straightforward O(mn)
-time implementation of Dijkstra's algorithm should work fine.
-OPTIONAL: For those of you seeking an additional challenge, try implementing
-the heap-based version. Note this requires a heap that supports deletions,
-and you'll probably need to maintain some kind of mapping between vertices
-and their positions in the heap.
-
 */
 
 #pragma once
 
 
 #include <string>
+
+
+namespace Lecture
+{
+    //
+    // The lecture slide labels vertices with characters { s,v,x,w,t }, whereas the input format here expects integers.
+    // Therefore, the mapping between vertex character and integer is as follows:
+    //
+    // s == 1
+    // v == 2
+    // x == 3
+    // w == 4
+    // t == 5
+    //
+    const std::string Input
+    {
+R"(1  2,2  3,4
+2  3,1  4,2
+3  5,4
+4  5,2
+)"
+    }; // const std::string Input
+
+} // namespace Lecture
 
 
 namespace Assignment
@@ -246,6 +262,6 @@ R"(1	80,982	163,8164	170,2620	145,648	200,8021	173,2069	92,647	26,4122	140,546	1
 199	152,2697	8,1918	136,7783	59,8958	24,2838	175,3779	31,5564	162,7749	65,11	76,6878	9,70	89,2446	34,8196	167,2001	154,5786
 200	108,9976	103,6851	145,2753	41,2622	187,6767	190,5999	16,2848	194,2915	5,4009	172,6888	39,4319	176,1709	60,3269	138,678	43,8943	98,2690	1,8021	104,7083	154,229	91,1988	67,475	76,4623	195,8114	37,7541	54,4899
 )"
-    } // const std::string Input
+    }; // const std::string Input
 
 } // namespace Assignment
