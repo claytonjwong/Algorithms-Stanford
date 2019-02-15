@@ -47,10 +47,10 @@ static const Cost Infinity = numeric_limits< Cost >::max();
 using VertexCost = pair< Vertex, Cost >;
 struct Edge
 {
-    Vertex tail{ 0 }, head{ 0 };
-    bool operator==( const Edge& rhs ) const { return tail == rhs.tail && head == rhs.head; }
+    Vertex u{ 0 }, v{ 0 };
+    bool operator==( const Edge& rhs ) const { return u == rhs.u && v == rhs.v; }
 };
-struct Hash{ Cost operator()( const Edge& e ) const { return ( N+1 ) * e.tail + e.head; } };
+struct Hash{ Cost operator()( const Edge& e ) const { return ( N+1 ) * e.u + e.v; } };
 using Edges = unordered_map< Edge, Cost, Hash >;
 using Vertices = unordered_set< Vertex >;
 using MinCost = unordered_map< Vertex, Cost >;
@@ -58,15 +58,15 @@ using AdjacencyList = unordered_set< Vertex >;
 using Graph = unordered_map< Vertex, AdjacencyList >;
 
 
-Edges readInput( const string& input, Edges edges={}, Vertex tail=0, Vertex head=0, char comma=',', Cost cost=0 )
+Edges readInput( const string& input, Edges edges={}, Vertex u=0, Vertex v=0, char comma=',', Cost cost=0 )
 {
     istringstream stream{ input };
     for( string line; getline( stream, line ); )
     {
         stringstream parser{ line };
-        parser >> tail;
-        while( parser >> head >> comma >> cost )
-            edges.insert({ { tail, head }, cost });
+        parser >> u;
+        while( parser >> v >> comma >> cost )
+            edges.insert({ { u,v }, cost });
     }
     return edges;
 }
@@ -79,7 +79,7 @@ Graph generateGraph( const Vertices& V, const Edges& E, Graph G={} )
     for( auto& pair: E )
     {
         auto edge{ pair.first };
-        G[ edge.tail ].insert( edge.head );
+        G[ edge.u ].insert( edge.v ); // u -> v
     }
     return G;
 }
@@ -91,9 +91,9 @@ Graph reverse( Graph& G )
     for_each( R.begin(), R.end(), []( auto& pair ){ pair.second={}; });
     for( auto& pair: G )
     {
-        auto cur{ pair.first };
-        for( auto adj: G[ cur ] )
-            R[ adj ].insert( cur );
+        auto u{ pair.first };
+        for( auto v: G[ u ] )   // u -> v
+            R[ v ].insert( u ); // v -> u
     }
     return R;
 }
@@ -126,7 +126,7 @@ namespace TopDown
                 return memo[ i ][ v ];
             Cost pre = go( G, E, memo, i-1, v ),
                  alt = Infinity;
-            for( auto w: G[ v ] )
+            for( auto w: G[ v ] ) // w -> v
             {
                 Edge wv{ w,v };
                 Cost Cw = go( G, E, memo, i-1, w ),
@@ -157,7 +157,7 @@ namespace BottomUp
                 {
                     auto v{ pair.first };
                     dp[ i ][ v ] = dp[ i-1 ][ v ]; // (pre)vious path or minimum (alt)erative path to v through w + cost of edge wv
-                    for( auto w: G[ v ] )
+                    for( auto w: G[ v ] ) // w -> v
                     {
                         Edge wv{ w,v };
                         Cost Cw = dp[ i-1 ][ w ],
@@ -183,8 +183,8 @@ void getShortestPaths( Vertex start )
     for( size_t vertex{ 1 }; vertex <= N; ++vertex )
         V.insert( vertex );
     auto E = readInput( Input );
-    auto G = generateGraph( V, E ); // note: lookup in the "forward" (G)raph provides outgoing adjacent vertices, therefore,
-    auto R = reverse( G );          //       create (R)everse (G)raph since this algorithm uses incoming adjacent vertices
+    auto G = generateGraph( V, E ), // note: lookup in the "forward" (G)raph provides outgoing adjacent vertices, therefore,
+         R = reverse( G );          //       create (R)everse (G)raph since this algorithm uses incoming adjacent vertices
     auto A = solution.getShortestPaths( R, E, start );
 
 #ifdef ASSIGNMENT_INPUT
