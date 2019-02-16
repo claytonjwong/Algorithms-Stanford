@@ -118,7 +118,6 @@ https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
     using Vertex = Integer;
     using Cost = Integer;
     static const Cost Infinity = numeric_limits< Cost >::max();
-    using VertexCost = pair< Vertex, Cost >;
     struct Edge
     {
         Vertex u{ 0 }, v{ 0 };
@@ -127,7 +126,6 @@ https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
     struct Hash{ Cost operator()( const Edge& e ) const { return ( N+1 ) * e.u + e.v; } };
     using Edges = unordered_map< Edge, Cost, Hash >;
     using Vertices = unordered_set< Vertex >;
-    using MinCost = unordered_map< Vertex, Cost >;
     using AdjacencyList = unordered_set< Vertex >;
     using Graph = unordered_map< Vertex, AdjacencyList >;
     
@@ -175,7 +173,6 @@ https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
     
     namespace TopDown
     {
-        template< typename Type >
         class Solution
         {
         public:
@@ -217,7 +214,6 @@ https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
     
     namespace BottomUp
     {
-        template< typename Type >
         class Solution
         {
         public:
@@ -286,20 +282,16 @@ https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
         // Top-Down
         //
         {
-            using Solution = TopDown::Solution< Integer >;
-    
             cout << "Top-Down answer:  ";
-            getShortestPaths< Solution >( start );
+            getShortestPaths< TopDown::Solution >( start );
         }
     
         //
         // Bottom-Up
         //
         {
-            using Solution = BottomUp::Solution< Integer >;
-    
             cout << "Bottom-Up answer: ";
-            getShortestPaths< Solution >( start );
+            getShortestPaths< BottomUp::Solution >( start );
         }
     
     //    Top-Down answer:  2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
