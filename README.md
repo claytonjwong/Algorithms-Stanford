@@ -30,9 +30,9 @@
   * [Kosaraju ( DFS + DFS - Recursive )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_rec )
   * [Kosaraju ( DFS + DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr )
   * [Dijkstra ( priority queue )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra )
-  * [Heap ( sort + median )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/main.cpp )
+  * [Heap ( sort + median )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap )
   * Search Trees
-  * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/main.cpp )
+  * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum )
   
 * **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
   * [Introduction and Motivating Applications]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/greedy_mst_dp )

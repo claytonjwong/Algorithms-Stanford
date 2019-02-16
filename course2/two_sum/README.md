@@ -8,31 +8,31 @@ https://en.wikipedia.org/wiki/Hash_table
 * [Dependencies](#dependencies)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_01.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_02.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_03.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_04.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_05.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_06.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_07.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_08.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_09.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_10.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_11.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_12.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/two_sum_13.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_13.png)
 ---
 
 ## Solution
