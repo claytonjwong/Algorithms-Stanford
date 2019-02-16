@@ -89,7 +89,7 @@ int main()
     auto fastFinish = Time::now();
     cout << "fast answer ( " << fastResult << " ) found in "
          << duration_cast< seconds >( fastFinish - fastStart ).count()
-         << " seconds " << endl << endl;
+         << " seconds " << endl;
 
     SlowSolution< Type > slow;
     auto slowStart = Time::now();
