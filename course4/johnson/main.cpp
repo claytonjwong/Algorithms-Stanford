@@ -14,6 +14,7 @@
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
+#include <queue>
 
 
 using namespace std;
@@ -45,6 +46,9 @@ struct Edge
 struct Hash{ Cost operator()( const Edge& e ) const { return ( N+1 ) * e.u + e.v; } };
 using Edges = unordered_map< Edge, Cost, Hash >;
 using Vertices = unordered_set< Vertex >;
+using VertexCost = pair< Vertex, Cost >;
+struct Compare{ bool operator()( const VertexCost& lhs, const VertexCost& rhs ) const { return lhs.second > rhs.second; } };
+using Queue = priority_queue< VertexCost, vector< VertexCost >, Compare >;
 
 
 Edges readInput( const string& input, Edges edges={}, Vertex u=0, Vertex v=0, Cost cost=0 )
@@ -133,6 +137,38 @@ private:
 }; // class BellmanFord
 
 
+class Dijkstra
+{
+public:
+
+    using MinCost = unordered_map< Vertex, Cost >;
+
+    static MinCost getShortestPaths( Graph& G, Edges& E, Vertex start, Queue q={}, MinCost C={} )
+    {
+        for( auto& pair: G )
+        {
+            auto vertex{ pair.first };
+            C[ vertex ] = INF;
+        }
+        C[ start ] = 0;
+        for( q.push({ start, C[ start ] }); ! q.empty(); q.pop() )
+        {
+            auto tail{ q.top().first };
+            auto cost{ q.top().second };
+            for( auto& head: G[ tail ] )
+            {
+                Edge edge{ tail, head };
+                auto candidate = cost + E[ edge ];
+                if( C[ head ] > candidate )
+                    C[ head ] = candidate,
+                        q.push({ head, C[ head ] });
+            }
+        }
+        return C;
+    }
+
+};
+
 class Johnson
 {
 public:
@@ -146,12 +182,30 @@ public:
             V.insert( vertex );
         auto E = readInput( input );
         auto G = generateGraph( V, E );
-        Vertex source{ 0 };
-        auto[ Gs, Es ] = Johnson::addSourceVertex( G, E, source );
-        Gs = reverse( Gs ); // Gs was generated with outgoing adjacency lists, reverse Gs for incoming adjacency lists needed by Bellman-Ford
-        auto[ P, hasCycle ] = BellmanFord::getShortestPaths( Gs, Es, source );
-        if( hasCycle )
-            return{ {}, true };
+        //
+        // form Gs by adding a new vertex 'source' and a new edge of cost 0
+        // from 'source' to each vertex in G to determine if a cycle exists
+        //
+        VVI A;
+        {
+            Vertex source{ 0 };
+            auto[ Gs, Es ] = Johnson::addSourceVertex( G, E, source );
+            Gs = reverse( Gs ); // Gs was generated with outgoing adjacency lists, reverse Gs for incoming adjacency lists needed by Bellman-Ford
+            auto[ A, hasCycle ] = BellmanFord::getShortestPaths( Gs, Es, source );
+            if( hasCycle )
+                return{ {}, true };
+        }
+
+        // TODO: calculate new edge costs using A[ N ][ u ] and A[ N ][ v ] ==> new cost = old cost + ( A[ N ][ u ] - A[ N ][ v ] )
+        //       note that this looks like it can be simplified by pulling the last row as P = A.back(), then just use P[ u ] and P[ v ]
+        //
+
+        // TODO: for each vertex u in G, run Dijkstra using that vertex as the start vertex
+        //       this returns a MinCost mapping for each u -> v path, convert this cost to terms we care about by subtracing re-weights from step above
+        //       for each minCost in C, the minCost = minCost - P[ u ] + P[ v ]
+
+        // TODO: for each minimum cost, store the minimum and return the minimum of all the minimums in the return value
+
         return{ {}, false };
     }
 
