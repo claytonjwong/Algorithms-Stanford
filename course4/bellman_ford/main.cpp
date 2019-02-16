@@ -99,7 +99,6 @@ Graph reverse( Graph& G )
 
 namespace TopDown
 {
-    template< typename Type >
     class Solution
     {
     public:
@@ -141,7 +140,6 @@ namespace TopDown
 
 namespace BottomUp
 {
-    template< typename Type >
     class Solution
     {
     public:
@@ -210,20 +208,16 @@ int main()
     // Top-Down
     //
     {
-        using Solution = TopDown::Solution< Integer >;
-
         cout << "Top-Down answer:  ";
-        getShortestPaths< Solution >( start );
+        getShortestPaths< TopDown::Solution >( start );
     }
 
     //
     // Bottom-Up
     //
     {
-        using Solution = BottomUp::Solution< Integer >;
-
         cout << "Bottom-Up answer: ";
-        getShortestPaths< Solution >( start );
+        getShortestPaths< BottomUp::Solution >( start );
     }
 
 //    Top-Down answer:  2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
