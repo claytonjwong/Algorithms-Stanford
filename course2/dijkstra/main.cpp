@@ -1,6 +1,6 @@
 /**
  *
- * Modern C++ implementation of Dikstra algorithm to find the single-source shortest paths in a graph
+ * Modern C++ implementation of Dijkstra algorithm to find the single-source shortest paths in a graph
  *
  * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
  *

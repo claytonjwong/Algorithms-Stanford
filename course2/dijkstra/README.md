@@ -1,4 +1,4 @@
-# Dikstra ( priority queue )
+# Dijkstra ( priority queue )
 https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 
 ## Contents
@@ -8,47 +8,47 @@ https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 * [Dependencies](#dependencies)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_01.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_02.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_03.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_04.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_05.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_06.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_07.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_08.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_09.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_10.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_11.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_12.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_13.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_14.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_15.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_16.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_17.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_18.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_18.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_19.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_19.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_20.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_20.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dikstra_priority_queue/documentation/dikstra_21.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_21.png)
 ---
 
 ## Solution
@@ -56,7 +56,7 @@ https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 
     /**
      *
-     * Modern C++ implementation of Dikstra algorithm to find the single-source shortest paths in a graph
+     * Modern C++ implementation of Dijkstra algorithm to find the single-source shortest paths in a graph
      *
      * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
      *
@@ -173,7 +173,7 @@ https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 Use ```cmake``` to build this project:
 
 ```
-    cmake --build cmake-build-debug --target dikstra_priority_queue -- -j 4
+    cmake --build cmake-build-debug --target Dijkstra_priority_queue -- -j 4
 ```
 
 ## Dependencies
