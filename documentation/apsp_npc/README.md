@@ -1,6 +1,5 @@
 # All-Pairs Shortest Paths and NP-Complete Algorithms
 
-## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/apsp_01.png)
 ---
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/apsp_02.png)
