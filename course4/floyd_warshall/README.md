@@ -36,11 +36,9 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     #include <string>
     #include <unordered_map>
     #include <unordered_set>
-    #include <chrono>
     
     
     using namespace std;
-    using namespace std::chrono;
     using InputFiles = vector< string >;
     //
     // Assignment Input
@@ -112,6 +110,8 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
             return{ dp, hasCycle( dp ) };
         }
     
+    
+    
         Cost shortestPath( const VVVI& A )
         {
             if( hasCycle( A ) )
@@ -138,17 +138,22 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     
     
     
-    string test( const string& inputFile, ostringstream outStream=ostringstream{} )
+    void test( const string& inputFile )
     {
         Solution solution;
         auto E = readInput( inputFile );
         auto[ A, hasCycle ] = solution.getShortestPaths( E );
-        outStream << inputFile << ": ";
+        cout << inputFile << ": ";
         if( hasCycle )
-            outStream << "has a cycle" << endl;
+            cout << "has a cycle";
         else
-            outStream << "has shortest path " << solution.shortestPath( A ) << endl;
-        return outStream.str();
+            cout << "has shortest path " << solution.shortestPath( A );
+        size_t count{ 0 };
+        for( auto i{ 1 }; i <= N; ++i )
+            for( auto j{ 1 }; j <= N; ++j )
+                if( A[ i ][ j ][ N ] < INF )
+                    ++count;
+        cout << " and contains " << count << " transitive closures" << endl;
     }
     
     
@@ -157,9 +162,9 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
         for( auto& inputFile: inputFiles )
             test( inputFile );
     
-    //    g1.txt: has a cycle
-    //    g2.txt: has a cycle
-    //    g3.txt: has shortest path -19
+    //    g1.txt: has a cycle and contains 998001 transitive closures
+    //    g2.txt: has a cycle and contains 998001 transitive closures
+    //    g3.txt: has shortest path -19 and contains 998001 transitive closures
     
         return 0;
     }

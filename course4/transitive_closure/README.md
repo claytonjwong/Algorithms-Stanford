@@ -22,7 +22,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 
     /**
      *
-     * Modern C++ implementation of Floyd Warshall's algorithm to find the all-pairs shortest paths in a graph
+     * Modern C++ implementation of Floyd Warshall's algorithm to find the transitive closures in a graph
      *
      * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
      *
@@ -36,7 +36,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     #include <string>
     #include <unordered_map>
     #include <unordered_set>
-    #include <chrono>
+    #include <bitset>
     
     
     using namespace std;
@@ -55,10 +55,8 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     using Integer = long long;
     using Vertex = Integer;
     using Cost = Integer;
-    using VI = vector< Cost >;
+    using VI = vector< bitset< N > >;
     using VVI = vector< VI >;
-    using VVVI = vector< VVI >;
-    static const Cost INF = numeric_limits< Cost >::max();
     struct Edge
     {
         Vertex u{ 0 }, v{ 0 };
@@ -66,7 +64,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     };
     struct Hash{ Cost operator()( const Edge& e ) const { return ( N+1 ) * e.u + e.v; } };
     using Edges = unordered_map< Edge, Cost, Hash >;
-    using Answer = pair< VVVI, bool >;
+    using Answer = pair< VVI, bool >;
     
     
     Edges readInput( const string& filename, Edges edges={} )
@@ -88,67 +86,44 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     {
     public:
     
-        Answer getShortestPaths( Edges& E )
+        VVI getPaths( Edges& E )
         {
-            VVVI dp( N+1, VVI( N+1, VI( N+1, INF )));                       // 1-based indexing from [1:N]
+            VVI dp( N+1, VI( N+1, false ));                                 // 1-based indexing from [1:N]
             for( auto i{ 1 }; i <= N; ++i ) for( auto j{ 1 }; j <= N; ++j ) // for each i,j: base cases for k == 1 ( k is non-inclusive, so Vertex 1 is NOT considered here )
             {
                 Edge edge{ i,j };
-                auto it = E.find( edge );
-                auto cost = ( it != E.end() )? it->second : INF;
-                dp[ i ][ j ][ 1 ] = ( i == j )? 0 : cost;
+                auto hasEdge = ( E.find( edge ) != E.end() );
+                dp[ i ][ j ][ 1 ] = ( i == j )? true : hasEdge;
             }
             for( auto k{ 2 }; k <= N; ++k ) for( auto i{ 2 }; i <= N; ++i ) for( auto j{ 2 }; j <= N; ++j ) // for each i,j,
             {
                 // Note: let (1...k-1) denote a path which is only comprised of candidate vertices [1:k-1], that is 1 inclusive to k-1 inclusive
                 //       this does NOT mean that all of these candidate vertices are included in this path, but these vertices are the only candidates
                 //       which may potentially be included in the path ( this is a fundamental concept of this algorithm to create overlapping subproblems! )
-                auto pre = dp[ i ][ j ][ k-1 ],                         // (pre)vious cost of path i -> (1...k-1) -> j  ( without k )
-                     Cik = dp[ i ][ k ][ k-1 ],                         // cost of path i -> (1...k-1) -> k
-                     Ckj = dp[ k ][ j ][ k-1 ],                         // cost of path k -> (1...k-1) -> j
-                     alt = ( Cik < INF && Ckj < INF )? Cik + Ckj : INF; // (alt)ernative cost of path i -> (1...k-1) -> k -> (1...k-1) -> j
-                dp[ i ][ j ][ k ] = min( pre, alt );
+                bool pre = dp[ i ][ j ][ k-1 ], // (pre)vious existence of path i -> (1...k-1) -> j  ( without k )
+                      ik = dp[ i ][ k ][ k-1 ], // existence of path i -> (1...k-1) -> k
+                      kj = dp[ k ][ j ][ k-1 ], // existence of path k -> (1...k-1) -> j
+                     alt = ( ik & kj );         // (alt)ernative existence of path i -> (1...k-1) -> k -> (1...k-1) -> j
+                dp[ i ][ j ][ k ] = ( pre | alt );
             }
-            return{ dp, hasCycle( dp ) };
-        }
-    
-        Cost shortestPath( const VVVI& A )
-        {
-            if( hasCycle( A ) )
-                return INF;
-            auto cost{ INF };
-            for( auto i{ 1 }; i <= N; ++i )
-                for( auto j{ 1 }; j <= N; ++j )
-                    if( cost > A[ i ][ j ][ N ] )
-                        cost = A[ i ][ j ][ N ];
-            return cost;
-        }
-    
-    private:
-    
-        bool hasCycle( const VVVI& A )
-        {
-            for( auto i{ 1 }; i <= N; ++i )
-                if( A[ i ][ i ][ N ] < 0 )
-                    return true;
-            return false;
+            return dp;
         }
     
     }; // class Solution
     
     
     
-    string test( const string& inputFile, ostringstream outStream=ostringstream{} )
+    void test( const string& inputFile, ostringstream outStream=ostringstream{} )
     {
         Solution solution;
         auto E = readInput( inputFile );
-        auto[ A, hasCycle ] = solution.getShortestPaths( E );
-        outStream << inputFile << ": ";
-        if( hasCycle )
-            outStream << "has a cycle" << endl;
-        else
-            outStream << "has shortest path " << solution.shortestPath( A ) << endl;
-        return outStream.str();
+        auto A = solution.getPaths( E );
+        size_t count{ 0 };
+        for( auto i{ 1 }; i <= N; ++i )
+            for( auto j{ 1 }; j <= N; ++j )
+                if( A[ i ][ j ][ N ] )
+                    ++count;
+        cout << inputFile << " contains " << count << " transitive closures" << endl;
     }
     
     
@@ -157,9 +132,9 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
         for( auto& inputFile: inputFiles )
             test( inputFile );
     
-    //    g1.txt: has a cycle
-    //    g2.txt: has a cycle
-    //    g3.txt: has shortest path -19
+    //    g1.txt contains 998001 transitive closures
+    //    g2.txt contains 998001 transitive closures
+    //    g3.txt contains 998001 transitive closures
     
         return 0;
     }
