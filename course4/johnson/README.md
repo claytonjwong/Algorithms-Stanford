@@ -8,14 +8,19 @@ https://en.wikipedia.org/wiki/Johnson%27s_algorithm
 * [Dependencies](#dependencies)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_01.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_02.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_03.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_04.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_04.png)
 ---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_05.png)
+---
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_06.png)
+---
+
 
 ## Solution
 ```cpp

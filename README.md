@@ -54,5 +54,5 @@
   * [Introduction, All-Pairs Shortest Paths, Algorithmic Approaches to NP-Complete Problems]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/apsp_npc )
   * [Bellman Ford]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford )
   * [Floyd Warshall]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall )
-  * Johnson
+  * [Johnson]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/johnson )
   * 2-SAT
