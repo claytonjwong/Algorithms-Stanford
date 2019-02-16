@@ -44,7 +44,6 @@ using VVI = vector< VI >;
 using Vertex = Integer;
 using Cost = Integer;
 static const Cost Infinity = numeric_limits< Cost >::max();
-using VertexCost = pair< Vertex, Cost >;
 struct Edge
 {
     Vertex u{ 0 }, v{ 0 };
@@ -53,7 +52,6 @@ struct Edge
 struct Hash{ Cost operator()( const Edge& e ) const { return ( N+1 ) * e.u + e.v; } };
 using Edges = unordered_map< Edge, Cost, Hash >;
 using Vertices = unordered_set< Vertex >;
-using MinCost = unordered_map< Vertex, Cost >;
 using AdjacencyList = unordered_set< Vertex >;
 using Graph = unordered_map< Vertex, AdjacencyList >;
 
