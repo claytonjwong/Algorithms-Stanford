@@ -87,22 +87,20 @@ int main()
     auto fastStart = Time::now();
     auto fastResult = fast.count2SumRange( "input.txt", -10000, 10000 );
     auto fastFinish = Time::now();
-    cout << "fast answer: " << fastResult << endl
-         << "fast duration: " << duration_cast< seconds >( fastFinish - fastStart ).count() << " seconds " << endl << endl;
+    cout << "fast answer ( " << fastResult << " ) found in "
+         << duration_cast< seconds >( fastFinish - fastStart ).count()
+         << " seconds " << endl << endl;
 
     SlowSolution< Type > slow;
     auto slowStart = Time::now();
     auto slowResult = slow.count2SumRange( "input.txt", -10000, 10000 );
     auto slowFinish = Time::now();
-    cout << "slow answer: " << slowResult << endl
-         << "slow duration: " << duration_cast< seconds >( slowFinish - slowStart ).count() << " seconds " << endl;
+    cout << "slow answer ( " << slowResult << " ) found in "
+         << duration_cast< seconds >( slowFinish - slowStart ).count()
+         << " seconds " << endl;
 
-//    fast answer: 427
-//    fast duration: 3 seconds
-//
-//    slow answer: 427
-//    slow duration: 3273 seconds
-
+//    fast answer ( 427 ) found in 3 seconds
+//    slow answer ( 427 ) found in 3273 seconds
 
     return 0;
 }
