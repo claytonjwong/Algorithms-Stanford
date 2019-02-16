@@ -19,7 +19,7 @@
   * [Karger Minimum Cut ( Randomized Edge Contractions ) [ Monte Carlo ]]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course1/karger_min_cut )
   
 * **Course 2: Graph Search, Shortest Paths, and Data Structures**
-  * [Graph Introduction, Representations, Primitives, and the Web]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/graphs )
+  * [Introduction, Graph Representations, Primitives, and the Web]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/graphs )
   * [Breadth First Search ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs )
   * [Minimum Path Distances ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs_min_path_dist )
   * [Depth First Search ( DFS - Iterative )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/dfs )
@@ -51,7 +51,8 @@
   * Optimal Binary Search Trees
   
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
+  * [Introduction, All-Pairs Shortest Paths, Algorithmic Approaches to NP-Complete Problems]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/apsp_npc )
   * [Bellman Ford]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford )
-  * algo 2
-  * algo 3
-  * algo 4
+  * [Floyd Warshall]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall )
+  * Johnson
+  * 2-SAT
