@@ -36,20 +36,22 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     #include <string>
     #include <unordered_map>
     #include <unordered_set>
-    
-    
-    #define ASSIGNMENT_INPUT 69 // comment this line to execute tests on the large optional input
+    #include <chrono>
     
     
     using namespace std;
+    using namespace std::chrono;
     using InputFiles = vector< string >;
-    #ifdef ASSIGNMENT_INPUT
+    //
+    // Assignment Input
+    //
     const auto N{ 1000 };
     const InputFiles inputFiles{ "g1.txt", "g2.txt", "g3.txt" };
-    #else
-    const auto N{ 20000 };
-    const InputFiles inputFiles{ "large.txt" };
-    #endif
+    //
+    // Optional Challenge Input
+    //
+    //const auto N{ 20000 };
+    //const InputFiles inputFiles{ "large.txt" };
     using Integer = long long;
     using Vertex = Integer;
     using Cost = Integer;
@@ -98,8 +100,8 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
             }
             for( auto k{ 2 }; k <= N; ++k ) for( auto i{ 2 }; i <= N; ++i ) for( auto j{ 2 }; j <= N; ++j ) // for each i,j,
             {
-                // Note: let (1...k-1) denote a path which is only comprised of vertices [1:k-1], that is 1 inclusive to k-1 inclusive
-                //       this does NOT mean that all of these vertices are included in this path, but these vertices are the only potential candidates
+                // Note: let (1...k-1) denote a path which is only comprised of candidate vertices [1:k-1], that is 1 inclusive to k-1 inclusive
+                //       this does NOT mean that all of these candidate vertices are included in this path, but these vertices are the only candidates
                 //       which may potentially be included in the path ( this is a fundamental concept of this algorithm to create overlapping subproblems! )
                 auto pre = dp[ i ][ j ][ k-1 ],                         // (pre)vious cost of path i -> (1...k-1) -> j  ( without k )
                      Cik = dp[ i ][ k ][ k-1 ],                         // cost of path i -> (1...k-1) -> k
@@ -135,21 +137,25 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     }; // class Solution
     
     
-    int main()
+    
+    string test( const string& inputFile, ostringstream outStream=ostringstream{} )
     {
         Solution solution;
-        for( auto& inputFile: inputFiles )
-        {
-            auto E = readInput( inputFile );
-            auto[ A, hasCycle ] = solution.getShortestPaths( E );
-            cout << inputFile << ": ";
-            if( hasCycle )
-                cout << "has a cycle";
-            else
-                cout << "has shortest path " << solution.shortestPath( A );
+        auto E = readInput( inputFile );
+        auto[ A, hasCycle ] = solution.getShortestPaths( E );
+        outStream << inputFile << ": ";
+        if( hasCycle )
+            outStream << "has a cycle" << endl;
+        else
+            outStream << "has shortest path " << solution.shortestPath( A ) << endl;
+        return outStream.str();
+    }
     
-            cout << endl;
-        }
+    
+    int main()
+    {
+        for( auto& inputFile: inputFiles )
+            test( inputFile );
     
     //    g1.txt: has a cycle
     //    g2.txt: has a cycle
@@ -157,7 +163,6 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     
         return 0;
     }
-
 
 ```
 

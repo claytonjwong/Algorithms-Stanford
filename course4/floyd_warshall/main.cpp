@@ -17,19 +17,19 @@
 #include <chrono>
 
 
-#define ASSIGNMENT_INPUT 69 // comment this line to execute tests on the large optional input
-
-
 using namespace std;
 using namespace std::chrono;
 using InputFiles = vector< string >;
-#ifdef ASSIGNMENT_INPUT
+//
+// Assignment Input
+//
 const auto N{ 1000 };
 const InputFiles inputFiles{ "g1.txt", "g2.txt", "g3.txt" };
-#else
-const auto N{ 20000 };
-const InputFiles inputFiles{ "large.txt" };
-#endif
+//
+// Optional Challenge Input
+//
+//const auto N{ 20000 };
+//const InputFiles inputFiles{ "large.txt" };
 using Integer = long long;
 using Vertex = Integer;
 using Cost = Integer;
@@ -78,8 +78,8 @@ public:
         }
         for( auto k{ 2 }; k <= N; ++k ) for( auto i{ 2 }; i <= N; ++i ) for( auto j{ 2 }; j <= N; ++j ) // for each i,j,
         {
-            // Note: let (1...k-1) denote a path which is only comprised of vertices [1:k-1], that is 1 inclusive to k-1 inclusive
-            //       this does NOT mean that all of these vertices are included in this path, but these vertices are the only potential candidates
+            // Note: let (1...k-1) denote a path which is only comprised of candidate vertices [1:k-1], that is 1 inclusive to k-1 inclusive
+            //       this does NOT mean that all of these candidate vertices are included in this path, but these vertices are the only candidates
             //       which may potentially be included in the path ( this is a fundamental concept of this algorithm to create overlapping subproblems! )
             auto pre = dp[ i ][ j ][ k-1 ],                         // (pre)vious cost of path i -> (1...k-1) -> j  ( without k )
                  Cik = dp[ i ][ k ][ k-1 ],                         // cost of path i -> (1...k-1) -> k
@@ -116,45 +116,28 @@ private:
 
 
 
-string test( const string& inputFile )
+string test( const string& inputFile, ostringstream outStream=ostringstream{} )
 {
-    ostringstream outStream;
     Solution solution;
     auto E = readInput( inputFile );
     auto[ A, hasCycle ] = solution.getShortestPaths( E );
     outStream << inputFile << ": ";
     if( hasCycle )
-        outStream << "has a cycle";
+        outStream << "has a cycle" << endl;
     else
-        outStream << "has shortest path " << solution.shortestPath( A );
+        outStream << "has shortest path " << solution.shortestPath( A ) << endl;
     return outStream.str();
 }
 
-using Minute = duration< long long, minutes >;
-using Minutes = vector< Minute >;
-using Time = std::chrono::high_resolution_clock;
 
 int main()
 {
-
     for( auto& inputFile: inputFiles )
-    {
-        string output;
-        auto start = Time::now();
-        {
-            output = test( inputFile );
-        }
-        auto finish = Time::now();
-        cout << output << " ( execution time: "
-             << duration_cast< minutes >( finish - start ).count()
-             << " minutes )" << endl << endl;
-    }
+        test( inputFile );
 
-//    g1.txt: has a cycle ( execution time: 3 minutes )
-//
-//    g2.txt: has a cycle ( execution time: 3 minutes )
-//
-//    g3.txt: has shortest path -19 ( execution time: 3 minutes )
+//    g1.txt: has a cycle
+//    g2.txt: has a cycle
+//    g3.txt: has shortest path -19
 
     return 0;
 }
