@@ -4,8 +4,6 @@ https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
 ## Contents
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
-* [Build Instructions](#build-instructions)
-* [Dependencies](#dependencies)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bellman_ford/documentation/bell_01.png)
@@ -126,13 +124,3 @@ for the complete solution.
     }; // class BellmanFord
     
 ```
-
-## Build Instructions
-Use ```cmake``` to build this project:
-
-```
-    cmake --build cmake-build-debug --target bellman_ford -- -j 4
-```
-
-## Dependencies
-* [cmake.org](https://cmake.org)
