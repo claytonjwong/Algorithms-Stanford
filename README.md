@@ -53,7 +53,7 @@
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
   * [Introduction, All-Pairs Shortest Paths (APSP), Algorithmic Approaches to NP-Complete Problems]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/apsp_npc )
   * [Bellman Ford]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford )
-  * Bellman Ford ( memory optimized )
+  * [Bellman Ford ( memory optimized + cycle detection )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford )
   * [Floyd Warshall ( APSP )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall )
   * Floyd Warshall ( APSP + memory optimized )
   * [Floyd Warshall ( Transitive Closure )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/transitive_closure )
