@@ -28,7 +28,6 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
      *
      **/
     
-    
     #include <iostream>
     #include <fstream>
     #include <sstream>
@@ -153,7 +152,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
             for( auto j{ 1 }; j <= N; ++j )
                 if( A[ i ][ j ][ N ] < INF )
                     ++count;
-        cout << " and contains " << count << " transitive closures" << endl;
+        cout << " and contains " << count << " paths" << endl;
     }
     
     
@@ -162,9 +161,9 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
         for( auto& inputFile: inputFiles )
             test( inputFile );
     
-    //    g1.txt: has a cycle and contains 998001 transitive closures
-    //    g2.txt: has a cycle and contains 998001 transitive closures
-    //    g3.txt: has shortest path -19 and contains 998001 transitive closures
+    //    g1.txt: has a cycle and contains 998001 paths
+    //    g2.txt: has a cycle and contains 998001 paths
+    //    g3.txt: has shortest path -19 and contains 998001 paths
     
         return 0;
     }
