@@ -20,6 +20,16 @@
 using namespace std;
 using InputFiles = vector< string >;
 //
+// Lecture Test Input
+//
+//const auto N{ 6 };
+//const InputFiles inputFiles{ "lecture.txt" };
+//
+// Small Test Input
+//
+//const auto N{ 3 };
+//const InputFiles inputFiles{ "g0.txt" };
+//
 // Assignment Input
 //
 const auto N{ 1000 };
@@ -122,13 +132,16 @@ private:
 
     static bool hasCycle( Graph& G, Edges& E, VVI& dp )
     {
+        auto P{ dp.back() };
         for( auto& e: E )
         {
             auto edge{ e.first };
-            auto Cuv = e.second,
-                 Cu = dp[ N ][ edge.u ],
-                 Cv = dp[ N ][ edge.v ];
-            if( Cu < INF && Cv > Cu + Cuv )
+            auto u{ edge.u },
+                 v{ edge.v };
+            auto Pu = P[ u ],      // cost of (P)ath from s -> ... -> u
+                 Pv = P[ v ],      // cost of (P)ath from s -> ... -> v
+                 cost{ e.second }; // cost of u -> v
+            if( Pu < INF && Pv > Pu + cost )
                 return true;
         }
         return false;
@@ -153,15 +166,15 @@ public:
         C[ start ] = 0;
         for( q.push({ start, C[ start ] }); ! q.empty(); q.pop() )
         {
-            auto tail{ q.top().first };
+            auto u{ q.top().first };
             auto cost{ q.top().second };
-            for( auto& head: G[ tail ] )
+            for( auto& v: G[ u ] )
             {
-                Edge edge{ tail, head };
-                auto candidate = cost + E[ edge ];
-                if( C[ head ] > candidate )
-                    C[ head ] = candidate,
-                        q.push({ head, C[ head ] });
+                Edge uv{ u,v };
+                auto alt = ( cost < INF )? cost + E[ uv ] : INF;
+                if( C[ v ] > alt )
+                    C[ v ] = alt,
+                    q.push({ v, C[ v ] });
             }
         }
         return C;
@@ -173,7 +186,7 @@ class Johnson
 {
 public:
 
-    using Answer = pair< VVVI, bool >;
+    using Answer = pair< Cost, bool >;
 
     static Answer getShortestPaths( const string& input )
     {
@@ -186,27 +199,48 @@ public:
         // form Gs by adding a new vertex 'source' and a new edge of cost 0
         // from 'source' to each vertex in G to determine if a cycle exists
         //
-        VVI A;
-        {
-            Vertex source{ 0 };
-            auto[ Gs, Es ] = Johnson::addSourceVertex( G, E, source );
-            Gs = reverse( Gs ); // Gs was generated with outgoing adjacency lists, reverse Gs for incoming adjacency lists needed by Bellman-Ford
-            auto[ A, hasCycle ] = BellmanFord::getShortestPaths( Gs, Es, source );
-            if( hasCycle )
-                return{ {}, true };
-        }
-
-        // TODO: calculate new edge costs using A[ N ][ u ] and A[ N ][ v ] ==> new cost = old cost + ( A[ N ][ u ] - A[ N ][ v ] )
-        //       note that this looks like it can be simplified by pulling the last row as P = A.back(), then just use P[ u ] and P[ v ]
+        Vertex source{ 0 };
+        auto[ Gs, Es ] = Johnson::addSourceVertex( G, E, source );
+        Gs = reverse( Gs ); // Gs was generated with outgoing adjacency lists, reverse Gs for incoming adjacency lists needed by Bellman-Ford
+        auto[ A, hasCycle ] = BellmanFord::getShortestPaths( Gs, Es, source );
+        if( hasCycle )
+            return{ {}, true };
         //
-
-        // TODO: for each vertex u in G, run Dijkstra using that vertex as the start vertex
-        //       this returns a MinCost mapping for each u -> v path, convert this cost to terms we care about by subtracing re-weights from step above
-        //       for each minCost in C, the minCost = minCost - P[ u ] + P[ v ]
-
-        // TODO: for each minimum cost, store the minimum and return the minimum of all the minimums in the return value
-
-        return{ {}, false };
+        // re-weight edges using the (P)aths found from runnning Bellman-Ford
+        // on the augmented graph Gs ( G with new vertex 'source' )
+        //
+        auto P{ A.back() };
+        for( auto& pair: E )
+        {
+            auto edge{ pair.first };
+            auto u{ edge.u },
+                 v{ edge.v };
+            auto Pu = P[ u ],
+                 Pv = P[ v ];
+            auto cost{ pair.second };
+            E[{ u,v }] = ( cost < INF )? cost + Pu - Pv : 0;
+        }
+        //
+        // run Dijkstra to find the minimum cost for each path from u -> ... -> v
+        // convert the weight back to the original graph's edge weights
+        // and track the minimum cost path to be returned
+        //
+        auto minCost{ INF };
+        for( auto u: V )
+        {
+            auto C = Dijkstra::getShortestPaths( G, E, u );
+            for( auto& pair: C )
+            {
+                auto v{ pair.first };
+                auto cost{ pair.second };
+                auto Pu = P[ u ],
+                     Pv = P[ v ];
+                cost = ( cost < INF )? cost - Pu + Pv : 0;
+                if( minCost > cost )
+                    minCost = cost;
+            }
+        }
+        return{ minCost, false };
     }
 
 private:
@@ -233,8 +267,17 @@ int main()
     for( auto& inputFile: inputFiles )
     {
         auto answer = Johnson::getShortestPaths( inputFile );
-        cout << inputFile << " contains cycle? " << answer.second << endl;
+        auto hasCycle{ answer.second };
+        cout << inputFile << ": ";
+        if( hasCycle )
+            cout << "has a cycle" << endl;
+        else
+            cout << "has shortest path " << answer.first << endl;
     }
+
+//    g1.txt: has a cycle
+//    g2.txt: has a cycle
+//    g3.txt: has shortest path -19
 
     return 0;
 }

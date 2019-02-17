@@ -51,9 +51,11 @@
   * Optimal Binary Search Trees
   
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
-  * [Introduction, All-Pairs Shortest Paths, Algorithmic Approaches to NP-Complete Problems]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/apsp_npc )
+  * [Introduction, All-Pairs Shortest Paths (APSP), Algorithmic Approaches to NP-Complete Problems]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/apsp_npc )
   * [Bellman Ford]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford )
-  * [Floyd Warshall ( All-Pairs Shortest Paths )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall )
+  * Bellman Ford ( memory optimized )
+  * [Floyd Warshall ( APSP )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall )
+  * Floyd Warshall ( APSP + memory optimized )
   * [Floyd Warshall ( Transitive Closure )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/transitive_closure )
   * [Johnson]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/johnson )
   * 2-SAT
