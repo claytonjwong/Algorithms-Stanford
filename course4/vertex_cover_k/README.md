@@ -12,23 +12,23 @@ https://en.wikipedia.org/wiki/Vertex_cover
 [Video](https://www.coursera.org/lecture/algorithms-npcomplete/the-vertex-cover-problem-fxmkY)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_01.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_02.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_03.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_04.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_05.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_06.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_07.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_08.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/vertex_cover_k_09.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_09.png)
 ---
 
 
