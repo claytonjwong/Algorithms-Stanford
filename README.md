@@ -60,4 +60,5 @@
   * [Johnson]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/johnson )
   * [Vertex Cover ( min K graph )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k_graph )
   * [Vertex Cover ( min K tree )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k_tree )
+  * [Travelling Salesman]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/travelling_salesman )
   * 2-SAT
