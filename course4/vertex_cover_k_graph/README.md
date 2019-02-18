@@ -1,4 +1,4 @@
-# Vertex Cover
+# Vertex Cover ( minimum K graph )
 https://en.wikipedia.org/wiki/Vertex_cover
 
 ## Contents
@@ -12,23 +12,23 @@ https://en.wikipedia.org/wiki/Vertex_cover
 [Video](https://www.coursera.org/lecture/algorithms-npcomplete/the-vertex-cover-problem-fxmkY)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_01.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_02.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_03.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_04.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_05.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_06.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_07.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_08.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k/documentation/cover_09.png)
+![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_graph/documentation/cover_09.png)
 ---
 
 
@@ -141,7 +141,7 @@ https://en.wikipedia.org/wiki/Vertex_cover
 Use ```cmake``` to build this project:
 
 ```
-    cmake --build cmake-build-debug --target vertex_cover_k -- -j 4
+    cmake --build cmake-build-debug --target vertex_cover_k_graph -- -j 4
 ```
 
 ## Dependencies
