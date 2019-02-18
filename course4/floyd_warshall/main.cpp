@@ -126,12 +126,6 @@ void test( const string& inputFile )
         cout << "has a cycle";
     else
         cout << "has shortest path " << solution.shortestPath( A );
-    size_t count{ 0 };
-    for( auto i{ 1 }; i <= N; ++i )
-        for( auto j{ 1 }; j <= N; ++j )
-            if( A[ i ][ j ][ N ] < INF )
-                ++count;
-    cout << " and contains " << count << " paths" << endl;
 }
 
 
