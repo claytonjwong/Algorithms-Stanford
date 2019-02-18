@@ -96,7 +96,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
                 auto cost = ( it != E.end() )? it->second : INF;
                 cur[ i ][ j ] = ( i == j )? 0 : cost;
             }
-            for( auto k{ 2 }; k <= N; ++k, swap( cur, next ) ) for( auto i{ 2 }; i <= N; ++i ) for( auto j{ 2 }; j <= N; ++j ) // for each i,j,
+            for( auto k{ 2 }; k <= N; ++k, swap( cur, next ) ) for( auto i{ 2 }; i <= N; ++i ) for( auto j{ 2 }; j <= N; ++j ) // for each i,j,k
             {
                 // Note: let (1...k-1) denote a path which is only comprised of candidate vertices [1:k-1], that is 1 inclusive to k-1 inclusive
                 //       this does NOT mean that all of these candidate vertices are included in this path, but these vertices are the only candidates
