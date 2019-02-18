@@ -1,4 +1,4 @@
-# Floyd Warshall
+# Floyd Warshall ( memory optimized )
 https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 
 ## Contents
@@ -169,7 +169,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 Use ```cmake``` to build this project:
 
 ```
-    cmake --build cmake-build-debug --target floyd_warshall -- -j 4
+    cmake --build cmake-build-debug --target floyd_warshall_memopt -- -j 4
 ```
 
 ## Dependencies
