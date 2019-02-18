@@ -56,7 +56,7 @@
   * [Bellman Ford ( memory optimized + cycle detection )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford_memopt )
   * [Floyd Warshall]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall )
   * [Floyd Warshall ( memory optimized )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall_memopt )
-  * [Floyd Warshall ( Transitive Closure )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/transitive_closure )
+  * [Floyd Warshall ( memory optimized + transitive closure )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/transitive_closure )
   * [Johnson]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/johnson )
   * [Vertex Cover ( min K graph )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k_graph )
   * [Vertex Cover ( min K tree )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k_tree )
