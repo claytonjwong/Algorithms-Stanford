@@ -118,7 +118,7 @@ https://en.wikipedia.org/wiki/Cluster_analysis
             return cost;
         }
     
-        size_t maxClusters( size_t threshold )
+        size_t maxClusters()
         {
             Buckets buckets;
             Leads leads;
@@ -202,21 +202,20 @@ https://en.wikipedia.org/wiki/Cluster_analysis
     
     int main()
     {
+        using Type = size_t;
+        Solution< Type > s;
+    
         //
         // part 1
         //
-        using Type = size_t;
-    
         auto K{ 4 };
-        Solution< Type > s;
         auto answer_part1 = s.maxSpacingKClusters( Assignment1::Input, K );
         cout << "answer ( part 1 ): " << answer_part1 << endl << endl;
     
         //
         // part 2
         //
-        auto hammingThreshold{ 3 }; // non-inclusive, find all K-clusters with hamming distance strictly LESS THAN this threshold
-        auto answer_part2 = s.maxClusters( hammingThreshold );
+        auto answer_part2 = s.maxClusters();
         cout << "answer ( part 2 ): " << answer_part2 << endl << endl;
     
     //    answer ( part 1 ): 106
