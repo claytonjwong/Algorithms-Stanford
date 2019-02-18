@@ -54,8 +54,8 @@
   * [Introduction, All-Pairs Shortest Paths (APSP), Algorithmic Approaches to NP-Complete Problems]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/apsp_npc )
   * [Bellman Ford]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford )
   * [Bellman Ford ( memory optimized + cycle detection )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford_memopt )
-  * [Floyd Warshall ( APSP )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall )
-  * Floyd Warshall ( APSP + memory optimized )
+  * [Floyd Warshall]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall )
+  * [Floyd Warshall ( memory optimized )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall_memopt )
   * [Floyd Warshall ( Transitive Closure )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/transitive_closure )
   * [Johnson]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/johnson )
   * 2-SAT
