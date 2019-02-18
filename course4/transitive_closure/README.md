@@ -145,7 +145,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 Use ```cmake``` to build this project:
 
 ```
-    cmake --build cmake-build-debug --target floyd_warshall -- -j 4
+    cmake --build cmake-build-debug --target transitive_closure -- -j 4
 ```
 
 ## Dependencies
