@@ -85,25 +85,18 @@ https://en.wikipedia.org/wiki/Vertex_cover
             copy_if( E.begin(), E.end(), inserter( Ev, Ev.end() ), [=]( auto& e ){ return v != e.u && v != e.v; });
             auto Au = go( Eu, K-1 ), // (A)nswer with cover set of Eu: (E)dges with vertex u and u's incident edges removed
                  Av = go( Ev, K-1 ); // (A)nswer with cover set of Ev: (E)dges with vertex v and v's incident edges removed
-            if( Au.second && Av.second )
-            {
-                auto Su{ Au.first }, // cover (S)et for Eu
-                     Sv{ Av.first }; // cover (S)et for Ev
-                if( Su.size() > Sv.size() ) Au.second = false; // skip past Au if its bigger than Av, and return Av instead (it is a more optimal solution)
-            }
-            if( Au.second ) // arbitrarily return the valid cover set in Au ( unless if its bigger than another valid cover set Av )
-            {
-                auto cover{ Au.first };
-                cover.push_back( u );
-                return{ cover, true };
-            }
-            if( Av.second ) // valid cover set Av
-            {
-                auto cover{ Av.first };
-                cover.push_back( v );
-                return{ cover, true };
-            }
-            return{ {}, false };
+            auto Su{ Au.first }, // cover (S)et for Eu
+                 Sv{ Av.first }; // cover (S)et for Ev
+            Su.push_back( u ),
+            Sv.push_back( v );
+            if( ! Au.second && ! Av.second )
+                return{ {}, false };
+            else
+            if(( Au.second && Av.second && Su.size() <= Sv.size() ) || // if both valid, arbitrarily return Su ( unless size Su > Sv )
+               ( Au.second && ! Av.second ))
+                return{ Su, true };
+            else
+                return{ Sv, true };
         }
     
     }; // class Solution
