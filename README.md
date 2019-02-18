@@ -58,4 +58,5 @@
   * [Floyd Warshall ( memory optimized )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/floyd_warshall_memopt )
   * [Floyd Warshall ( Transitive Closure )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/transitive_closure )
   * [Johnson]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/johnson )
+  * [Vertex Cover K]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k )
   * 2-SAT
