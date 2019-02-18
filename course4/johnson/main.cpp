@@ -22,18 +22,13 @@ using InputFiles = vector< string >;
 //
 // Lecture Test Input
 //
-//const auto N{ 6 };
-//const InputFiles inputFiles{ "lecture.txt" };
-//
-// Small Test Input
-//
-//const auto N{ 3 };
-//const InputFiles inputFiles{ "g0.txt" };
+const auto N{ 6 };
+const InputFiles inputFiles{ "lecture.txt" };
 //
 // Assignment Input
 //
-const auto N{ 1000 };
-const InputFiles inputFiles{ "g1.txt", "g2.txt", "g3.txt" };
+//const auto N{ 1000 };
+//const InputFiles inputFiles{ "g1.txt", "g2.txt", "g3.txt" };
 //
 // Optional Challenge Input
 //
@@ -48,11 +43,7 @@ using VVVI = vector< VVI >;
 static const Cost INF = numeric_limits< Cost >::max();
 using AdjacencyList = unordered_set< Vertex >;
 using Graph = unordered_map< Vertex, AdjacencyList >;
-struct Edge
-{
-    Vertex u{ 0 }, v{ 0 };
-    bool operator==( const Edge& rhs ) const { return u == rhs.u && v == rhs.v; }
-};
+struct Edge{ Vertex u{ 0 }, v{ 0 }; bool operator==( const Edge& rhs ) const { return u == rhs.u && v == rhs.v; } };
 struct Hash{ Cost operator()( const Edge& e ) const { return ( N+1 ) * e.u + e.v; } };
 using Edges = unordered_map< Edge, Cost, Hash >;
 using Vertices = unordered_set< Vertex >;
@@ -273,9 +264,13 @@ int main()
             cout << "has shortest path " << answer.first << endl;
     }
 
+//    lecture.txt: has shortest path -6
+
 //    g1.txt: has a cycle
 //    g2.txt: has a cycle
 //    g3.txt: has shortest path -19
+
+//    large.txt: has shortest path -6
 
     return 0;
 }
