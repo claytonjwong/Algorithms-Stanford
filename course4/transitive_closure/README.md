@@ -55,7 +55,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     using Integer = long long;
     using Vertex = Integer;
     using Cost = Integer;
-    using VI = vector< bitset< N > >;
+    using VI = bitset< N >;
     using VVI = vector< VI >;
     struct Edge
     {
@@ -88,29 +88,29 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
     
         VVI getPaths( Edges& E )
         {
-            VVI dp( N+1, VI( N+1, false ));                                 // 1-based indexing from [1:N]
+            VVI cur( N+1, false ), next( cur );
             for( auto i{ 1 }; i <= N; ++i ) for( auto j{ 1 }; j <= N; ++j ) // for each i,j: base cases for k == 1 ( k is non-inclusive, so Vertex 1 is NOT considered here )
-            {
-                Edge edge{ i,j };
-                auto hasEdge = ( E.find( edge ) != E.end() );
-                dp[ i ][ j ][ 1 ] = ( i == j )? true : hasEdge;
-            }
-            for( auto k{ 2 }; k <= N; ++k ) for( auto i{ 2 }; i <= N; ++i ) for( auto j{ 2 }; j <= N; ++j ) // for each i,j,
+                {
+                    Edge edge{ i,j };
+                    auto it = E.find( edge );
+                    auto hasEdge = ( it != E.end() );
+                    cur[ i ][ j ] = ( i == j )? true : hasEdge;
+                }
+            for( auto k{ 2 }; k <= N; ++k, swap( cur, next ) ) for( auto i{ 2 }; i <= N; ++i ) for( auto j{ 2 }; j <= N; ++j ) // for each i,j,k
             {
                 // Note: let (1...k-1) denote a path which is only comprised of candidate vertices [1:k-1], that is 1 inclusive to k-1 inclusive
                 //       this does NOT mean that all of these candidate vertices are included in this path, but these vertices are the only candidates
                 //       which may potentially be included in the path ( this is a fundamental concept of this algorithm to create overlapping subproblems! )
-                bool pre = dp[ i ][ j ][ k-1 ], // (pre)vious existence of path i -> (1...k-1) -> j  ( without k )
-                      ik = dp[ i ][ k ][ k-1 ], // existence of path i -> (1...k-1) -> k
-                      kj = dp[ k ][ j ][ k-1 ], // existence of path k -> (1...k-1) -> j
-                     alt = ( ik & kj );         // (alt)ernative existence of path i -> (1...k-1) -> k -> (1...k-1) -> j
-                dp[ i ][ j ][ k ] = ( pre | alt );
+                bool pre = cur[ i ][ j ], // (pre)vious existence of path i -> (1...k-1) -> j  ( without k )
+                      ik = cur[ i ][ k ], // existence of path i -> (1...k-1) -> k
+                      kj = cur[ k ][ j ], // existence of path k -> (1...k-1) -> j
+                     alt = ( ik & kj );    // (alt)ernative existence of path i -> (1...k-1) -> k -> (1...k-1) -> j
+                next[ i ][ j ] = ( pre | alt );
             }
-            return dp;
+            return next;
         }
     
     }; // class Solution
-    
     
     
     void test( const string& inputFile, ostringstream outStream=ostringstream{} )
@@ -121,7 +121,7 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
         size_t count{ 0 };
         for( auto i{ 1 }; i <= N; ++i )
             for( auto j{ 1 }; j <= N; ++j )
-                if( A[ i ][ j ][ N ] )
+                if( A[ i ][ j ] )
                     ++count;
         cout << inputFile << " contains " << count << " transitive closures" << endl;
     }
@@ -132,9 +132,9 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
         for( auto& inputFile: inputFiles )
             test( inputFile );
     
-    //    g1.txt contains 998001 transitive closures
-    //    g2.txt contains 998001 transitive closures
-    //    g3.txt contains 998001 transitive closures
+    //    g1.txt contains 998090 transitive closures
+    //    g2.txt contains 998108 transitive closures
+    //    g3.txt contains 998114 transitive closures
     
         return 0;
     }
