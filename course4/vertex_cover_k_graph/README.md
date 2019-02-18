@@ -1,4 +1,4 @@
-# Vertex Cover ( minimum K graph )
+# Vertex Cover ( min K graph )
 https://en.wikipedia.org/wiki/Vertex_cover
 
 ## Contents
