@@ -7,7 +7,7 @@
     and each subsequent line indicates the x- and y-coordinates of a single city.
 
     The distance between two cities is defined as the Euclidean distance ---
-    that is, two cities at locations (x,y)(x,y) and (z,w)(z,w) have distance \sqrt{(x-z)^2 + (y-w)^2} between them.
+    that is, two cities at locations (x,y) and (i,j) have distance \sqrt{(x-i)^2 + (y-j)^2} between them.
 
     In the box below, type in the minimum cost of a traveling salesman tour for this instance,
     rounded down to the nearest integer.
