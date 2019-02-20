@@ -74,8 +74,8 @@ public:
         {
             auto S = Set( ( 1 << m ) - 1 ).to_string(); // set right-most m-bits
             do {
-                auto bits{ Set{ S } };
-                auto Sj{ bits.to_ulong() };
+                auto bits = Set{ S };
+                auto Sj = bits.to_ulong();
                 for( auto j{ 1 }, k{ 0 }; j < N; ++j ) // for each bit-j in S, j != 0, source vertex 0 is always included in S
                 {
                     if( ! bits[ j ] )
