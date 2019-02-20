@@ -1,6 +1,6 @@
 /**
  *
- * Modern C++ implementation of the Held-Karp travelling salesman algorithm to find minimum tour in a graph
+ * Modern C++ implementation of the Held-Karp travelling salesman algorithm to find min tour in O(N^2 * 2^N) time
  *
  * Note: a tour is a path which traverses each vertex exactly once, starting and finishing at a specific vertex
  *
@@ -16,10 +16,9 @@
 #include <algorithm>
 #include <iomanip>
 #include <cmath>
-#include <unordered_map>
 
 
-constexpr auto N{ 4 }; // assignment input contains 25 cities
+constexpr auto N{ 25 }; // assignment input contains 25 cities
 
 
 using namespace std;
@@ -67,43 +66,37 @@ class Solution
 {
 public:
 
-    RealNum tour( Cost& D )
+    RealNum minTour( Cost& D, RealNum minCost=INF )
     {
-        // TODO: reconsider overall strategy bottom-up, make things easier on myself by using a 2-D vector instead of map
-        // for the first implementation, since that *should* be less error prone, as it is a more simple approach
         VVR dp(( 1 << N ), VR( N, INF ));
-        dp[ 1 ][ 0 ] = 0; // base case: bit at position 0 is set ( 1 ): S = {0}
-//            A[ key( 1, k ) ] = D[ 0 ][ k ]; //            so S + {k} = {0} + {k} = cost of 0,k
-        auto minCost{ INF };
+        dp[ 1 ][ 0 ] = 0; // base case: set bit at position 0 ( S = {0} ): A[ S, 0 ] = 0
         for( auto m{ 2 }; m <= N; ++m ) // m = sub-problem size ( cardinality of S )
         {
-            auto S = Set( ( 1 << m ) - 1 ).to_string(); // all bits set till m
+            auto S = Set( ( 1 << m ) - 1 ).to_string(); // set right-most m-bits
             do {
                 auto bits{ Set{ S } };
-                auto S_with_j{ bits.to_ulong() };
-                for( auto j{ 1 }, k{ 0 }; j < N; ++j ) // for each bit-j in S, j != 0
+                auto Sj{ bits.to_ulong() };
+                for( auto j{ 1 }, k{ 0 }; j < N; ++j ) // for each bit-j in S, j != 0, source vertex 0 is always included in S
                 {
                     if( ! bits[ j ] )
                         continue;
-                    bits.reset( j ); // S - {j} ( forward tracking )
-                    auto S_without_j = bits.to_ulong();
+                    bits.reset( j ); // S - {j}
+                    auto alt = bits.to_ulong(); // find min (alt)ernative path ending at j, comprised of vertices S - {j} for each penultimate vertex k
+                    for( dp[ Sj ][ j ] = INF, k = 0; k < N; ++k ) // find min-k in S ( k != j ): A[ S - {j}, k ] + cost of k,j
                     {
-                        for( dp[ S_with_j ][ j ] = INF, k = 0; k < N; ++k ) // find min-k in S ( k != j ): A[ S - {j}, k ] + cost of k,j
-                        {
-                            if( k == j )
-                                continue;
-                            auto Ck = dp[ S_without_j ][ k ], // A[ S - {j}, k ] == (C)ost of path 1 -> ... -> k ( without j )
-                                 Ckj = D[ k ][ j ],           // (C)ost of k,j
-                                 cost = ( Ck < INF )? Ck + Ckj : INF;
-                                if( dp[ S_with_j ][ j ] > cost )
-                                    dp[ S_with_j ][ j ] = cost;
-                        }
+                        if( k == j )
+                            continue;
+                        auto Ck = dp[ alt ][ k ], // A[ S - {j}, k ] == (C)ost of path 1 -> ... -> k ( without j )
+                             Ckj = D[ k ][ j ],   // (C)ost of k,j
+                             cost = ( Ck < INF )? Ck + Ckj : INF;
+                            if( dp[ Sj ][ j ] > cost )
+                                dp[ Sj ][ j ] = cost;
                     }
-                    bits.set( j ); // S + {j} ( back tracking )
+                    bits.set( j ); // S + {j}
                 }
-            } while( next_permutation( S.begin(), S.end() - 1 )); // Note: end - 1 to NOT permute upon the last bit, source vertex {0} is always included in S
+            } while( next_permutation( S.begin(), S.end() - 1 )); // Note: end - 1 to NOT permute upon the last bit, source vertex 0 is always included in S
         }
-        auto P{ dp.back() }; // use (P)aths of {S} from 1 -> ... -> k to calculate the min full tour by connecting k with source vertex {0}
+        auto P{ dp.back() }; // use (P)aths of {S} from 0 -> ... -> k to calculate the min tour by connecting k with source vertex 0
         for( auto k{ 1 }; k < N; ++k )
         {
             auto alt = P[ k ] + D[ k ][ 0 ]; // consider each (alt)ernative cost based on each penultimate vertex choice k
@@ -115,11 +108,7 @@ public:
 
 private:
 
-    using Key = unsigned long;
     using Set = bitset< N >;
-
-    Key key(Set &bits ){ return bits.to_ulong(); }
-    Key key(Set &&bits ){ return bits.to_ulong(); }
 
 }; // class Solution
 
@@ -127,20 +116,48 @@ private:
 int main()
 {
     Solution solution;
-//    auto city = readInput( Assignment::Input );
-//    auto cost = getCosts( city );
-//    auto ans = solution.tour( city, cost );
 
-    // lecture input ( 13 )
-    Cost cost{
-        { 0, 2, 1, 3 },
-        { 2, 0, 4, 5 },
-        { 1, 4, 0, 6 },
-        { 3, 5, 6, 0 },
-    };
-    auto ans = solution.tour( cost );
+//
+// assignment input
+//
 
-    cout << "answer: " << ans << endl;
+    auto city = readInput( Assignment::Input );
+    auto cost = getCosts( city );
+
+//
+// lecture input ( answer: 13 )
+//
+/*
+ *             2
+ *     (0)-----------(1)
+ *      |\           /|
+ *      | \         / |
+ *      |  \ 3     /  |
+ *      |   \     /   |
+ *      |    \   /    |
+ *      |     \ /     |
+ *    1 |      \      | 5
+ *      |     / \     |
+ *      |    /   \    |
+ *      |   /     \   |
+ *      |  / 4     \  |
+ *      | /         \ |
+ *      |/           \|
+ *     (2)-----------(3)
+ *             6
+ *
+ */
+//    Cost cost{
+//        { 0, 2, 1, 3 },
+//        { 2, 0, 4, 5 },
+//        { 1, 4, 0, 6 },
+//        { 3, 5, 6, 0 },
+//    };
+
+    auto ans = solution.minTour( cost );
+    cout << "answer: " << static_cast< int >( ans ) << endl;
+
+    // answer: 26442
 
     return 0;
 }
