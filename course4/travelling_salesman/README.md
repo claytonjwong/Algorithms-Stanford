@@ -120,20 +120,20 @@ https://en.wikipedia.org/wiki/Travelling_salesman_problem
                         if( ! bits[ j ] )
                             continue;
                         bits.reset( j ); // S - {j}
-                        auto alt = bits.to_ulong(); // find min (alt)ernative path ending at j, comprised of vertices S - {j} for each penultimate vertex k
-                        for( dp[ Sj ][ j ] = INF, k = 0; k < N; ++k ) // find min-k in S ( k != j ): A[ S - {j}, k ] + cost of k,j
+                        auto alt = bits.to_ulong(); // (alt)ernative path ending at j, comprised of vertices S - {j}
+                        for( dp[ Sj ][ j ] = INF, k = 0; k < N; ++k ) // for each penultimate vertex k, find min-k in S: A[ S - {j}, k ] + cost of k,j
                         {
                             if( k == j )
                                 continue;
-                            auto Ck = dp[ alt ][ k ], // A[ S - {j}, k ] == (C)ost of path 1 -> ... -> k ( without j )
+                            auto Ck = dp[ alt ][ k ], // A[ S - {j}, k ] == (C)ost of (alt)ernative path 1 -> ... -> k ( without j )
                                  Ckj = D[ k ][ j ],   // (C)ost of k,j
-                                 cost = ( Ck < INF )? Ck + Ckj : INF;
+                                 cost = ( Ck < INF )? Ck + Ckj : INF; // (alt)ernative path 1 -> ... -> k ( without j ) + cost of k,j
                                 if( dp[ Sj ][ j ] > cost )
-                                    dp[ Sj ][ j ] = cost;
+                                    dp[ Sj ][ j ] = cost; // min cost of each (alt)ernative path with penultimate vertex k ending at vertex j
                         }
                         bits.set( j ); // S + {j}
                     }
-                } while( next_permutation( S.begin(), S.end() - 1 )); // Note: end - 1 to NOT permute upon the last bit, source vertex 0 is always included in S
+                } while( next_permutation( S.begin(), S.end() - 1 )); // Note: end - 1 to NOT permute upon the right-most bit, source vertex 0 is always included in S
             }
             auto P{ dp.back() }; // use (P)aths of {S} from 0 -> ... -> k to calculate the min tour by connecting k with source vertex 0
             for( auto k{ 1 }; k < N; ++k )
