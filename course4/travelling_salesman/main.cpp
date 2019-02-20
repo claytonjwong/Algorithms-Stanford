@@ -1,7 +1,8 @@
 /**
  *
- * Modern C++ implementation to find minimum path in a graph which traverses each vertex exactly once,
- * starting and finishing at a specific vertex
+ * Modern C++ implementation of the Held-Karp travelling salesman algorithm to find minimum tour in a graph
+ *
+ * Note: a tour is a path which traverses each vertex exactly once, starting and finishing at a specific vertex
  *
  * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
  *
