@@ -1,6 +1,6 @@
 # Travelling Salesman
-* https://en.wikipedia.org/wiki/Travelling_salesman_problem
-* https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm
+* [Wikipedia.org: Travelling Salesman Problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+* [Wikipedia.org: Held-Karp algorithm](https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
