@@ -47,7 +47,7 @@
   * [Huffman Coding]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman )
   * [Maximum Independent Set]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set )
   * [Knapsack]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/knapsack )
-  * [Needleman-Wunsch Sequence Alignment]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/sequence_alignment )
+  * [Sequence Alignment ( Needleman-Wunsch score )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/sequence_alignment )
   * Optimal Binary Search Trees
   
 * **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
