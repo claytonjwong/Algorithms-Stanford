@@ -71,55 +71,55 @@ public:
     {
         // TODO: reconsider overall strategy bottom-up, make things easier on myself by using a 2-D vector instead of map
         // for the first implementation, since that *should* be less error prone, as it is a more simple approach
-        Map A;
-        for( auto k{ 0 }; k < N; ++k )      // base case: bit at position 0 is set ( 1 ): S = {0}
-            A[ key( 1, k ) ] = D[ 0 ][ k ]; //            so S + {k} = {0} + {k} = cost of 0,k
+        VVR dp(( 1 << N ), VR( N, INF ));
+        dp[ 1 ][ 0 ] = 0; // base case: bit at position 0 is set ( 1 ): S = {0}
+//            A[ key( 1, k ) ] = D[ 0 ][ k ]; //            so S + {k} = {0} + {k} = cost of 0,k
         auto minCost{ INF };
-        for( auto m{ 2 }; m <= N; ++m ) // m = sub-problem size
+        for( auto m{ 2 }; m <= N; ++m ) // m = sub-problem size ( cardinality of S )
         {
             auto S = Set( ( 1 << m ) - 1 ).to_string(); // all bits set till m
             do {
-                if( S.back() != '1' ) // only consider S which contains the first vertex at position 0 ( i.e. the right-most bit / char of S )
-                    continue;
-                auto bits = Set{ S };
-                for( auto j{ 1 }, k{ 1 }; j < N; ++j ) // for each bit-j in S, j != 0
+                auto bits{ Set{ S } };
+                auto S_with_j{ bits.to_ulong() };
+                for( auto j{ 1 }, k{ 0 }; j < N; ++j ) // for each bit-j in S, j != 0
                 {
                     if( ! bits[ j ] )
                         continue;
-                    auto Sj = key( bits, j ); // TODO: thoughtfully consider this
-                    bits.reset( j ); // S - {j}
+                    bits.reset( j ); // S - {j} ( forward tracking )
+                    auto S_without_j = bits.to_ulong();
                     {
-                        for( A[ Sj ] = INF, k = 1; k < N; ++k ) // find min-k in S ( k != j ): A[ S - {j}, k ] + cost of k,j
+                        for( dp[ S_with_j ][ j ] = INF, k = 0; k < N; ++k ) // find min-k in S ( k != j ): A[ S - {j}, k ] + cost of k,j
                         {
                             if( k == j )
                                 continue;
-                            auto Sk = key( bits, k ); // S - {j} + {k}
-                            auto it = A.find( Sk );
-                            if( it != A.end() )
-                            {
-                                auto Ck = it->second, // (C)ost of Sk
-                                     Ckj = D[ k ][ j ]; // (C)ost of k,j
-                                auto cost = ( Ck < INF )? Ck + Ckj : INF; // TODO: is INF check needed???
-                                if( A[ Sj ] > cost )
-                                    A[ Sj ] = cost;
-                            }
+                            auto Ck = dp[ S_without_j ][ k ], // A[ S - {j}, k ] == (C)ost of path 1 -> ... -> k ( without j )
+                                 Ckj = D[ k ][ j ],           // (C)ost of k,j
+                                 cost = ( Ck < INF )? Ck + Ckj : INF;
+                                if( dp[ S_with_j ][ j ] > cost )
+                                    dp[ S_with_j ][ j ] = cost;
                         }
                     }
-                    bits.set( j ); // S + {j}
+                    bits.set( j ); // S + {j} ( back tracking )
                 }
-            } while( next_permutation( S.begin(), S.end() ));
+            } while( next_permutation( S.begin(), S.end() - 1 )); // Note: end - 1 to NOT permute upon the last bit, source vertex {0} is always included in S
+        }
+        auto P{ dp.back() }; // use (P)aths of {S} from 1 -> ... -> k to calculate the min full tour by connecting k with source vertex {0}
+        for( auto k{ 1 }; k < N; ++k )
+        {
+            auto alt = P[ k ] + D[ k ][ 0 ]; // consider each (alt)ernative cost based on each penultimate vertex choice k
+            if( minCost > alt )
+                minCost = alt;
         }
         return minCost;
     }
 
 private:
 
-    using Key = size_t;
-    using Map = unordered_map< Key, RealNum >;
+    using Key = unsigned long;
     using Set = bitset< N >;
 
-    Key key(Set &bits, int j){ return ( bits.to_ulong() << N ) + j; }
-    Key key(Set &&bits, int j){ return ( bits.to_ulong() << N ) + j; }
+    Key key(Set &bits ){ return bits.to_ulong(); }
+    Key key(Set &&bits ){ return bits.to_ulong(); }
 
 }; // class Solution
 
