@@ -102,7 +102,7 @@ https://en.m.wikipedia.org/wiki/Sequence_alignment
         public:
     
             using Iter = typename Type::iterator;
-            const Integer MaximumSentinel = numeric_limits< Integer >::max();
+            const Integer INF = numeric_limits< Integer >::max();
     
             VVI alignment( Type& X, Type& Y )
             {
@@ -110,7 +110,7 @@ https://en.m.wikipedia.org/wiki/Sequence_alignment
                      j{ Y.end() };
                 auto M = distance( X.begin(), i ),
                      N = distance( Y.begin(), j );
-                VVI memo( M+1, VI( N+1, MaximumSentinel ));
+                VVI memo( M+1, VI( N+1, INF ));
                 go( X, Y, i, j, memo );
                 return memo;
             }
@@ -121,7 +121,7 @@ https://en.m.wikipedia.org/wiki/Sequence_alignment
             {
                 auto M = distance( X.begin(), i ),
                      N = distance( Y.begin(), j );
-                if( memo[ M ][ N ] < MaximumSentinel )
+                if( memo[ M ][ N ] < INF )
                     return memo[ M ][ N ];
                 if( M == 0 ) return memo[ M ][ N ] = cost.gap * N;
                 if( N == 0 ) return memo[ M ][ N ] = cost.gap * M;
