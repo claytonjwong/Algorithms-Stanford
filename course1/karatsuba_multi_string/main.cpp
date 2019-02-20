@@ -42,7 +42,7 @@ public:
     void pop_back(){ value_.pop_back(); }
     Number substr( size_t begin, size_t end ){ return Number({ value_.substr( begin, end ) }); }
     Number substr( size_t begin ){ return Number({ value_.substr( begin ) }); }
-    void append( size_t N, const char c ){ value_.append( N, c ); }
+    void pow10( size_t N ){ value_.append( N, '0' ); }
     void pad( const size_t N ){ stringstream ss; ss << setw( N ) << setfill( '0' ) << value_; value_ = ss.str(); }
 
 private:
@@ -128,8 +128,8 @@ class Solution
                c = y.substr( 0, pivot ), d = y.substr( pivot ),
                u = go( a, c ), v = go( a+b, c+d ), w = go( b, d );
         v = v - u - w;
-        u.append( M, '0' );   // multiply u by 10^M
-        v.append( M/2, '0' ); // multiply v by 10^M/2
+        u.pow10( M );     // "multiply" u by 10^M
+        v.pow10( M / 2 ); // "multiply" v by 10^M/2
         return( u + v + w );
     }
 
@@ -147,8 +147,11 @@ int main()
     Solution s;
 
     Number x{ "3141592653589793238462643383279502884197169399375105820974944592" }, y{ "2718281828459045235360287471352662497757247093699959574966967627" };
-    cout << s.multiply( x, y ) << endl;
-    cout << "8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184" << endl;
+    cout << "expected: 8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184" << endl;
+    cout << "observed: " << s.multiply( x, y ) << endl;
+
+//    expected: 8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184
+//    observed: 8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184
 
     return 0;
 }
