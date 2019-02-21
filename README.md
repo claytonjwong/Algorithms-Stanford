@@ -61,4 +61,14 @@
   * [Vertex Cover ( min K graph )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k_graph )
   * [Vertex Cover ( min K tree )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k_tree )
   * [Travelling Salesman]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/travelling_salesman )
+  * Knapsack ( Heuristic )
+  * Travelling Salesman ( Heuristic )
   * 2-SAT
+
+* **Supplemental Resources**
+  * [Algorithms: Dasgupta-Papadimitriou-Vazirani ( 2006 )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/Dasgupta-Papadimitriou-Vazirani.pdf )
+  * [Algorithms and Data Structures: Mehlhorn-Sanders ( 2007 )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/Mehlhorn-Sanders-Toolbox.pdf )
+  * Introduction to Algorithms: Cormen-Leiserson-Rivest-Stein ( 2009 )
+  * [Discrete Probability]( https://en.wikibooks.org/wiki/High_School_Mathematics_Extensions/Discrete_Probability )
+  * [Mathematical Proofs]( https://en.wikibooks.org/wiki/High_School_Mathematics_Extensions/Mathematical_Proofs )
+  
