@@ -4,7 +4,7 @@
 ![Can We Do Better?](/documentation/can_we_do_better.png)
 ### Can we do better?... [$1,000,000](https://en.wikipedia.org/wiki/Millennium_Prize_Problems)
 
-* **Course 1: Divide and Conquer, Sorting and Searching, and Randomized Algorithms**
+#### Course 1: Divide and Conquer, Sorting and Searching, and Randomized Algorithms
   * [Introduction, Guiding Principles, and Asymptotic Analysis]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/introduction )
   * [Master Theorem]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/master_theorem )
   * [Karatsuba Multiplication ( trivial templates )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication )
@@ -18,7 +18,7 @@
   * Deterministic Linear Selection
   * [Karger Minimum Cut ( Randomized Edge Contractions ) [ Monte Carlo ]]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course1/karger_min_cut )
   
-* **Course 2: Graph Search, Shortest Paths, and Data Structures**
+#### Course 2: Graph Search, Shortest Paths, and Data Structures
   * [Introduction, Graph Representations, Primitives, and the Web]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/documentation/graphs )
   * [Breadth First Search ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs )
   * [Minimum Path Distances ( BFS )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course2/bfs_min_path_dist )
@@ -34,7 +34,7 @@
   * Search Trees
   * [Two Sum ( hash table )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum )
   
-* **Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming**
+#### Course 3: Greedy Algorithms, Minimum Spanning Trees, Dynamic Programming
   * [Introduction and Motivating Applications]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/greedy_mst_dp )
   * [LRU Cache]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/LRU_cache )
   * [Job Scheduler ( Minimum Weighted Sum of Completion Times )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs )
@@ -50,7 +50,7 @@
   * [Sequence Alignment ( Needleman-Wunsch score )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course3/sequence_alignment )
   * Optimal Binary Search Trees
   
-* **Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them**
+#### Course 4: Shortest Paths Revisited, NP-Complete Problems and What To Do About Them
   * [Introduction, All-Pairs Shortest Paths (APSP), Algorithmic Approaches to NP-Complete Problems]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/apsp_npc )
   * [Bellman Ford]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford )
   * [Bellman Ford ( memory optimized + cycle detection )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bellman_ford_memopt )
@@ -65,7 +65,7 @@
   * Travelling Salesman ( Heuristic )
   * 2-SAT
 
-* **Supplemental Resources**
+#### Supplemental Resources
   * [Algorithms: Dasgupta-Papadimitriou-Vazirani ( 2006 )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/Dasgupta-Papadimitriou-Vazirani.pdf )
   * [Algorithms and Data Structures: Mehlhorn-Sanders ( 2007 )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/Mehlhorn-Sanders-Toolbox.pdf )
   * Introduction to Algorithms: Cormen-Leiserson-Rivest-Stein ( 2009 )
