@@ -1,7 +1,7 @@
 # Algorithms-Stanford
 
 ![Can We Do Better?](/documentation/can_we_do_better.png)
-## Can we do better?... [$1,000,000](https://en.wikipedia.org/wiki/Millennium_Prize_Problems)
+## Can we do better?... [$1,000,000]( https://en.wikipedia.org/wiki/Millennium_Prize_Problems#P_versus_NP )
 
 ### Course 1: Divide and Conquer, Sorting and Searching, and Randomized Algorithms
   * [Introduction, Guiding Principles, and Asymptotic Analysis]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/introduction )
