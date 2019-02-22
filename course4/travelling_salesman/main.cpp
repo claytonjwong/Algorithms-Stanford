@@ -18,7 +18,18 @@
 #include <cmath>
 
 
-constexpr auto N{ 25 }; // assignment input contains 25 cities
+#define LECTURE_INPUT 69
+
+
+#ifdef LECTURE_INPUT
+
+    constexpr auto N{ 4 }; // lecture input contains 25 cities ( optimal solution: 13 )
+
+#else
+
+    constexpr auto N{ 25 }; // assignment input contains 25 cities ( optimal solution: 26442 )
+
+#endif
 
 
 using namespace std;
@@ -53,11 +64,11 @@ Cost getCosts( CityList& C )
 {
     Cost cost = VVR( N, VR( N, 0 ) );
     for( auto i{ 0 }; i < N; ++i ) for( auto j{ 0 }; j < N; ++j ) // euclidean distance for each i,j pair of (C)ities
-    {
-        auto x = ( C[ i ].x - C[ j ].x ),
-             y = ( C[ i ].y - C[ j ].y );
-        cost[ i ][ j ] = sqrt(( x * x ) + ( y * y ));
-    }
+        {
+            auto x = ( C[ i ].x - C[ j ].x ),
+                 y = ( C[ i ].y - C[ j ].y );
+            cost[ i ][ j ] = sqrt(( x * x ) + ( y * y ));
+        }
     return cost;
 }
 
@@ -87,10 +98,10 @@ public:
                         if( k == j )
                             continue;
                         auto Ck = dp[ alt ][ k ], // A[ S - {j}, k ] == (C)ost of (alt)ernative path 1 -> ... -> k ( without j )
-                             Ckj = D[ k ][ j ],   // (C)ost of k,j
-                             cost = ( Ck < INF )? Ck + Ckj : INF; // (alt)ernative path 1 -> ... -> k ( without j ) + cost of k,j
-                            if( dp[ Sj ][ j ] > cost )
-                                dp[ Sj ][ j ] = cost; // min cost of each (alt)ernative path with penultimate vertex k ending at vertex j
+                            Ckj = D[ k ][ j ],   // (C)ost of k,j
+                            cost = ( Ck < INF )? Ck + Ckj : INF; // (alt)ernative path 1 -> ... -> k ( without j ) + cost of k,j
+                        if( dp[ Sj ][ j ] > cost )
+                            dp[ Sj ][ j ] = cost; // min cost of each (alt)ernative path with penultimate vertex k ending at vertex j
                     }
                     bits.set( j ); // S + {j}
                 }
@@ -115,49 +126,49 @@ private:
 
 int main()
 {
-    Solution solution;
 
-//
-// assignment input
-//
+#ifdef LECTURE_INPUT
+
+    /*
+     *   lecture input ( answer: 13 )
+     *
+     *             2
+     *     (0)-----------(1)
+     *      |\           /|
+     *      | \         / |
+     *      |  \ 3     /  |
+     *      |   \     /   |
+     *      |    \   /    |
+     *      |     \ /     |
+     *    1 |      \      | 5
+     *      |     / \     |
+     *      |    /   \    |
+     *      |   /     \   |
+     *      |  / 4     \  |
+     *      | /         \ |
+     *      |/           \|
+     *     (2)-----------(3)
+     *             6
+     *
+     */
+    Cost cost{
+        { 0, 2, 1, 3 },
+        { 2, 0, 4, 5 },
+        { 1, 4, 0, 6 },
+        { 3, 5, 6, 0 },
+    };
+
+#else
 
     auto city = readInput( Assignment::Input );
     auto cost = getCosts( city );
 
-//
-// lecture input ( answer: 13 )
-//
-/*
- *             2
- *     (0)-----------(1)
- *      |\           /|
- *      | \         / |
- *      |  \ 3     /  |
- *      |   \     /   |
- *      |    \   /    |
- *      |     \ /     |
- *    1 |      \      | 5
- *      |     / \     |
- *      |    /   \    |
- *      |   /     \   |
- *      |  / 4     \  |
- *      | /         \ |
- *      |/           \|
- *     (2)-----------(3)
- *             6
- *
- */
-//    Cost cost{
-//        { 0, 2, 1, 3 },
-//        { 2, 0, 4, 5 },
-//        { 1, 4, 0, 6 },
-//        { 3, 5, 6, 0 },
-//    };
+#endif
 
+    Solution solution;
     auto ans = solution.minTour( cost );
-    cout << "answer: " << static_cast< int >( ans ) << endl;
 
-    // answer: 26442
+    cout << "answer: " << static_cast< int >( ans ) << endl; // answer: 26442
 
     return 0;
 }
