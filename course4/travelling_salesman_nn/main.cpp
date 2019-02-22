@@ -20,16 +20,22 @@
 #include <unordered_set>
 
 
-//#define LECTURE_INPUT 69
+#define SMALL_INPUT 69
 
 
-#ifdef LECTURE_INPUT
+#ifdef SMALL_INPUT
 
-    constexpr auto N{ 4 }; // lecture input contains 4 cities
+    //
+    // previous TSP assignment input contains 25 cities
+    //
+    // optimal solution:      26442
+    // sub-optimal solution:  32981
+    //
+    constexpr auto N{ 25 };
 
 #else
 
-    constexpr auto N{ 33708 }; // assignment input contains 25 cities
+    constexpr auto N{ 33708 }; // assignment input contains 33708 cities
 
 #endif
 
@@ -47,7 +53,7 @@ ostream& operator<<( ostream& os, const City& c )
     return os;
 }
 using CityList = vector< City >;
-using Pool = set< int >;
+using Pool = vector< int >;
 using Seen = unordered_set< int >;
 using Tour = vector< int >;
 
@@ -59,7 +65,7 @@ CityList readInput( const string& input, CityList C={} )
     {
         istringstream parser{ line };
 
-#ifdef LECTURE_INPUT
+#ifdef SMALL_INPUT
 
         for( RealNum x{ 0 }, y{ 0 }; parser >> x >> y; C.push_back({ x,y }) );
 
@@ -69,6 +75,7 @@ CityList readInput( const string& input, CityList C={} )
         for( RealNum x{ 0 }, y{ 0 }; parser >> id >> x >> y; C.push_back({ x,y }) );
 
 #endif
+
     }
     assert( N == C.size() );
     return C;
@@ -81,7 +88,7 @@ Cost getCosts( CityList& C )
     {
         auto x = ( C[ i ].x - C[ j ].x ),
              y = ( C[ i ].y - C[ j ].y );
-        cost[ i ][ j ] = sqrt(( x * x ) + ( y * y ));
+        cost[ i ][ j ] = ( x * x ) + ( y * y );
     }
     return cost;
 }
@@ -95,24 +102,23 @@ public:
     {
         auto cur{ 0 }; // 0-based index of (cur)rent city
         Seen seen{ cur };
-        for( auto i{ cur }; i < N; pool.insert( i++ ) ); // include cur since distance() is invoked upon pool for (alt)ernative candidate indices
+        for( auto i{ cur }; i < N; pool.push_back( i++ ) ); // include cur since (alt)ernative candidate indices are offset from cur
         for( auto next{ 0 }; seen.size() < pool.size(); swap( cur, next ) )
         {
             auto nextCost{ INF };
-            for( auto it{ pool.begin() }; it != pool.end(); ++it )
+            for( auto alt{ 1 }; alt < N; ++alt )
             {
-                if( seen.find( *it ) != seen.end() )
+                if( seen.find( alt ) != seen.end() )
                     continue;
-                auto alt = static_cast< int >( distance( pool.begin(), it ) ); // unseen (alt)ernative pool candidate index
-                auto cost = D[ cur ][ alt ];
+                auto cost = D[ cur ][ alt ]; // find min cost of unseen (alt)ernative next candidate index
                 if( nextCost > cost )
                     nextCost = cost,
                     next = alt;
             }
-            minCost += nextCost;
+            minCost += sqrt( nextCost );
             seen.insert( next );
         }
-        return minCost + D[ cur ][ 0 ]; // return the first city to complete the tour
+        return minCost + sqrt( D[ cur ][ 0 ] ); // complete tour by returning to the first city
     }
 
 }; // class Solution
@@ -121,53 +127,23 @@ public:
 int main()
 {
 
-#ifdef LECTURE_INPUT
+#ifdef SMALL_INPUT
 
-    /**
-     *
-     * lecture input ( answer: 13 )
-     *
-     *             2
-     *     (0)-----------(1)
-     *      |\           /|
-     *      | \         / |
-     *      |  \ 3     /  |
-     *      |   \     /   |
-     *      |    \   /    |
-     *      |     \ /     |
-     *    1 |      \      | 5
-     *      |     / \     |
-     *      |    /   \    |
-     *      |   /     \   |
-     *      |  / 4     \  |
-     *      | /         \ |
-     *      |/           \|
-     *     (2)-----------(3)
-     *             6
-     *
-     **/
-
-    Cost cost{
-        { 0, 2, 1, 3 },
-        { 2, 0, 4, 5 },
-        { 1, 4, 0, 6 },
-        { 3, 5, 6, 0 },
-    };
+    auto city = readInput( Small::Input );
 
 #else
 
-    //
-    // assignment input
-    //
     auto city = readInput( Assignment::Input );
-    auto cost = getCosts( city );
 
 #endif
 
     Solution solution;
+    auto cost = getCosts( city );
     auto ans = solution.minTour( cost );
 
-    cout << "answer: " << ans << endl;
+    cout << "answer: " << static_cast< int >( ans ) << endl;
+
+    // answer: 1203406
 
     return 0;
 }
