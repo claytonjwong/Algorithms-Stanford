@@ -60,8 +60,8 @@
   * [Vertex Cover ( min K graph )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k_graph )
   * [Vertex Cover ( min K tree )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/vertex_cover_k_tree )
   * [Travelling Salesman]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/travelling_salesman )
-  * Knapsack ( Heuristic )
-  * Travelling Salesman ( Heuristic )
+  * Knapsack ( heuristic )
+  * [Travelling Salesman ( heuristic )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/travelling_salesman_nn )
   * 2-SAT
 
 ### Supplemental Resources
