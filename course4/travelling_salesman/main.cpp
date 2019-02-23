@@ -23,7 +23,7 @@
 
 #ifdef LECTURE_INPUT
 
-    constexpr auto N{ 4 }; // lecture input contains 25 cities ( optimal solution: 13 )
+    constexpr auto N{ 4 }; // lecture input contains 4 cities ( optimal solution: 13 )
 
 #else
 
@@ -64,11 +64,11 @@ Cost getCosts( CityList& C )
 {
     Cost cost = VVR( N, VR( N, 0 ) );
     for( auto i{ 0 }; i < N; ++i ) for( auto j{ 0 }; j < N; ++j ) // euclidean distance for each i,j pair of (C)ities
-        {
-            auto x = ( C[ i ].x - C[ j ].x ),
-                 y = ( C[ i ].y - C[ j ].y );
-            cost[ i ][ j ] = sqrt(( x * x ) + ( y * y ));
-        }
+    {
+        auto x = ( C[ i ].x - C[ j ].x ),
+             y = ( C[ i ].y - C[ j ].y );
+        cost[ i ][ j ] = sqrt(( x * x ) + ( y * y ));
+    }
     return cost;
 }
 
@@ -98,8 +98,8 @@ public:
                         if( k == j )
                             continue;
                         auto Ck = dp[ alt ][ k ], // A[ S - {j}, k ] == (C)ost of (alt)ernative path 1 -> ... -> k ( without j )
-                            Ckj = D[ k ][ j ],   // (C)ost of k,j
-                            cost = ( Ck < INF )? Ck + Ckj : INF; // (alt)ernative path 1 -> ... -> k ( without j ) + cost of k,j
+                             Ckj = D[ k ][ j ],   // (C)ost of k,j
+                             cost = ( Ck < INF )? Ck + Ckj : INF; // (alt)ernative path 1 -> ... -> k ( without j ) + cost of k,j
                         if( dp[ Sj ][ j ] > cost )
                             dp[ Sj ][ j ] = cost; // min cost of each (alt)ernative path with penultimate vertex k ending at vertex j
                     }
