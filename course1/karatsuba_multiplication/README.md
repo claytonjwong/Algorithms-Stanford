@@ -30,7 +30,7 @@ https://en.wikipedia.org/wiki/Karatsuba_algorithm
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_08.png)
 ---
 
-## C++ Solution
+## CPP Solution
 ```cpp
 
     /**
