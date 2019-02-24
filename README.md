@@ -63,7 +63,7 @@
   * Knapsack ( heuristic )
   * [Travelling Salesman ( heuristic )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/travelling_salesman_nn )
   * [Max Cut ( bipartite graph )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/bipartite_graph )
-  * 2-SAT
+  * [2-SAT]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/2sat )
 
 ### Supplemental Resources
   * [Algorithms: Dasgupta-Papadimitriou-Vazirani ( 2006 )]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/Dasgupta-Papadimitriou-Vazirani.pdf )
