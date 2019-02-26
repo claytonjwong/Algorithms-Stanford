@@ -116,7 +116,7 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
         OrderedList topo_sort( Graph&& G, Stack stack={}, Seen seen={} )
         {
             auto N{ G.size() };
-            OrderedList L( N + 1 );
+            OrderedList L( N + 1 );                 // 1-based index input vertex identifiers ( i.e. 1 to 875714 )
             for( auto& pair: G )
             {
                 auto cur{ pair.first };
@@ -132,7 +132,7 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
                 }
                 for(; ! path.empty(); L[ N-- ] = path.back(), path.pop_back() );
             }
-            return { L.cbegin() + 1, L.cend() }; // return buckets as 0-based index of [ 1 : N+1 )
+            return { L.cbegin() + 1, L.cend() };    // return buckets as 0-based index of [ 1 : N+1 ) ( i.e. 0 to 875713 )
         }
     
     };
