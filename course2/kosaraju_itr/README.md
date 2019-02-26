@@ -69,7 +69,7 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
     {
     public:
     
-        using Vertex = unsigned int;
+        using Vertex = size_t;
         using AdjacencyList = unordered_set< Vertex >;
         using Graph = unordered_map< Vertex, AdjacencyList >;
         using Seen = unordered_set< Vertex >;
@@ -83,14 +83,14 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
             for( auto cur: L )
             {
                 if( seen.insert( cur ).second )
-                    stack.push_back( cur );
+                    stack.push_back( cur );         // push unseen (cur)rent vertex onto the stack
                 Stack path;
                 while( ! stack.empty() )
                 {
                     auto start{ stack.back() }; stack.pop_back(); path.push_back( start );
                     for( auto adj: G[ start ] )
                         if( seen.insert( adj ).second )
-                            stack.push_back( adj );
+                            stack.push_back( adj ); // push unseen (adj)acent vertex onto the stack
                 }
                 if( ! path.empty() )
                     CC.emplace_back( path );
@@ -106,9 +106,9 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
             for_each( R.begin(), R.end(), []( auto& pair ){ pair.second={}; });
             for( auto& pair: G )
             {
-                auto cur{ pair.first };
-                for( auto adj: G[ cur ] )
-                    R[ adj ].insert( cur );
+                auto u{ pair.first };
+                for( auto v: G[ u ] )   // u -> v
+                    R[ v ].insert( u ); // v -> u
             }
             return R;
         }
@@ -121,14 +121,14 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
             {
                 auto cur{ pair.first };
                 if( seen.insert( cur ).second )
-                    stack.push_back( cur );
+                    stack.push_back( cur );         // push unseen (cur)rent vertex onto the stack
                 Stack path;
                 while( ! stack.empty() )
                 {
                     auto start{ stack.back() }; stack.pop_back(); path.push_back( start );
                     for( auto adj: G[ start ] )
                         if( seen.insert( adj ).second )
-                            stack.push_back( adj );
+                            stack.push_back( adj ); // push unseen (adj)acent vertex onto the stack
                 }
                 for(; ! path.empty(); L[ N-- ] = path.back(), path.pop_back() );
             }
@@ -153,9 +153,9 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
                 if( G.find( tail ) == G.end() )
                     G[ tail ] = {};
             }
-            auto result = s.getSCC( G );
+            auto CC = s.getSCC( G );
             auto index{ 0 };
-            for( auto& component: result )
+            for( auto& component: CC )
             {
                 cout << index++ << ": ";
                 for( auto& vertex: component )
@@ -169,22 +169,23 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
     }
     #else
     
-    void print_answer( const Solution::ConnectedComponents& CC )
+    void print_answer( Solution::ConnectedComponents& CC, ostringstream stream=ostringstream() )
     {
         set< size_t, greater<int> > sizes;
         for( auto& C: CC )
             sizes.insert( C.size() );
+        cout << "answer: ";
         auto N{ 5 };
         for( auto it{ sizes.begin() }; N--; ++it )
             cout << *it << ",";
+        cout << endl;
     }
     
     int main()
     {
         Solution::Graph G;
-        fstream stream{ "input.txt" }; // this file was too big to upload to github, so I had to zip it as "input.txt.zip"
-        string line;
-        while( getline( stream, line ) )
+        fstream stream{ "input.txt" }; // this file was too big to upload to github, so it is compressed as "input.txt.zip"
+        for( string line; getline( stream, line ); )
         {
             stringstream parser{ line };
             auto tail{ 0 }, head{ 0 };
@@ -209,7 +210,7 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
 Use ```cmake``` to build this project:
 
 ```
-    cmake --build cmake-build-debug --target kosaraju -- -j 4
+    cmake --build cmake-build-debug --target kosaraju_itr -- -j 4
 ```
 
 ## Dependencies
