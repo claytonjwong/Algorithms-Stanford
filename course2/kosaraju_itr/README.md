@@ -55,6 +55,7 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
     #include <unordered_set>
     #include <set>
     #include <vector>
+    #include <queue>
     #include <sstream>
     #include <fstream>
     
@@ -74,7 +75,7 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
         using Graph = unordered_map< Vertex, AdjacencyList >;
         using Seen = unordered_set< Vertex >;
         using ConnectedComponents = vector< vector< Vertex > >;
-        using OrderedList = vector< Vertex >;
+        using OrderedList = deque< Vertex >;
         using Stack = vector< Vertex >;
     
         ConnectedComponents getSCC( Graph& G, ConnectedComponents CC={}, Stack stack={}, Seen seen={} )
@@ -102,21 +103,23 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
     
         Graph reverse( Graph& G )
         {
-            Graph R( G ); // (R)eversed (G)raph: keep G's vertex keys ( pair.first ), but clear G's adjacency lists ( pair.second )
-            for_each( R.begin(), R.end(), []( auto& pair ){ pair.second={}; });
+            Graph R;
             for( auto& pair: G )
             {
                 auto u{ pair.first };
                 for( auto v: G[ u ] )   // u -> v
+                {
+                    if( R.find( v ) == R.end() )
+                        R[ v ] = {};
                     R[ v ].insert( u ); // v -> u
+                }
             }
             return R;
         }
     
         OrderedList topo_sort( Graph&& G, Stack stack={}, Seen seen={} )
         {
-            auto N{ G.size() };
-            OrderedList L( N + 1 );                 // 1-based index input vertex identifiers ( i.e. 1 to 875714 )
+            OrderedList L;
             for( auto& pair: G )
             {
                 auto cur{ pair.first };
@@ -130,9 +133,9 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
                         if( seen.insert( adj ).second )
                             stack.push_back( adj ); // push unseen (adj)acent vertex onto the stack
                 }
-                for(; ! path.empty(); L[ N-- ] = path.back(), path.pop_back() );
+                for(; ! path.empty(); L.push_front( path.back() ), path.pop_back() );
             }
-            return { L.cbegin() + 1, L.cend() };    // return buckets as 0-based index of [ 1 : N+1 ) ( i.e. 0 to 875713 )
+            return L;
         }
     
     };
