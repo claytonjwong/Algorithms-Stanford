@@ -214,7 +214,7 @@
 Use ```cmake``` to build this project:
 
 ```
-    cmake --build cmake-build-debug --target 2sat -- -j 4
+    cmake --build cmake-build-debug --target 2sat_scc -- -j 4
 ```
 
 ## Dependencies
