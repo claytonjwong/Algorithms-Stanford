@@ -59,7 +59,7 @@ https://en.wikipedia.org/wiki/Scheduling_(computing)
      * (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
      *
      **/
-     
+    
     
     #include "input.hpp"
     #include <iostream>
@@ -70,11 +70,7 @@ https://en.wikipedia.org/wiki/Scheduling_(computing)
     using namespace std;
     using Type = long long;
     
-    //
-    // NOTICE: this solution uses 'cost' in place of 'weight' and 'time' in place of 'length' since I subjectively feel
-    // that 'weight' and 'length' are somewhat synonymous which can cause ambiguous confusion.  So I chose 'cost' and 'time'
-    // to clearly represent how much a job costs and how much time it takes to perform that job.
-    //
+
     template< typename Job >
     class Solution
     {
@@ -115,8 +111,8 @@ https://en.wikipedia.org/wiki/Scheduling_(computing)
         D_Job( Type cost, Type time ) : Job{ cost, time } {}
         bool operator<( const Job& rhs ) const
         {
-            return ( cost - time ) > ( rhs.cost - rhs.time )
-                   || (( cost - time ) == ( rhs.cost - rhs.time ) && cost > rhs.cost );
+            return ( cost - time ) >  ( rhs.cost - rhs.time )
+               || (( cost - time ) == ( rhs.cost - rhs.time ) && cost > rhs.cost );
         }
     };
     
