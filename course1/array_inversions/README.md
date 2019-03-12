@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics)
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+## Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/o-n-log-n-algorithm-for-counting-inversions-i-GFmmJ)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_01.png)
@@ -115,8 +119,6 @@ https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics)
         }
         Solution< size_t > s;
         cout << "answer: " << s.inversions( A ) << endl;
-    
-        // answer: 2407905288
     
         return 0;
     }

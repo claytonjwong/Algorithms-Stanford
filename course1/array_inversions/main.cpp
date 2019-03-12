@@ -74,7 +74,5 @@ int main()
     Solution< size_t > s;
     cout << "answer: " << s.inversions( A ) << endl;
 
-    // answer: 2407905288
-
     return 0;
 }

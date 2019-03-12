@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-npcomplete/the-floyd-warshall-algorithm-WKb60)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_01.png)

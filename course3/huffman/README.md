@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Huffman_coding
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-greedy/introduction-and-motivation-plgXS)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/huffman/documentation/huffman_01.png)
@@ -150,10 +154,6 @@ https://en.wikipedia.org/wiki/Huffman_coding
         auto[ min, max ] = s.minMaxCodeSize( Assignment1::Input );
         cout << "answer 1: " << max << endl << endl
              << "answer 2: " << min << endl << endl;
-    
-    //    answer 1: 19
-    
-    //    answer 2: 9
     
         return 0;
     }

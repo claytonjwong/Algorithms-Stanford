@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-greedy/kruskals-mst-algorithm-PLdBf)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_01.png)
@@ -168,12 +172,8 @@ https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
     int main()
     {
     
-        cout << "lecture answer: " << costMST( Lecture::Input ) << endl << endl
+        cout << "lecture answer: "    << costMST( Lecture::Input )    << endl << endl
              << "assignment answer: " << costMST( Assignment::Input ) << endl << endl;
-    
-    //    lecture answer: 7
-    
-    //    assignment answer: -3612829
     
         return 0;
     }

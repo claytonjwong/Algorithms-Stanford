@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-graphs-data-structures/dijkstras-shortest-path-algorithm-rxrPa)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_01.png)
@@ -160,7 +164,7 @@ https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
         auto E = s.readInput( INPUT );
         auto G = s.generateGraph( V, E );
         auto[ C, P ] = s.getShortestPaths( G, E, 1 );
-        for( auto vertex: { 7,37,59,82,99,115,133,165,188,197 } ) // 2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
+        for( auto vertex: { 7,37,59,82,99,115,133,165,188,197 } )
             cout << C[ vertex ] << ",";
         cout << endl;
     
@@ -173,7 +177,7 @@ https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 Use ```cmake``` to build this project:
 
 ```
-    cmake --build cmake-build-debug --target Dijkstra_priority_queue -- -j 4
+    cmake --build cmake-build-debug --target dijkstra -- -j 4
 ```
 
 ## Dependencies

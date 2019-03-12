@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Selection_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/randomized-selection-algorithm-aqUNa)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_01.png)

@@ -2,10 +2,14 @@
 [https://en.wikipedia.org/wiki/Karatsuba_algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+## Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/karatsuba-multiplication-wKEYL)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_01.png)
@@ -173,15 +177,11 @@
     
     int main()
     {
-    
         Solution s;
     
-        Number x{ "3141592653589793238462643383279502884197169399375105820974944592" }, y{ "2718281828459045235360287471352662497757247093699959574966967627" };
-        cout << "expected: 8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184" << endl;
-        cout << "observed: " << s.multiply( x, y ) << endl;
-    
-    //    expected: 8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184
-    //    observed: 8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184
+        Number x{ "3141592653589793238462643383279502884197169399375105820974944592" },
+               y{ "2718281828459045235360287471352662497757247093699959574966967627" };
+        cout << "answer: " << s.multiply( x, y ) << endl;
     
         return 0;
     }

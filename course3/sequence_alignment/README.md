@@ -2,10 +2,14 @@
 https://en.m.wikipedia.org/wiki/Sequence_alignment
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-greedy/application-sequence-alignment-ekVkk)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_01.png)

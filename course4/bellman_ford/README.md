@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-npcomplete/single-source-shortest-paths-revisted-x0YZd)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bellman_ford/documentation/bell_01.png)
@@ -293,9 +297,6 @@ https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
             cout << "Bottom-Up answer: ";
             getShortestPaths< BottomUp::Solution >( start );
         }
-    
-    //    Top-Down answer:  2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
-    //    Bottom-Up answer: 2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
     
         return 0;
     }

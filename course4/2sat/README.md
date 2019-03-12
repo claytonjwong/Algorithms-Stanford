@@ -209,7 +209,6 @@
             cout << ( ok? '1': '0' ) << endl;
             flush( cout );
         }
-        cout << "answer: " << ans << endl; // answer: 101100
     
         return 0;
     }

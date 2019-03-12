@@ -182,8 +182,6 @@
     
         cout << "answer: " << static_cast< int >( ans ) << endl;
     
-        // answer: 1203406
-    
         return 0;
     }
 

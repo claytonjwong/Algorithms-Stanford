@@ -188,9 +188,5 @@ int main()
     auto answer_part2 = s.maxClusters();
     cout << "answer ( part 2 ): " << answer_part2 << endl << endl;
 
-//    answer ( part 1 ): 106
-
-//    answer ( part 2 ): 6118
-
     return 0;
 }

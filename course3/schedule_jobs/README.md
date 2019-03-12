@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Scheduling_(computing)
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-greedy/a-greedy-algorithm-Jo6gK)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_00.png)
@@ -148,12 +152,6 @@ https://en.wikipedia.org/wiki/Scheduling_(computing)
              << "lecture answer 2: "    << schedule< R_Job >( Lecture::Input )    << " ( optimal )" << endl << endl
              << "assignment answer 1: " << schedule< D_Job >( Assignment::Input ) << " ( sub-optimal )" << endl
              << "assignment answer 2: " << schedule< R_Job >( Assignment::Input ) << " ( optimal )" << endl;
-    
-    //    lecture answer 1: 23 ( sub-optimal )
-    //    lecture answer 2: 22 ( optimal )
-    
-    //    assignment answer 1: 69119377652 ( sub-optimal )
-    //    assignment answer 2: 67311454237 ( optimal )
     
         return 0;
     }

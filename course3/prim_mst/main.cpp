@@ -90,9 +90,5 @@ int main()
         cout << "answer: " << answer << endl << endl;
     }
 
-//    answer: 7
-
-//    answer: -3612829
-
     return 0;
 }

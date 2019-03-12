@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Prim%27s_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-greedy/prims-mst-algorithm-tQ6gK)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_01.png)
@@ -163,10 +167,6 @@ https://en.wikipedia.org/wiki/Prim%27s_algorithm
             auto answer = s.costMST( G, E, start );
             cout << "answer: " << answer << endl << endl;
         }
-    
-    //    answer: 7
-    
-    //    answer: -3612829
     
         return 0;
     }

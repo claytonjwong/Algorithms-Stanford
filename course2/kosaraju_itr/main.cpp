@@ -159,8 +159,6 @@ int main()
     auto CC = s.getSCC( G );
     print_answer( CC );
 
-    // answer: 434821,968,459,313,211
-
     return 0;
 }
 #endif

@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-graphs-data-structures/computing-strong-components-the-algorithm-rng2S)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_01.png)
@@ -200,8 +204,6 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
         Solution s;
         auto CC = s.getSCC( G );
         print_answer( CC );
-    
-        // answer: 434821,968,459,313,211
     
         return 0;
     }

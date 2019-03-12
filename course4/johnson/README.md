@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Johnson%27s_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-npcomplete/johnsons-algorithm-i-eT0Xt)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_01.png)
@@ -290,14 +294,6 @@ https://en.wikipedia.org/wiki/Johnson%27s_algorithm
             else
                 cout << "has shortest path " << answer.first << endl;
         }
-    
-    //    lecture.txt: has shortest path -6
-    
-    //    g1.txt: has a cycle
-    //    g2.txt: has a cycle
-    //    g3.txt: has shortest path -19
-    
-    //    large.txt: has shortest path -6
     
         return 0;
     }

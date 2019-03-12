@@ -140,12 +140,5 @@ int main()
     cout << "Question #4 ( Pivot is Random ): " << s.quickSort( Q4, PivotChoice::Random ) << endl;
     assert( is_sorted( Q4.cbegin(), Q4.cend() ) );
 
-//    copy( A.cbegin(), A.cend(), ostream_iterator< Type >( cout, " " ) );
-
-//    Question #1 ( Pivot is Left ):   162085
-//    Question #2 ( Pivot is Right ):  164123
-//    Question #3 ( Pivot is Median ): 138382
-//    Question #4 ( Pivot is Random ): 146451
-
     return 0;
 }

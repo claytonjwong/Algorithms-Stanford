@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Knapsack_problem
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-greedy/the-knapsack-problem-LIgLJ)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack01.png)
@@ -164,12 +168,6 @@ https://en.wikipedia.org/wiki/Knapsack_problem
     
              << "Assignment #2 Top-Down Answer: " << maxSack< TopDown::Solution >( Assignment2::Input ) << endl
              << "Assignment #2 Bottom-Up Answer: " << maxSack< BottomUp::Solution >( Assignment2::Input ) << endl << endl;
-    
-    //    Assignment #1 Top-Down Answer: 2493893
-    //    Assignment #1 Bottom-Up Answer: 2493893
-    
-    //    Assignment #2 Top-Down Answer: 4243395
-    //    Assignment #2 Bottom-Up Answer: 4243395
     
         return 0;
     }

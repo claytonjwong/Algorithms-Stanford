@@ -131,11 +131,5 @@ int main()
          << "Assignment #2 Top-Down Answer: " << maxSack< TopDown::Solution >( Assignment2::Input ) << endl
          << "Assignment #2 Bottom-Up Answer: " << maxSack< BottomUp::Solution >( Assignment2::Input ) << endl << endl;
 
-//    Assignment #1 Top-Down Answer: 2493893
-//    Assignment #1 Bottom-Up Answer: 2493893
-
-//    Assignment #2 Top-Down Answer: 4243395
-//    Assignment #2 Bottom-Up Answer: 4243395
-
     return 0;
 }

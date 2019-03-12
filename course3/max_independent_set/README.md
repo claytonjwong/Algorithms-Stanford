@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Maximal_independent_set
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-greedy/introduction-weighted-independent-sets-in-path-graphs-WENc1)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_01.png)
@@ -174,10 +178,6 @@ https://en.wikipedia.org/wiki/Maximal_independent_set
     {
         cout << "Top-Down answer: " << max_independent_set< TopDown::Solution >() << endl << endl
              << "Bottom-Up answer: " << max_independent_set< BottomUp::Solution >() << endl << endl;
-    
-    //    Top-Down answer:  10100110
-    
-    //    Bottom-Up answer: 10100110
     
         return 0;
     }

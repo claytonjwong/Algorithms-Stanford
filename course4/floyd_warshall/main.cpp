@@ -134,9 +134,5 @@ int main()
     for( auto& inputFile: inputFiles )
         test( inputFile );
 
-//    g1.txt: has a cycle and contains 998001 paths
-//    g2.txt: has a cycle and contains 998001 paths
-//    g3.txt: has shortest path -19 and contains 998001 paths
-
-    return 0;
+   return 0;
 }

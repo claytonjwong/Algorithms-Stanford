@@ -85,9 +85,5 @@ int main()
     cout << "answer 1: " << max << endl << endl
          << "answer 2: " << min << endl << endl;
 
-//    answer 1: 19
-
-//    answer 2: 9
-
     return 0;
 }

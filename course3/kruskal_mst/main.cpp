@@ -118,12 +118,8 @@ Type costMST( const string& input )
 int main()
 {
 
-    cout << "lecture answer: " << costMST( Lecture::Input ) << endl << endl
+    cout << "lecture answer: "    << costMST( Lecture::Input )    << endl << endl
          << "assignment answer: " << costMST( Assignment::Input ) << endl << endl;
-
-//    lecture answer: 7
-
-//    assignment answer: -3612829
 
     return 0;
 }

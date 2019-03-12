@@ -104,7 +104,7 @@ int main()
     auto E = s.readInput( INPUT );
     auto G = s.generateGraph( V, E );
     auto[ C, P ] = s.getShortestPaths( G, E, 1 );
-    for( auto vertex: { 7,37,59,82,99,115,133,165,188,197 } ) // 2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
+    for( auto vertex: { 7,37,59,82,99,115,133,165,188,197 } )
         cout << C[ vertex ] << ",";
     cout << endl;
 

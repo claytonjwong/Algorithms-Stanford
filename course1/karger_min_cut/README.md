@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Karger%27s_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/random-contraction-algorithm-FKAnq)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_01.png)
@@ -172,8 +176,6 @@ https://en.wikipedia.org/wiki/Karger%27s_algorithm
         auto minCut = numeric_limits< int >::max();
         for( auto N{ 100 }; N--; minCut = min( minCut, s.getMinCut( G ) ) );
         cout << "minCut: " << minCut << endl;
-    
-        // minCut: 17
     
         return 0;
     }

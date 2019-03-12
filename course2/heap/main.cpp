@@ -156,7 +156,5 @@ int main()
     auto answer = accumulate( medians.cbegin(), medians.cend(), 0 ) % 10000;
     cout << "answer: " << answer << endl;
 
-    // answer: 1213
-
     return 0;
 }

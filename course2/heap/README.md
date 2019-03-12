@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Heap_(data_structure)
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-graphs-data-structures/data-structures-overview-WHOPA)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_01.png)
@@ -199,8 +203,6 @@ https://en.wikipedia.org/wiki/Heap_(data_structure)
         }
         auto answer = accumulate( medians.cbegin(), medians.cend(), 0 ) % 10000;
         cout << "answer: " << answer << endl;
-    
-        // answer: 1213
         
         return 0;
     }

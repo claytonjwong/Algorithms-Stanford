@@ -100,7 +100,5 @@ int main()
     for( auto N{ 100 }; N--; minCut = min( minCut, s.getMinCut( G ) ) ); // run min cut algo an arbitrary amount of times
     cout << "minCut: " << minCut << endl;
 
-    // minCut: 17
-
     return 0;
 }

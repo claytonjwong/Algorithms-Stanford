@@ -264,13 +264,5 @@ int main()
             cout << "has shortest path " << answer.first << endl;
     }
 
-//    lecture.txt: has shortest path -6
-
-//    g1.txt: has a cycle
-//    g2.txt: has a cycle
-//    g3.txt: has shortest path -19
-
-//    large.txt: has shortest path -6
-
     return 0;
 }

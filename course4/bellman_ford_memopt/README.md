@@ -2,8 +2,12 @@
 https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-npcomplete/single-source-shortest-paths-revisted-x0YZd)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bellman_ford/documentation/bell_01.png)

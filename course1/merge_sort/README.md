@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Merge_sort
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/merge-sort-motivation-and-example-4vzQr)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_01.png)

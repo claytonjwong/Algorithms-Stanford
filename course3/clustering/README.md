@@ -2,10 +2,14 @@
 https://en.wikipedia.org/wiki/Cluster_analysis
 
 ## Contents
+* [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
 * [Solution](#solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+
+# Lecture
+* [Video](https://www.coursera.org/lecture/algorithms-greedy/application-to-clustering-QWubN)
 
 ## Lecture Slides
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_01.png)
@@ -217,10 +221,6 @@ https://en.wikipedia.org/wiki/Cluster_analysis
         //
         auto answer_part2 = s.maxClusters();
         cout << "answer ( part 2 ): " << answer_part2 << endl << endl;
-    
-    //    answer ( part 1 ): 106
-    
-    //    answer ( part 2 ): 6118
     
         return 0;
     }

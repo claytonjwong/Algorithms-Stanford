@@ -143,8 +143,6 @@ int main()
         cout << test( filename ), flush( cout );
     cout << endl;
 
-    // answer: 101100
-
     return 0;
 }
 

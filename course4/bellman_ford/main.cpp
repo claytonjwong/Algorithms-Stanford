@@ -220,8 +220,5 @@ int main()
         getShortestPaths< BottomUp::Solution >( start );
     }
 
-//    Top-Down answer:  2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
-//    Bottom-Up answer: 2599,2610,2947,2052,2367,2399,2029,2442,2505,3068
-
     return 0;
 }
