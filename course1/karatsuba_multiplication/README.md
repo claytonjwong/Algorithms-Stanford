@@ -4,7 +4,7 @@ https://en.wikipedia.org/wiki/Karatsuba_algorithm
 ## Contents
 * [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
-* [CPP Solution](#cpp-solution)
+* [C++ Solution](#cpp-solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
 * [Python Solution](#python-solution)
