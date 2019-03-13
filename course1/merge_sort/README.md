@@ -4,9 +4,10 @@ https://en.wikipedia.org/wiki/Merge_sort
 ## Contents
 * [Lecture](#lecture)
 * [Lecture Slides](#lecture-slides)
-* [Solution](#solution)
+* [C++ Solution](#cpp-solution)
 * [Build Instructions](#build-instructions)
 * [Dependencies](#dependencies)
+* [Python Solution](#python-solution)
 
 # Lecture
 * [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/merge-sort-motivation-and-example-4vzQr)
@@ -51,9 +52,8 @@ https://en.wikipedia.org/wiki/Merge_sort
 ![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_20.png)
 ---
 
-## Solution
+## CPP Solution
 ```cpp
-
     /**
      *
      * Modern C++ implementation of Merge Sort algorithm to sort a collection
@@ -134,7 +134,6 @@ https://en.wikipedia.org/wiki/Merge_sort
     
         return 0;
     }
-
 ```
 
 ## Build Instructions
@@ -146,3 +145,45 @@ Use ```cmake``` to build this project:
 
 ## Dependencies
 * [cmake.org](https://cmake.org)
+
+## Python Solution
+```python
+    ##
+    #
+    # Python implementation of Merge Sort algorithm
+    # 
+    # (c) Copyright 2019 Clayton J. Wong ( http://www.claytonjwong.com )
+    #
+    ##
+    
+    def merge_sort( A ):
+        return go( A )
+    
+    def go( A ):
+        if len( A ) < 2:
+            return A
+        P = len( A ) // 2
+        return merge( go( A[ :P ] ), go( A[ P: ] ) )
+    
+    def merge( L, R ):
+        A = []
+        i = 0
+        j = 0
+        while i < len( L ) and j < len( R ):
+            if L[ i ] < R[ j ]:
+                A.append( L[ i ] )
+                i += 1
+            else:
+                A.append( R[ j ] )
+                j += 1
+        A.extend( L[ i: ] )
+        A.extend( R[ j: ] )
+        return A
+    
+    if __name__ == '__main__':
+        A = [ 7, 9, 2, 4, 1, 3, 8, 5, 6, 0 ]
+        A = merge_sort( A )
+        print( "A: " )
+        for x in A:
+            print( x )
+```
