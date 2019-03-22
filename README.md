@@ -1,13 +1,13 @@
 # Algorithms-Stanford
 
-![Can We Do Better?](/documentation/can_we_do_better.png)
+![Can We Do Better?](documentation/can_we_do_better.png)
 ## Can we do better?... [$1,000,000]( https://en.wikipedia.org/wiki/Millennium_Prize_Problems#P_versus_NP )
 
 ### Course 1: Divide and Conquer, Sorting and Searching, and Randomized Algorithms
-  * [Introduction, Guiding Principles, and Asymptotic Analysis]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/introduction )
-  * [Master Theorem]( https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/master_theorem )
-  * [Karatsuba Multiplication ( trivial templates )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication )
-  * [Karatsuba Multiplication ( non-trivial strings )]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multi_string )
+  * [Introduction, Guiding Principles, and Asymptotic Analysis](documentation/introduction)
+  * [Master Theorem](documentation/master_theorem)
+  * [Karatsuba Multiplication ( trivial templates )](course1/karatsuba_multiplication)
+  * [Karatsuba Multiplication ( non-trivial strings )](course1/karatsuba_multi_string)
   * [Merge Sort]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort )
   * [Array Inversions]( https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions )
   * Strassen's Matrix Multiplication
