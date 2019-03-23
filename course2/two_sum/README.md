@@ -139,9 +139,6 @@
              << duration_cast< seconds >( slowFinish - slowStart ).count()
              << " seconds " << endl;
     
-    //    fast answer ( 427 ) found in 3 seconds
-    //    slow answer ( 427 ) found in 3273 seconds
-    
         return 0;
     }
 
