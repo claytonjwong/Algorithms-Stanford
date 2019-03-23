@@ -1,5 +1,5 @@
 # Topological Sort ( BFS - Iterative Pruning )
-https://en.wikipedia.org/wiki/Breadth-first_search
+[https://en.wikipedia.org/wiki/Breadth-first_search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,19 +12,19 @@ https://en.wikipedia.org/wiki/Breadth-first_search
 * [Video](https://www.coursera.org/lecture/algorithms-graphs-data-structures/topological-sort-yeKm7)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/bfs/documentation/bfs_01.png)
+![](documentation/bfs_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/bfs/documentation/bfs_02.png)
+![](documentation/bfs_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/bfs/documentation/bfs_03.png)
+![](documentation/bfs_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/bfs/documentation/bfs_04.png)
+![](documentation/bfs_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/bfs/documentation/bfs_05.png)
+![](documentation/bfs_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/bfs/documentation/bfs_06.png)
+![](documentation/bfs_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/bfs/documentation/bfs_07.png)
+![](documentation/bfs_07.png)
 ---
 
 ## Solution

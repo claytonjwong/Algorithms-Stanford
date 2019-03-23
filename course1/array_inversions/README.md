@@ -1,5 +1,5 @@
 # Array Inversions
-https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics)
+[https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics)](https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics))
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,33 +12,33 @@ https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics)
 * [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/o-n-log-n-algorithm-for-counting-inversions-i-GFmmJ)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_01.png)
+![](documentation/inv_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_02.png)
+![](documentation/inv_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_03.png)
+![](documentation/inv_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_04.png)
+![](documentation/inv_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_05.png)
+![](documentation/inv_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_06.png)
+![](documentation/inv_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_07.png)
+![](documentation/inv_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_08.png)
+![](documentation/inv_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_09.png)
+![](documentation/inv_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_10.png)
+![](documentation/inv_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_11.png)
+![](documentation/inv_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_12.png)
+![](documentation/inv_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_13.png)
+![](documentation/inv_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/array_inversions/documentation/inv_14.png)
+![](documentation/inv_14.png)
 ---
 
 ## Solution

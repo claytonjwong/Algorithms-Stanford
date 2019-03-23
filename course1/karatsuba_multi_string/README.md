@@ -12,21 +12,21 @@
 * [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/karatsuba-multiplication-wKEYL)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_01.png)
+![](documentation/mult_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_02.png)
+![](documentation/mult_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_03.png)
+![](documentation/mult_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_04.png)
+![](documentation/mult_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_05.png)
+![](documentation/mult_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_06.png)
+![](documentation/mult_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_07.png)
+![](documentation/mult_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karatsuba_multiplication/documentation/mult_08.png)
+![](documentation/mult_08.png)
 ---
 
 # Solution

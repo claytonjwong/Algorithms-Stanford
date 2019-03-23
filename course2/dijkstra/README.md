@@ -1,5 +1,5 @@
 # Dijkstra ( priority queue )
-https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+[https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,47 +12,47 @@ https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 * [Video](https://www.coursera.org/lecture/algorithms-graphs-data-structures/dijkstras-shortest-path-algorithm-rxrPa)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_01.png)
+![](documentation/dijkstra_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_02.png)
+![](documentation/dijkstra_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_03.png)
+![](documentation/dijkstra_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_04.png)
+![](documentation/dijkstra_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_05.png)
+![](documentation/dijkstra_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_06.png)
+![](documentation/dijkstra_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_07.png)
+![](documentation/dijkstra_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_08.png)
+![](documentation/dijkstra_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_09.png)
+![](documentation/dijkstra_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_10.png)
+![](documentation/dijkstra_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_11.png)
+![](documentation/dijkstra_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_12.png)
+![](documentation/dijkstra_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_13.png)
+![](documentation/dijkstra_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_14.png)
+![](documentation/dijkstra_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_15.png)
+![](documentation/dijkstra_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_16.png)
+![](documentation/dijkstra_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_17.png)
+![](documentation/dijkstra_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_18.png)
+![](documentation/dijkstra_18.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_19.png)
+![](documentation/dijkstra_19.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_20.png)
+![](documentation/dijkstra_20.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dijkstra/documentation/dijkstra_21.png)
+![](documentation/dijkstra_21.png)
 ---
 
 ## Solution

@@ -1,5 +1,5 @@
 # Sequence Alignment
-https://en.m.wikipedia.org/wiki/Sequence_alignment
+[https://en.m.wikipedia.org/wiki/Sequence_alignment](https://en.m.wikipedia.org/wiki/Sequence_alignment)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,27 +12,27 @@ https://en.m.wikipedia.org/wiki/Sequence_alignment
 * [Video](https://www.coursera.org/lecture/algorithms-greedy/application-sequence-alignment-ekVkk)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_01.png)
+![](documentation/seq_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_02.png)
+![](documentation/seq_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_03.png)
+![](documentation/seq_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_04.png)
+![](documentation/seq_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_05.png)
+![](documentation/seq_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_06.png)
+![](documentation/seq_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_07.png)
+![](documentation/seq_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_08.png)
+![](documentation/seq_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_09.png)
+![](documentation/seq_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_10.png)
+![](documentation/seq_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/sequence_alignment/documentation/seq_11.png)
+![](documentation/seq_11.png)
 ---
 
 ## Solution

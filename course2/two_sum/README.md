@@ -1,5 +1,5 @@
 # Two Sum
-https://en.wikipedia.org/wiki/Hash_table
+[https://en.wikipedia.org/wiki/Hash_table](https://en.wikipedia.org/wiki/Hash_table)
 
 ## Contents
 * [Lecture Slides](#lecture-slides)
@@ -8,31 +8,31 @@ https://en.wikipedia.org/wiki/Hash_table
 * [Dependencies](#dependencies)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_01.png)
+![](documentation/hash_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_02.png)
+![](documentation/hash_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_03.png)
+![](documentation/hash_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_04.png)
+![](documentation/hash_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_05.png)
+![](documentation/hash_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_06.png)
+![](documentation/hash_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_07.png)
+![](documentation/hash_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_08.png)
+![](documentation/hash_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_09.png)
+![](documentation/hash_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_10.png)
+![](documentation/hash_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_11.png)
+![](documentation/hash_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_12.png)
+![](documentation/hash_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/two_sum/documentation/hash_13.png)
+![](documentation/hash_13.png)
 ---
 
 ## Solution

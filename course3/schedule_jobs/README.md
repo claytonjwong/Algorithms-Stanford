@@ -1,5 +1,5 @@
 # Job Scheduling
-https://en.wikipedia.org/wiki/Scheduling_(computing)
+[https://en.wikipedia.org/wiki/Scheduling_(computing)](https://en.wikipedia.org/wiki/Scheduling_(computing))
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,45 +12,45 @@ https://en.wikipedia.org/wiki/Scheduling_(computing)
 * [Video](https://www.coursera.org/lecture/algorithms-greedy/a-greedy-algorithm-Jo6gK)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_00.png)
+![](documentation/job_00.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_01.png)
+![](documentation/job_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_02.png)
+![](documentation/job_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_03.png)
+![](documentation/job_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_04.png)
+![](documentation/job_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_05.png)
+![](documentation/job_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_06.png)
+![](documentation/job_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_07.png)
+![](documentation/job_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_08.png)
+![](documentation/job_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_09.png)
+![](documentation/job_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_10.png)
+![](documentation/job_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_11.png)
+![](documentation/job_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_12.png)
+![](documentation/job_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_13.png)
+![](documentation/job_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_14.png)
+![](documentation/job_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_15.png)
+![](documentation/job_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_16.png)
+![](documentation/job_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_17.png)
+![](documentation/job_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_18.png)
+![](documentation/job_18.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/schedule_jobs/documentation/job_19.png)
+![](documentation/job_19.png)
 ---
 
 ## Solution

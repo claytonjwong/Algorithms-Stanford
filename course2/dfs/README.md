@@ -1,5 +1,5 @@
 # Depth First Search ( DFS - Iterative )
-https://en.wikipedia.org/wiki/Depth-first_search
+[https://en.wikipedia.org/wiki/Depth-first_search](https://en.wikipedia.org/wiki/Depth-first_search)
 
 ## Contents
 * [Lecture Slides](#lecture-slides)
@@ -8,21 +8,21 @@ https://en.wikipedia.org/wiki/Depth-first_search
 * [Dependencies](#dependencies)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_01.png)
+![](documentation/dfs_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_02.png)
+![](documentation/dfs_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_03.png)
+![](documentation/dfs_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_04.png)
+![](documentation/dfs_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_05.png)
+![](documentation/dfs_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_06.png)
+![](documentation/dfs_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_07.png)
+![](documentation/dfs_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_08.png)
+![](documentation/dfs_08.png)
 ---
 
 ## Solution

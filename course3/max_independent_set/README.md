@@ -1,5 +1,5 @@
 # Max Independent Set
-https://en.wikipedia.org/wiki/Maximal_independent_set
+[https://en.wikipedia.org/wiki/Maximal_independent_set](https://en.wikipedia.org/wiki/Maximal_independent_set)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,41 +12,41 @@ https://en.wikipedia.org/wiki/Maximal_independent_set
 * [Video](https://www.coursera.org/lecture/algorithms-greedy/introduction-weighted-independent-sets-in-path-graphs-WENc1)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_01.png)
+![](documentation/mis_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_02.png)
+![](documentation/mis_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_03.png)
+![](documentation/mis_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_04.png)
+![](documentation/mis_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_05.png)
+![](documentation/mis_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_06.png)
+![](documentation/mis_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_07.png)
+![](documentation/mis_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_08.png)
+![](documentation/mis_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_09.png)
+![](documentation/mis_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_10.png)
+![](documentation/mis_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_11.png)
+![](documentation/mis_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_12.png)
+![](documentation/mis_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_13.png)
+![](documentation/mis_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_14.png)
+![](documentation/mis_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_15.png)
+![](documentation/mis_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_16.png)
+![](documentation/mis_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_17.png)
+![](documentation/mis_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/max_independent_set/documentation/mis_18.png)
+![](documentation/mis_18.png)
 ---
 
 ## Solution

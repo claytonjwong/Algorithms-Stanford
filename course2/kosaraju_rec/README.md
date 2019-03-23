@@ -1,5 +1,5 @@
 # Kosaraju ( DFS + DFS - Recursive )
-https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
+[https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,33 +12,33 @@ https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm
 * [Video](https://www.coursera.org/lecture/algorithms-graphs-data-structures/computing-strong-components-the-algorithm-rng2S)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_01.png)
+![](documentation/scc_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_02.png)
+![](documentation/scc_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_03.png)
+![](documentation/scc_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_04.png)
+![](documentation/scc_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_05.png)
+![](documentation/scc_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_06.png)
+![](documentation/scc_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_07.png)
+![](documentation/scc_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_08.png)
+![](documentation/scc_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_09.png)
+![](documentation/scc_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_10.png)
+![](documentation/scc_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_11.png)
+![](documentation/scc_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_12.png)
+![](documentation/scc_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_13.png)
+![](documentation/scc_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/kosaraju_itr/documentation/scc_14.png)
+![](documentation/scc_14.png)
 ---
 
 ## Solution

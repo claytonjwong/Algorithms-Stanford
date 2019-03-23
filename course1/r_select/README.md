@@ -1,5 +1,5 @@
 # Randomized Linear Selection
-https://en.wikipedia.org/wiki/Selection_algorithm
+[https://en.wikipedia.org/wiki/Selection_algorithm](https://en.wikipedia.org/wiki/Selection_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,49 +12,49 @@ https://en.wikipedia.org/wiki/Selection_algorithm
 * [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/randomized-selection-algorithm-aqUNa)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_01.png)
+![](documentation/rsel_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_02.png)
+![](documentation/rsel_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_03.png)
+![](documentation/rsel_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_04.png)
+![](documentation/rsel_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_05.png)
+![](documentation/rsel_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_06.png)
+![](documentation/rsel_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_07.png)
+![](documentation/rsel_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_08.png)
+![](documentation/rsel_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_09.png)
+![](documentation/rsel_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_10.png)
+![](documentation/rsel_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_11.png)
+![](documentation/rsel_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_12.png)
+![](documentation/rsel_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_13.png)
+![](documentation/rsel_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_14.png)
+![](documentation/rsel_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_15.png)
+![](documentation/rsel_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_16.png)
+![](documentation/rsel_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_17.png)
+![](documentation/rsel_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_18.png)
+![](documentation/rsel_18.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_19.png)
+![](documentation/rsel_19.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_20.png)
+![](documentation/rsel_20.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_21.png)
+![](documentation/rsel_21.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/r_select/documentation/rsel_22.png)
+![](documentation/rsel_22.png)
 ---
 
 ## Solution

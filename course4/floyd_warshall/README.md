@@ -1,5 +1,5 @@
 # Floyd Warshall
-https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
+[https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,13 +12,13 @@ https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
 * [Video](https://www.coursera.org/lecture/algorithms-npcomplete/the-floyd-warshall-algorithm-WKb60)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_01.png)
+![](documentation/floyd_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_02.png)
+![](documentation/floyd_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_03.png)
+![](documentation/floyd_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/floyd_warshall/documentation/floyd_04.png)
+![](documentation/floyd_04.png)
 ---
 
 ## Solution

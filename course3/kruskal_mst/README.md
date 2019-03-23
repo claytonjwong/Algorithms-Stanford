@@ -1,5 +1,5 @@
 # Kruskal
-https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
+[https://en.wikipedia.org/wiki/Kruskal%27s_algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,41 +12,41 @@ https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
 * [Video](https://www.coursera.org/lecture/algorithms-greedy/kruskals-mst-algorithm-PLdBf)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_01.png)
+![](documentation/kruskal_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_02.png)
+![](documentation/kruskal_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_03.png)
+![](documentation/kruskal_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_04.png)
+![](documentation/kruskal_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_05.png)
+![](documentation/kruskal_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_06.png)
+![](documentation/kruskal_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_07.png)
+![](documentation/kruskal_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_08.png)
+![](documentation/kruskal_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_09.png)
+![](documentation/kruskal_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_10.png)
+![](documentation/kruskal_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_11.png)
+![](documentation/kruskal_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_12.png)
+![](documentation/kruskal_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_13.png)
+![](documentation/kruskal_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_14.png)
+![](documentation/kruskal_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_15.png)
+![](documentation/kruskal_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_16.png)
+![](documentation/kruskal_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_17.png)
+![](documentation/kruskal_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/kruskal_mst/documentation/kruskal_18.png)
+![](documentation/kruskal_18.png)
 ---
 
 ## Solution

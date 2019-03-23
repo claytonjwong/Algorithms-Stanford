@@ -1,5 +1,5 @@
 # Prim
-https://en.wikipedia.org/wiki/Prim%27s_algorithm
+[https://en.wikipedia.org/wiki/Prim%27s_algorithm](https://en.wikipedia.org/wiki/Prim%27s_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,65 +12,65 @@ https://en.wikipedia.org/wiki/Prim%27s_algorithm
 * [Video](https://www.coursera.org/lecture/algorithms-greedy/prims-mst-algorithm-tQ6gK)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_01.png)
+![](documentation/prim_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_02.png)
+![](documentation/prim_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_03.png)
+![](documentation/prim_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_04.png)
+![](documentation/prim_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_05.png)
+![](documentation/prim_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_06.png)
+![](documentation/prim_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_07.png)
+![](documentation/prim_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_08.png)
+![](documentation/prim_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_09.png)
+![](documentation/prim_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_10.png)
+![](documentation/prim_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_11.png)
+![](documentation/prim_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_12.png)
+![](documentation/prim_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_13.png)
+![](documentation/prim_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_14.png)
+![](documentation/prim_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_15.png)
+![](documentation/prim_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_16.png)
+![](documentation/prim_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_17.png)
+![](documentation/prim_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_18.png)
+![](documentation/prim_18.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_19.png)
+![](documentation/prim_19.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_20.png)
+![](documentation/prim_20.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_21.png)
+![](documentation/prim_21.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_22.png)
+![](documentation/prim_22.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_23.png)
+![](documentation/prim_23.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_24.png)
+![](documentation/prim_24.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_25.png)
+![](documentation/prim_25.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_26.png)
+![](documentation/prim_26.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_27.png)
+![](documentation/prim_27.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_28.png)
+![](documentation/prim_28.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_29.png)
+![](documentation/prim_29.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/prim_mst/documentation/prim_30.png)
+![](documentation/prim_30.png)
 ---
 
 ## Solution

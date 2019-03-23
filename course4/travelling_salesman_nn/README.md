@@ -13,25 +13,25 @@
 [Video](https://www.coursera.org/lecture/algorithms-npcomplete/the-traveling-salesman-problem-49MkW)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_01.png)
+![](documentation/tsp_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_02.png)
+![](documentation/tsp_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_03.png)
+![](documentation/tsp_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_04.png)
+![](documentation/tsp_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_05.png)
+![](documentation/tsp_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_06.png)
+![](documentation/tsp_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_07.png)
+![](documentation/tsp_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_08.png)
+![](documentation/tsp_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_09.png)
+![](documentation/tsp_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/travelling_salesman/documentation/tsp_10.png)
+![](documentation/tsp_10.png)
 ---
 
 

@@ -1,5 +1,5 @@
 # Clustering
-https://en.wikipedia.org/wiki/Cluster_analysis
+[https://en.wikipedia.org/wiki/Cluster_analysis](https://en.wikipedia.org/wiki/Cluster_analysis)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,21 +12,21 @@ https://en.wikipedia.org/wiki/Cluster_analysis
 * [Video](https://www.coursera.org/lecture/algorithms-greedy/application-to-clustering-QWubN)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_01.png)
+![](documentation/clustering_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_02.png)
+![](documentation/clustering_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_03.png)
+![](documentation/clustering_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_04.png)
+![](documentation/clustering_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_05.png)
+![](documentation/clustering_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_06.png)
+![](documentation/clustering_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_07.png)
+![](documentation/clustering_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/clustering/documentation/clustering_08.png)
+![](documentation/clustering_08.png)
 ---
 
 ## Solution

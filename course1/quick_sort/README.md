@@ -1,5 +1,5 @@
 # Quick Sort
-https://en.wikipedia.org/wiki/Quicksort
+[https://en.wikipedia.org/wiki/Quicksort](https://en.wikipedia.org/wiki/Quicksort)
 
 ## Contents
 * [Lecture](#lecture)
@@ -13,97 +13,97 @@ https://en.wikipedia.org/wiki/Quicksort
 * [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/quicksort-overview-Zt0Ti)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_01.png)
+![](documentation/quick_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_02.png)
+![](documentation/quick_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_03.png)
+![](documentation/quick_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_04.png)
+![](documentation/quick_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_05.png)
+![](documentation/quick_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_06.png)
+![](documentation/quick_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_07.png)
+![](documentation/quick_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_08.png)
+![](documentation/quick_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_09.png)
+![](documentation/quick_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_10.png)
+![](documentation/quick_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_11.png)
+![](documentation/quick_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_12.png)
+![](documentation/quick_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_13.png)
+![](documentation/quick_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_14.png)
+![](documentation/quick_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_15.png)
+![](documentation/quick_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_16.png)
+![](documentation/quick_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_17.png)
+![](documentation/quick_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_18.png)
+![](documentation/quick_18.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_19.png)
+![](documentation/quick_19.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_20.png)
+![](documentation/quick_20.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_21.png)
+![](documentation/quick_21.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_22.png)
+![](documentation/quick_22.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_23.png)
+![](documentation/quick_23.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_24.png)
+![](documentation/quick_24.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_25.png)
+![](documentation/quick_25.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_26.png)
+![](documentation/quick_26.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_27.png)
+![](documentation/quick_27.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_28.png)
+![](documentation/quick_28.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_29.png)
+![](documentation/quick_29.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_30.png)
+![](documentation/quick_30.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_31.png)
+![](documentation/quick_31.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_32.png)
+![](documentation/quick_32.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_33.png)
+![](documentation/quick_33.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_34.png)
+![](documentation/quick_34.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_35.png)
+![](documentation/quick_35.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_36.png)
+![](documentation/quick_36.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_37.png)
+![](documentation/quick_37.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_38.png)
+![](documentation/quick_38.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_39.png)
+![](documentation/quick_39.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_40.png)
+![](documentation/quick_40.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_41.png)
+![](documentation/quick_41.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_42.png)
+![](documentation/quick_42.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_43.png)
+![](documentation/quick_43.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/quick_44.png)
+![](documentation/quick_44.png)
 
 ## Probability
-* [Probability ( part 1 )](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/probability.pdf)
-* [Probability ( part 2 )](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/quick_sort/documentation/probability2.pdf)
+* [Probability ( part 1 )](documentation/probability.pdf)
+* [Probability ( part 2 )](documentation/probability2.pdf)
 
 ## Solution
 ```cpp

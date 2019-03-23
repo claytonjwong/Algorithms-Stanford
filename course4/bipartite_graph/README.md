@@ -13,19 +13,19 @@
 [Video](https://www.coursera.org/lecture/algorithms-npcomplete/the-maximum-cut-problem-i-YpJsR)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bipartite_graph/documentation/max_cut_01.png)
+![](documentation/max_cut_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bipartite_graph/documentation/max_cut_02.png)
+![](documentation/max_cut_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bipartite_graph/documentation/max_cut_03.png)
+![](documentation/max_cut_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bipartite_graph/documentation/max_cut_04.png)
+![](documentation/max_cut_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bipartite_graph/documentation/max_cut_05.png)
+![](documentation/max_cut_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bipartite_graph/documentation/max_cut_06.png)
+![](documentation/max_cut_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/bipartite_graph/documentation/max_cut_07.png)
+![](documentation/max_cut_07.png)
 ---
 
 ## Solution

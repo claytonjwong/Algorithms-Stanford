@@ -1,5 +1,5 @@
 # Vertex Cover ( min K tree )
-https://en.wikipedia.org/wiki/Vertex_cover
+[https://en.wikipedia.org/wiki/Vertex_cover](https://en.wikipedia.org/wiki/Vertex_cover)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,23 +12,23 @@ https://en.wikipedia.org/wiki/Vertex_cover
 [Video](https://www.coursera.org/lecture/algorithms-npcomplete/the-vertex-cover-problem-fxmkY)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_01.png)
+![](documentation/cover_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_02.png)
+![](documentation/cover_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_03.png)
+![](documentation/cover_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_04.png)
+![](documentation/cover_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_05.png)
+![](documentation/cover_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_06.png)
+![](documentation/cover_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_07.png)
+![](documentation/cover_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_08.png)
+![](documentation/cover_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/vertex_cover_k_tree/documentation/cover_09.png)
+![](documentation/cover_09.png)
 ---
 
 

@@ -1,5 +1,5 @@
 # Topological Sort ( DFS - Recursive )
-https://en.wikipedia.org/wiki/Topological_sorting
+[https://en.wikipedia.org/wiki/Topological_sorting](https://en.wikipedia.org/wiki/Topological_sorting)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,21 +12,21 @@ https://en.wikipedia.org/wiki/Topological_sorting
 * [Video](https://www.coursera.org/lecture/algorithms-graphs-data-structures/topological-sort-yeKm7)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_01.png)
+![](documentation/dfs_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_02.png)
+![](documentation/dfs_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_03.png)
+![](documentation/dfs_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_04.png)
+![](documentation/dfs_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_05.png)
+![](documentation/dfs_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_06.png)
+![](documentation/dfs_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_07.png)
+![](documentation/dfs_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/dfs/documentation/dfs_08.png)
+![](documentation/dfs_08.png)
 ---
 
 ## Solution

@@ -1,5 +1,5 @@
 # Karger Minimum Cut ( Randomized Edge Contractions )
-https://en.wikipedia.org/wiki/Karger%27s_algorithm
+[https://en.wikipedia.org/wiki/Karger%27s_algorithm](https://en.wikipedia.org/wiki/Karger%27s_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,61 +12,61 @@ https://en.wikipedia.org/wiki/Karger%27s_algorithm
 * [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/random-contraction-algorithm-FKAnq)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_01.png)
+![](documentation/karger_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_02.png)
+![](documentation/karger_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_03.png)
+![](documentation/karger_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_04.png)
+![](documentation/karger_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_05.png)
+![](documentation/karger_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_06.png)
+![](documentation/karger_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_07.png)
+![](documentation/karger_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_08.png)
+![](documentation/karger_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_09.png)
+![](documentation/karger_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_10.png)
+![](documentation/karger_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_11.png)
+![](documentation/karger_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_12.png)
+![](documentation/karger_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_13.png)
+![](documentation/karger_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_14.png)
+![](documentation/karger_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_15.png)
+![](documentation/karger_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_16.png)
+![](documentation/karger_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_17.png)
+![](documentation/karger_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_18.png)
+![](documentation/karger_18.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_19.png)
+![](documentation/karger_19.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_20.png)
+![](documentation/karger_20.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_21.png)
+![](documentation/karger_21.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_22.png)
+![](documentation/karger_22.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_23.png)
+![](documentation/karger_23.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_24.png)
+![](documentation/karger_24.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_25.png)
+![](documentation/karger_25.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_26.png)
+![](documentation/karger_26.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_27.png)
+![](documentation/karger_27.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/karger_min_cut/documentation/karger_28.png)
+![](documentation/karger_28.png)
 ---
 
 ## Solution

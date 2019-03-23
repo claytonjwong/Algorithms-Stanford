@@ -1,5 +1,5 @@
 # LRU Cache
-https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)
+[https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU))
 
 ## Contents
 * [Lecture Slides](#lecture-slides)
@@ -8,13 +8,13 @@ https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LR
 * [Dependencies](#dependencies)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_01.png)
+![](documentation/lru_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_02.png)
+![](documentation/lru_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_03.png)
+![](documentation/lru_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/LRU_cache/documentation/lru_04.png)
+![](documentation/lru_04.png)
 ---
 
 ## Solution

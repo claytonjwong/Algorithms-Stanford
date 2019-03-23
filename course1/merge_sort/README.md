@@ -1,5 +1,5 @@
 # Merge Sort
-https://en.wikipedia.org/wiki/Merge_sort
+[https://en.wikipedia.org/wiki/Merge_sort](https://en.wikipedia.org/wiki/Merge_sort)
 
 ## Contents
 * [Lecture](#lecture)
@@ -13,43 +13,43 @@ https://en.wikipedia.org/wiki/Merge_sort
 * [Video](https://www.coursera.org/lecture/algorithms-divide-conquer/merge-sort-motivation-and-example-4vzQr)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_01.png)
+![](documentation/merge_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_02.png)
+![](documentation/merge_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_03.png)
+![](documentation/merge_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_04.png)
+![](documentation/merge_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_05.png)
+![](documentation/merge_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_07.png)
+![](documentation/merge_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_08.png)
+![](documentation/merge_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_09.png)
+![](documentation/merge_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_10.png)
+![](documentation/merge_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_11.png)
+![](documentation/merge_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_12.png)
+![](documentation/merge_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_13.png)
+![](documentation/merge_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_14.png)
+![](documentation/merge_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_15.png)
+![](documentation/merge_15.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_16.png)
+![](documentation/merge_16.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_17.png)
+![](documentation/merge_17.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_18.png)
+![](documentation/merge_18.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_19.png)
+![](documentation/merge_19.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course1/merge_sort/documentation/merge_20.png)
+![](documentation/merge_20.png)
 ---
 
 ## CPP Solution

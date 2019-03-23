@@ -1,5 +1,5 @@
 # Johnson
-https://en.wikipedia.org/wiki/Johnson%27s_algorithm
+[https://en.wikipedia.org/wiki/Johnson%27s_algorithm](https://en.wikipedia.org/wiki/Johnson%27s_algorithm)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,17 +12,17 @@ https://en.wikipedia.org/wiki/Johnson%27s_algorithm
 * [Video](https://www.coursera.org/lecture/algorithms-npcomplete/johnsons-algorithm-i-eT0Xt)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_01.png)
+![](documentation/john_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_02.png)
+![](documentation/john_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_03.png)
+![](documentation/john_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_04.png)
+![](documentation/john_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_05.png)
+![](documentation/john_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course4/johnson/documentation/john_06.png)
+![](documentation/john_06.png)
 ---
 
 

@@ -1,5 +1,5 @@
 # Heap ( data structure )
-https://en.wikipedia.org/wiki/Heap_(data_structure)
+[https://en.wikipedia.org/wiki/Heap_(data_structure)](https://en.wikipedia.org/wiki/Heap_(data_structure))
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,35 +12,35 @@ https://en.wikipedia.org/wiki/Heap_(data_structure)
 * [Video](https://www.coursera.org/lecture/algorithms-graphs-data-structures/data-structures-overview-WHOPA)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_01.png)
+![](documentation/heap_01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_02.png)
+![](documentation/heap_02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_03.png)
+![](documentation/heap_03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_04.png)
+![](documentation/heap_04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_05.png)
+![](documentation/heap_05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_06.png)
+![](documentation/heap_06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_07.png)
+![](documentation/heap_07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_08.png)
+![](documentation/heap_08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_09.png)
+![](documentation/heap_09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_10.png)
+![](documentation/heap_10.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_11.png)
+![](documentation/heap_11.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_12.png)
+![](documentation/heap_12.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_13.png)
+![](documentation/heap_13.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_14.png)
+![](documentation/heap_14.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course2/heap/documentation/heap_15.png)
+![](documentation/heap_15.png)
 ---
 
 ## Solution

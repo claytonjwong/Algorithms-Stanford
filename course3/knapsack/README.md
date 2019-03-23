@@ -1,5 +1,5 @@
 # Knapsack
-https://en.wikipedia.org/wiki/Knapsack_problem
+[https://en.wikipedia.org/wiki/Knapsack_problem](https://en.wikipedia.org/wiki/Knapsack_problem)
 
 ## Contents
 * [Lecture](#lecture)
@@ -12,25 +12,25 @@ https://en.wikipedia.org/wiki/Knapsack_problem
 * [Video](https://www.coursera.org/lecture/algorithms-greedy/the-knapsack-problem-LIgLJ)
 
 ## Lecture Slides
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack01.png)
+![](documentation/knapsack01.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack02.png)
+![](documentation/knapsack02.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack03.png)
+![](documentation/knapsack03.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack04.png)
+![](documentation/knapsack04.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack05.png)
+![](documentation/knapsack05.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack06.png)
+![](documentation/knapsack06.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack07.png)
+![](documentation/knapsack07.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack08.png)
+![](documentation/knapsack08.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack09.png)
+![](documentation/knapsack09.png)
 ---
-![](https://github.com/claytonjwong/Algorithms-Stanford/blob/master/course3/knapsack/documentation/knapsack10.png)
+![](documentation/knapsack10.png)
 ---
 
 ## Solution
