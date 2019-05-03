@@ -6,16 +6,14 @@
  *
  **/
 
-
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <cmath>
 #include <sstream>
-
+#include <algorithm>
 
 using namespace std;
-
 
 class Number
 {
@@ -133,23 +131,28 @@ class Solution
         return( u + v + w );
     }
 
-public:
-
     Number multiply( const Number x, const Number y )
     {
         return go( x, y );
+    }
+
+public:
+
+    string multiply( string num1, string num2 ){
+        Number x{ num1 },
+               y{ num2 };
+        auto ans = multiply( x, y ).value();
+        auto pos = ans.find_first_not_of( '0' );
+        return( pos != string::npos )? ans.substr( pos ) : ans;
     }
 };
 
 int main()
 {
     Solution s;
-
-    Number x{ "3141592653589793238462643383279502884197169399375105820974944592" },
+    string x{ "3141592653589793238462643383279502884197169399375105820974944592" },
            y{ "2718281828459045235360287471352662497757247093699959574966967627" };
-    cout << "answer: " << s.multiply( x, y ) << endl;
-
+    auto ans = s.multiply( x, y );
+    cout << "answer: " << ans << endl;
     return 0;
 }
-
-
