@@ -11,6 +11,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
+#include <string>
 
 
 using namespace std;
@@ -64,7 +65,7 @@ private:
 int main()
 {
     string line;
-    stringstream stream{ Assignment::Input };
+    stringstream stream{ Test::Input };
     Solution< size_t >::Collection A;
     for( size_t num{ 0 }; getline( stream, line ); A.push_back( num ) )
     {

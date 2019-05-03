@@ -15,11 +15,22 @@ covered in the video lectures.
 #include <string>
 
 
+namespace Test {
+    const std::string Input
+    {
+R"(2
+1
+4
+3
+)"
+    };
+}
+
 namespace Assignment
 {
     const std::string Input
     {
-        R"(54044
+R"(54044
 14108
 79294
 29649
