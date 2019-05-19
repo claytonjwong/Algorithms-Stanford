@@ -67,6 +67,7 @@
   * [2-SAT ( Kosaraju SCC )](https://github.com/claytonjwong/Algorithms-Stanford/tree/master/course4/2sat_scc)
 
 ### Supplemental Resources
+  * [Master-Theorem](https://claytonjwong.github.io/Master-Theorem/)
   * [Algorithms: Dasgupta-Papadimitriou-Vazirani ( 2006 )](https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/Dasgupta-Papadimitriou-Vazirani.pdf)
   * [Algorithms and Data Structures: Mehlhorn-Sanders ( 2007 )](https://github.com/claytonjwong/Algorithms-Stanford/tree/master/documentation/Mehlhorn-Sanders-Toolbox.pdf)
   * Introduction to Algorithms: Cormen-Leiserson-Rivest-Stein ( 2009 )
