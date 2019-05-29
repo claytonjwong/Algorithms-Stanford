@@ -61,16 +61,13 @@ private:
 
     Graph reverse( Graph& G )
     {
-        Graph R;
+        Graph R( G ); // (R)eversed (G)raph: keep G's vertex keys ( pair.first ), but clear G's adjacency lists ( pair.second )
+        for_each( R.begin(), R.end(), []( auto& pair ){ pair.second={}; });
         for( auto& pair: G )
         {
             auto u{ pair.first };
             for( auto v: G[ u ] )   // u -> v
-            {
-                if( R.find( v ) == R.end() )
-                    R[ v ] = {};
                 R[ v ].insert( u ); // v -> u
-            }
         }
         return R;
     }
@@ -106,20 +103,19 @@ int main()
     for( auto& test: { TEST_CASE_0, TEST_CASE_1, TEST_CASE_2, TEST_CASE_3, TEST_CASE_4, TEST_CASE_5, TEST_CASE_6, TEST_CASE_7 } )
     {
         G.clear();
-        auto tail{ 0 }, head{ 0 };
+        auto u{ 0 }, v{ 0 };
         stringstream input{ test };
-        for( string line; getline( input, line ); G[ tail ].insert( head ) )
+        for( string line; getline( input, line ); )
         {
-            stringstream parser{ line }; parser >> tail >> head;
-            if( G.find( tail ) == G.end() )
-                G[ tail ] = {};
+            stringstream parser{ line }; parser >> u >> v;
+            G[ u ].insert( v );
         }
         auto CC = s.getSCC( G );
         auto index{ 0 };
-        for( auto& component: CC )
+        for( auto& C: CC )
         {
             cout << index++ << ": ";
-            for( auto& vertex: component )
+            for( auto& vertex: C )
                 cout << vertex << " ";
             cout << endl;
         }
@@ -130,16 +126,18 @@ int main()
 }
 #else
 
-void print_answer( Solution::ConnectedComponents& CC, ostringstream stream=ostringstream() )
+string topN( Solution::ConnectedComponents& CC, size_t N=5, ostringstream os=ostringstream() )
 {
-    set< size_t, greater<int> > sizes;
+    using Largest = set< size_t, greater< int > >;
+    Largest S;
     for( auto& C: CC )
-        sizes.insert( C.size() );
-    cout << "answer: ";
-    auto N{ 5 };
-    for( auto it{ sizes.begin() }; N--; ++it )
-        cout << *it << ",";
-    cout << endl;
+        S.insert( C.size() );
+    if( N > S.size() )
+        N = S.size();
+    copy_n( S.begin(), N, ostream_iterator< int >( os, "," ) );
+    string result{ os.str() };
+    result.pop_back();
+    return result;
 }
 
 int main()
@@ -151,14 +149,13 @@ int main()
         stringstream parser{ line };
         auto tail{ 0 }, head{ 0 };
         parser >> tail >> head;
-        if( G.find( tail ) == G.end() )
-            G[ tail ] = {};
         G[ tail ].insert( head );
     }
     Solution s;
     auto CC = s.getSCC( G );
-    print_answer( CC );
-
+    auto ans = topN( CC );
+    cout << "Answer: " << ans << endl;
     return 0;
 }
 #endif
+
