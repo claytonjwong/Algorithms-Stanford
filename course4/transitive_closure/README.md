@@ -94,12 +94,12 @@
         {
             VVI cur( N+1, false ), next( cur );
             for( auto i{ 1 }; i <= N; ++i ) for( auto j{ 1 }; j <= N; ++j ) // for each i,j: base cases for k == 1 ( k is non-inclusive, so Vertex 1 is NOT considered here )
-                {
-                    Edge edge{ i,j };
-                    auto it = E.find( edge );
-                    auto hasEdge = ( it != E.end() );
-                    cur[ i ][ j ] = ( i == j )? true : hasEdge;
-                }
+            {
+                Edge edge{ i,j };
+                auto it = E.find( edge );
+                auto hasEdge = ( it != E.end() );
+                cur[ i ][ j ] = ( i == j )? true : hasEdge;
+            }
             for( auto k{ 2 }; k <= N; ++k, swap( cur, next ) ) for( auto i{ 2 }; i <= N; ++i ) for( auto j{ 2 }; j <= N; ++j ) // for each i,j,k
             {
                 // Note: let (1...k-1) denote a path which is only comprised of candidate vertices [1:k-1], that is 1 inclusive to k-1 inclusive
